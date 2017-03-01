@@ -1,0 +1,10 @@
+Added Pin To Net: NetName=VCC Pin=L1-1
+Added Pin To Net: NetName=NetC8_1 Pin=L1-2
+Added Member To Class: ClassName=ideal V2.0 Member=Component D5 S4
+Added Member To Class: ClassName=ideal V2.0 Member=Component D6 S4
+Added Member To Class: ClassName=ideal V2.0 Member=Component D11 S4
+Added Member To Class: ClassName=ideal V2.0 Member=Component D12 S4
+Added Member To Class: ClassName=ideal V2.0 Member=Component D16 S4
+Added Member To Class: ClassName=ideal V2.0 Member=Component L1 33uH
+Added Member To Class: ClassName=ideal V2.0 Member=Component PIN*5 PIN
+Added Member To Class: ClassName=ideal V2.0 Member=Component PIN*6 PIN

@@ -1,0 +1,645 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : sans-serif;
+			color : white;
+			background-color : #21489e;
+			padding: 0.3em;
+		}
+		body {
+			font-family : verdana;
+		}
+		td, th {
+			padding: 0.5em;
+			text-align : center;
+			width : 18%;
+		}
+		th {
+			background-color : #A6CAF0;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+		}
+		
+		.DRC_summary_header {							
+			padding-bottom : 0.1em;
+			border : 0px solid black;							
+			width: 100%;
+                        align: right;
+                        
+		}
+
+		.DRC_summary_header_col1, 
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3
+		{
+			color : black;
+			font-size:150%;
+                        padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2: 0em;
+			border : 0px solid black;
+			width : auto;
+			vertical-align: top;
+			font-weight: bold;				
+		}
+		
+		.DRC_summary_header_col1 	
+		{		                       
+			text-align: right;
+                        width: auto;	
+		}
+
+		.DRC_summary_header_col2 	
+		{		
+			text-align: center;	
+		}
+
+		.DRC_summary_header_col3 	
+		{		
+			text-align: left;	
+		}
+
+
+		
+		.header_holder
+		{
+		Width = 100%;
+		border = 0px solid green;
+		padding = 0;
+		}
+		
+		
+		
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+                {
+			left:0;
+			top:0;
+			padding-top : 0.1em;			
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top
+
+		}
+		.front_matter {	
+			
+			margin-top: 5px;
+ 			margin-left: 0px;					 			
+ 			horizontal-align: left;
+		}
+				
+		
+		.front_matter_column1 {
+			width : 10em;	
+			text-align  : right;
+			padding-right:0.1em;
+			
+		}
+		
+		.front_matter_column2 {
+                        width: 0.1em;
+			align: center;
+			text-align : center;
+			margin-right  : 0.1em;	
+			margin-left   : 0.1em;
+		}
+		.front_matter_column3 {
+			width         : auto;  
+			text-align    : left;	
+			margin-right  : 0.5em;				
+		}
+		
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : right;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #EEEEE0 
+		}
+		tr.onmouseout_even { 
+			background-color : #F3F3E3   
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : lightYellow
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #008000 
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD13\Templates\AD-rgb_logo_223x64.gif
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td Style="width:70%">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">2016/8/4</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">15:41:46</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3"><a href="file:///C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc" class="file"><acronym title="C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc">C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td Style="Width:30%">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3" style="color : red">81</td></tr>
+</table>
+</td>
+</table>
+<hr><a name="IDRBWGUF1LUXDMCZTDRHVFCYW3BKZJ3M4MAUM3KMIF41CO4JAKNCVC"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDKF3A5W2UC3GVFW2H3W5LBL1OCMMZI3VUAKWYL4INVCQ0O20NRAYF">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDDMHFY0JTXOXKBDIDFNHNPR2JYOXG5H20BI5J4ED2K3JJESCGR40I">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJQ1TE3VOXSBCPKL4YV0YL5MTLFHXXLCQ0ZNKFHHKDQEJWPEVGGEF">Clearance Constraint (Gap=25mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUWRFXR04AQ5YH11MX3QT4ZTTFLFY2KPZGUB3DAJGFEGHMLF4VDED">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOKB5WG3JTLTNLCDASMA0Z2515KEABHZ0X04VR5KWRDHQ23ASUN0I">Width Constraint (Min=10mil) (Max=100mil) (Preferred=50mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID1WYVXKY44L4VJOH4R1KKZOOJCDJHFOR4I3WYOOAJ44PSTYOQAI">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDIXSSMKU1UZYJD5U5NJBFM2VPDKIB2VEM1QGAC5CRDSVMOWYZJHTI">Hole Size Constraint (Min=1mil) (Max=100mil) (All)</a></td>
+<td class="column2">23</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYABEWTP3VP4YHTM3UHD515DRBBTP2N0HDQSW0WKVI23ISEB1QQCJ">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDBH3GRQRGYMFGL22V51GCC5ECIMWA1RGA0L2WTYIKQNNYEC0RMDKH">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0RXJLFMUHNNRHHUZ51NWIDK15GGH5T4TAWUHLTBA5ZWNC3VZ1RQN">Silk To Solder Mask (Clearance=10mil) (IsPad),(All)</a></td>
+<td class="column2">24</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRNRFTG4KPZYDIBJCBT0Z05GFNHCNJRWNFNZFK5KIDLFRVVLYWAFP">Silk to Silk (Clearance=10mil) (All),(All)</a></td>
+<td class="column2">34</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDSOO0DB1LGS1PET4ZA5SP5VHIMBHBURY0M45FKBLOGLP4NQ0PIYFN">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">81</td>
+</tr>
+</table><br><hr><a name="IDIXSSMKU1UZYJD5U5NJBFM2VPDKIB2VEM1QGAC5CRDSVMOWYZJHTI"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Hole Size Constraint (Min=1mil) (Max=100mil) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5936.58mil|Location2.X=6095.31mil|Location1.Y=2337.131mil|Location2.Y=2495.861mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5936.58mil|Location2.X=6095.31mil|Location1.Y=2337.131mil|Location2.Y=2495.861mil|Absolute=True">Hole Size Constraint (157.48mil &gt; 100mil) : Pad SW1-0(150mil,40mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5756.58mil|Location2.X=5915.31mil|Location1.Y=2337.131mil|Location2.Y=2495.861mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5756.58mil|Location2.X=5915.31mil|Location1.Y=2337.131mil|Location2.Y=2495.861mil|Absolute=True">Hole Size Constraint (157.48mil &gt; 100mil) : Pad SW1-1(-30mil,40mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5581.58mil|Location2.X=5740.31mil|Location1.Y=2337.131mil|Location2.Y=2495.861mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5581.58mil|Location2.X=5740.31mil|Location1.Y=2337.131mil|Location2.Y=2495.861mil|Absolute=True">Hole Size Constraint (157.48mil &gt; 100mil) : Pad SW1-2(-205mil,40mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4338.824mil|Location2.X=4497.554mil|Location1.Y=2392.131mil|Location2.Y=2550.861mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4338.824mil|Location2.X=4497.554mil|Location1.Y=2392.131mil|Location2.Y=2550.861mil|Absolute=True">Hole Size Constraint (157.48mil &gt; 100mil) : Pad L1-2(-1447.756mil,95mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5172.997mil|Location2.X=5331.727mil|Location1.Y=2392.131mil|Location2.Y=2550.861mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5172.997mil|Location2.X=5331.727mil|Location1.Y=2392.131mil|Location2.Y=2550.861mil|Absolute=True">Hole Size Constraint (157.48mil &gt; 100mil) : Pad L1-1(-613.583mil,95mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3247.21mil|Location2.X=3366.57mil|Location1.Y=2316.816mil|Location2.Y=2436.176mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3247.21mil|Location2.X=3366.57mil|Location1.Y=2316.816mil|Location2.Y=2436.176mil|Absolute=True">Hole Size Constraint (118.11mil &gt; 100mil) : Pad Free-3(-2559.055mil,0mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8365.32mil|Location2.X=8484.68mil|Location1.Y=2316.816mil|Location2.Y=2436.176mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8365.32mil|Location2.X=8484.68mil|Location1.Y=2316.816mil|Location2.Y=2436.176mil|Absolute=True">Hole Size Constraint (118.11mil &gt; 100mil) : Pad Free-2(2559.055mil,0mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8365.32mil|Location2.X=8484.68mil|Location1.Y=4285.32mil|Location2.Y=4404.68mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8365.32mil|Location2.X=8484.68mil|Location1.Y=4285.32mil|Location2.Y=4404.68mil|Absolute=True">Hole Size Constraint (118.11mil &gt; 100mil) : Pad Free-1(2559.055mil,1968.504mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3247.21mil|Location2.X=3366.57mil|Location1.Y=4285.32mil|Location2.Y=4404.68mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3247.21mil|Location2.X=3366.57mil|Location1.Y=4285.32mil|Location2.Y=4404.68mil|Absolute=True">Hole Size Constraint (118.11mil &gt; 100mil) : Pad Free-0(-2559.055mil,1968.504mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6963.745mil|Location2.X=7130.349mil|Location1.Y=2998.194mil|Location2.Y=3164.798mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6963.745mil|Location2.X=7130.349mil|Location1.Y=2998.194mil|Location2.Y=3164.798mil|Absolute=True">Hole Size Constraint (165.354mil &gt; 100mil) : Pad PIN*6-1(1181.102mil,705mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4601.54mil|Location2.X=4768.145mil|Location1.Y=2998.194mil|Location2.Y=3164.798mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4601.54mil|Location2.X=4768.145mil|Location1.Y=2998.194mil|Location2.Y=3164.798mil|Absolute=True">Hole Size Constraint (165.354mil &gt; 100mil) : Pad PIN*5-1(-1181.102mil,705mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7672.407mil|Location2.X=7839.011mil|Location1.Y=2998.194mil|Location2.Y=3164.798mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7672.407mil|Location2.X=7839.011mil|Location1.Y=2998.194mil|Location2.Y=3164.798mil|Absolute=True">Hole Size Constraint (165.354mil &gt; 100mil) : Pad PIN*11-1(1889.764mil,705mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7318.076mil|Location2.X=7484.68mil|Location1.Y=2998.194mil|Location2.Y=3164.798mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7318.076mil|Location2.X=7484.68mil|Location1.Y=2998.194mil|Location2.Y=3164.798mil|Absolute=True">Hole Size Constraint (165.354mil &gt; 100mil) : Pad PIN*10-1(1535.433mil,705mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4955.871mil|Location2.X=5122.475mil|Location1.Y=2998.194mil|Location2.Y=3164.798mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4955.871mil|Location2.X=5122.475mil|Location1.Y=2998.194mil|Location2.Y=3164.798mil|Absolute=True">Hole Size Constraint (165.354mil &gt; 100mil) : Pad PIN*4-1(-826.772mil,705mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4247.21mil|Location2.X=4413.814mil|Location1.Y=2998.194mil|Location2.Y=3164.798mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4247.21mil|Location2.X=4413.814mil|Location1.Y=2998.194mil|Location2.Y=3164.798mil|Absolute=True">Hole Size Constraint (165.354mil &gt; 100mil) : Pad PIN*3-1(-1535.433mil,705mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3892.879mil|Location2.X=4059.483mil|Location1.Y=2998.194mil|Location2.Y=3164.798mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3892.879mil|Location2.X=4059.483mil|Location1.Y=2998.194mil|Location2.Y=3164.798mil|Absolute=True">Hole Size Constraint (165.354mil &gt; 100mil) : Pad PIN*2-1(-1889.764mil,705mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3538.548mil|Location2.X=3705.153mil|Location1.Y=2998.194mil|Location2.Y=3164.798mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3538.548mil|Location2.X=3705.153mil|Location1.Y=2998.194mil|Location2.Y=3164.798mil|Absolute=True">Hole Size Constraint (165.354mil &gt; 100mil) : Pad PIN*1-1(-2244.095mil,705mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5310.202mil|Location2.X=5476.806mil|Location1.Y=2998.194mil|Location2.Y=3164.798mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5310.202mil|Location2.X=5476.806mil|Location1.Y=2998.194mil|Location2.Y=3164.798mil|Absolute=True">Hole Size Constraint (165.354mil &gt; 100mil) : Pad PIN*7-1(-472.441mil,705mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8026.737mil|Location2.X=8193.341mil|Location1.Y=2998.194mil|Location2.Y=3164.798mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8026.737mil|Location2.X=8193.341mil|Location1.Y=2998.194mil|Location2.Y=3164.798mil|Absolute=True">Hole Size Constraint (165.354mil &gt; 100mil) : Pad PIN*12-1(2244.094mil,705mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6255.084mil|Location2.X=6421.688mil|Location1.Y=2998.194mil|Location2.Y=3164.798mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6255.084mil|Location2.X=6421.688mil|Location1.Y=2998.194mil|Location2.Y=3164.798mil|Absolute=True">Hole Size Constraint (165.354mil &gt; 100mil) : Pad PIN*8-1(472.441mil,705mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6609.414mil|Location2.X=6776.019mil|Location1.Y=2998.194mil|Location2.Y=3164.798mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6609.414mil|Location2.X=6776.019mil|Location1.Y=2998.194mil|Location2.Y=3164.798mil|Absolute=True">Hole Size Constraint (165.354mil &gt; 100mil) : Pad PIN*9-1(826.772mil,705mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8190.95mil|Location2.X=8389.05mil|Location1.Y=3930.95mil|Location2.Y=4129.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8190.95mil|Location2.X=8389.05mil|Location1.Y=3930.95mil|Location2.Y=4129.05mil|Absolute=True">Hole Size Constraint (196.85mil &gt; 100mil) : Pad GND-1-1(2424.055mil,1653.504mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8195.95mil|Location2.X=8394.05mil|Location1.Y=3545.95mil|Location2.Y=3744.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8195.95mil|Location2.X=8394.05mil|Location1.Y=3545.95mil|Location2.Y=3744.05mil|Absolute=True">Hole Size Constraint (196.85mil &gt; 100mil) : Pad 1-1(2429.055mil,1268.504mil)  Multi-Layer</acronym></a><br></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><a name="ID0RXJLFMUHNNRHHUZ51NWIDK15GGH5T4TAWUHLTBA5ZWNC3VZ1RQN"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Silk To Solder Mask (Clearance=10mil) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3587.008mil|Location2.X=4123.386mil|Location1.Y=2422.559mil|Location2.Y=2430.433mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3587.008mil|Location2.X=4123.386mil|Location1.Y=2422.559mil|Location2.Y=2430.433mil|Absolute=True">Track (-2275mil,50mil)(-1746.496mil,50mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4006.945mil|Location2.X=4094.945mil|Location1.Y=2432.496mil|Location2.Y=2520.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4006.945mil|Location2.X=4094.945mil|Location1.Y=2432.496mil|Location2.Y=2520.496mil|Absolute=True">Pad CB1-1(-1815mil,100mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3587.008mil|Location2.X=4123.386mil|Location1.Y=2522.559mil|Location2.Y=2530.433mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3587.008mil|Location2.X=4123.386mil|Location1.Y=2522.559mil|Location2.Y=2530.433mil|Absolute=True">Track (-2275mil,150mil)(-1746.496mil,150mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4006.945mil|Location2.X=4094.945mil|Location1.Y=2432.496mil|Location2.Y=2520.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4006.945mil|Location2.X=4094.945mil|Location1.Y=2432.496mil|Location2.Y=2520.496mil|Absolute=True">Pad CB1-1(-1815mil,100mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3587.008mil|Location2.X=4123.386mil|Location1.Y=2422.559mil|Location2.Y=2430.433mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3587.008mil|Location2.X=4123.386mil|Location1.Y=2422.559mil|Location2.Y=2430.433mil|Absolute=True">Track (-2275mil,50mil)(-1746.496mil,50mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3606.945mil|Location2.X=3694.945mil|Location1.Y=2432.496mil|Location2.Y=2520.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3606.945mil|Location2.X=3694.945mil|Location1.Y=2432.496mil|Location2.Y=2520.496mil|Absolute=True">Pad CB1-2(-2215mil,100mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3587.008mil|Location2.X=4123.386mil|Location1.Y=2522.559mil|Location2.Y=2530.433mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3587.008mil|Location2.X=4123.386mil|Location1.Y=2522.559mil|Location2.Y=2530.433mil|Absolute=True">Track (-2275mil,150mil)(-1746.496mil,150mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3606.945mil|Location2.X=3694.945mil|Location1.Y=2432.496mil|Location2.Y=2520.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3606.945mil|Location2.X=3694.945mil|Location1.Y=2432.496mil|Location2.Y=2520.496mil|Absolute=True">Pad CB1-2(-2215mil,100mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5565.445mil|Location2.X=6096.445mil|Location1.Y=2315.996mil|Location2.Y=2316.996mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5565.445mil|Location2.X=6096.445mil|Location1.Y=2315.996mil|Location2.Y=2316.996mil|Absolute=True">Track (-300mil,-60mil)(230mil,-60mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5952.89mil|Location2.X=6079mil|Location1.Y=2314.071mil|Location2.Y=2518.921mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5952.89mil|Location2.X=6079mil|Location1.Y=2314.071mil|Location2.Y=2518.921mil|Absolute=True">Pad SW1-0(150mil,40mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5565.445mil|Location2.X=6091.445mil|Location1.Y=2515.996mil|Location2.Y=2516.996mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5565.445mil|Location2.X=6091.445mil|Location1.Y=2515.996mil|Location2.Y=2516.996mil|Absolute=True">Track (-300mil,140mil)(225mil,140mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5952.89mil|Location2.X=6079mil|Location1.Y=2314.071mil|Location2.Y=2518.921mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5952.89mil|Location2.X=6079mil|Location1.Y=2314.071mil|Location2.Y=2518.921mil|Absolute=True">Pad SW1-0(150mil,40mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5565.445mil|Location2.X=6096.445mil|Location1.Y=2315.996mil|Location2.Y=2316.996mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5565.445mil|Location2.X=6096.445mil|Location1.Y=2315.996mil|Location2.Y=2316.996mil|Absolute=True">Track (-300mil,-60mil)(230mil,-60mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5772.89mil|Location2.X=5899mil|Location1.Y=2314.071mil|Location2.Y=2518.921mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5772.89mil|Location2.X=5899mil|Location1.Y=2314.071mil|Location2.Y=2518.921mil|Absolute=True">Pad SW1-1(-30mil,40mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5565.445mil|Location2.X=6091.445mil|Location1.Y=2515.996mil|Location2.Y=2516.996mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5565.445mil|Location2.X=6091.445mil|Location1.Y=2515.996mil|Location2.Y=2516.996mil|Absolute=True">Track (-300mil,140mil)(225mil,140mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5772.89mil|Location2.X=5899mil|Location1.Y=2314.071mil|Location2.Y=2518.921mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5772.89mil|Location2.X=5899mil|Location1.Y=2314.071mil|Location2.Y=2518.921mil|Absolute=True">Pad SW1-1(-30mil,40mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5565.445mil|Location2.X=6096.445mil|Location1.Y=2315.996mil|Location2.Y=2316.996mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5565.445mil|Location2.X=6096.445mil|Location1.Y=2315.996mil|Location2.Y=2316.996mil|Absolute=True">Track (-300mil,-60mil)(230mil,-60mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5597.89mil|Location2.X=5724mil|Location1.Y=2314.071mil|Location2.Y=2518.921mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5597.89mil|Location2.X=5724mil|Location1.Y=2314.071mil|Location2.Y=2518.921mil|Absolute=True">Pad SW1-2(-205mil,40mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5565.445mil|Location2.X=6091.445mil|Location1.Y=2515.996mil|Location2.Y=2516.996mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5565.445mil|Location2.X=6091.445mil|Location1.Y=2515.996mil|Location2.Y=2516.996mil|Absolute=True">Track (-300mil,140mil)(225mil,140mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5597.89mil|Location2.X=5724mil|Location1.Y=2314.071mil|Location2.Y=2518.921mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5597.89mil|Location2.X=5724mil|Location1.Y=2314.071mil|Location2.Y=2518.921mil|Absolute=True">Pad SW1-2(-205mil,40mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3438.819mil|Location2.X=4433.071mil|Location1.Y=4083.386mil|Location2.Y=4093.386mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3438.819mil|Location2.X=4433.071mil|Location1.Y=4083.386mil|Location2.Y=4093.386mil|Absolute=True">Track (-2422.126mil,1711.89mil)(-1437.874mil,1711.89mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3891.945mil|Location2.X=3979.945mil|Location1.Y=4044.386mil|Location2.Y=4132.386mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3891.945mil|Location2.X=3979.945mil|Location1.Y=4044.386mil|Location2.Y=4132.386mil|Absolute=True">Pad C9-1(-1930mil,1711.89mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3438.819mil|Location2.X=4433.071mil|Location1.Y=4319.606mil|Location2.Y=4329.606mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3438.819mil|Location2.X=4433.071mil|Location1.Y=4319.606mil|Location2.Y=4329.606mil|Absolute=True">Track (-2422.126mil,1948.11mil)(-1437.874mil,1948.11mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3891.945mil|Location2.X=3979.945mil|Location1.Y=4280.606mil|Location2.Y=4368.606mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3891.945mil|Location2.X=3979.945mil|Location1.Y=4280.606mil|Location2.Y=4368.606mil|Absolute=True">Pad C9-2(-1930mil,1948.11mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3437.874mil|Location2.X=4432.126mil|Location1.Y=3716.89mil|Location2.Y=3726.89mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3437.874mil|Location2.X=4432.126mil|Location1.Y=3716.89mil|Location2.Y=3726.89mil|Absolute=True">Track (-2423.071mil,1345.394mil)(-1438.819mil,1345.394mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3891mil|Location2.X=3979mil|Location1.Y=3677.89mil|Location2.Y=3765.89mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3891mil|Location2.X=3979mil|Location1.Y=3677.89mil|Location2.Y=3765.89mil|Absolute=True">Pad C4-1(-1930.945mil,1345.394mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3437.874mil|Location2.X=4432.126mil|Location1.Y=3953.11mil|Location2.Y=3963.11mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3437.874mil|Location2.X=4432.126mil|Location1.Y=3953.11mil|Location2.Y=3963.11mil|Absolute=True">Track (-2423.071mil,1581.614mil)(-1438.819mil,1581.614mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3891mil|Location2.X=3979mil|Location1.Y=3914.11mil|Location2.Y=4002.11mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3891mil|Location2.X=3979mil|Location1.Y=3914.11mil|Location2.Y=4002.11mil|Absolute=True">Pad C4-2(-1930.945mil,1581.614mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3438.819mil|Location2.X=4433.071mil|Location1.Y=3353.386mil|Location2.Y=3363.386mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3438.819mil|Location2.X=4433.071mil|Location1.Y=3353.386mil|Location2.Y=3363.386mil|Absolute=True">Track (-2422.126mil,981.89mil)(-1437.874mil,981.89mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3891.945mil|Location2.X=3979.945mil|Location1.Y=3314.386mil|Location2.Y=3402.386mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3891.945mil|Location2.X=3979.945mil|Location1.Y=3314.386mil|Location2.Y=3402.386mil|Absolute=True">Pad C1-1(-1930mil,981.89mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3438.819mil|Location2.X=4433.071mil|Location1.Y=3589.606mil|Location2.Y=3599.606mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3438.819mil|Location2.X=4433.071mil|Location1.Y=3589.606mil|Location2.Y=3599.606mil|Absolute=True">Track (-2422.126mil,1218.11mil)(-1437.874mil,1218.11mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3891.945mil|Location2.X=3979.945mil|Location1.Y=3550.606mil|Location2.Y=3638.606mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3891.945mil|Location2.X=3979.945mil|Location1.Y=3550.606mil|Location2.Y=3638.606mil|Absolute=True">Pad C1-2(-1930mil,1218.11mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4488.059mil|Location2.X=4513.059mil|Location1.Y=2249.776mil|Location2.Y=2704.39mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4488.059mil|Location2.X=4513.059mil|Location1.Y=2249.776mil|Location2.Y=2704.39mil|Absolute=True">Track (-1365.386mil,-114.221mil)(-1365.386mil,315.394mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4276.394mil|Location2.X=4559.984mil|Location1.Y=2420.252mil|Location2.Y=2522.74mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4276.394mil|Location2.X=4559.984mil|Location1.Y=2420.252mil|Location2.Y=2522.74mil|Absolute=True">Pad L1-2(-1447.756mil,95mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5157.35mil|Location2.X=5182.35mil|Location1.Y=2237.012mil|Location2.Y=2706.106mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5157.35mil|Location2.X=5182.35mil|Location1.Y=2237.012mil|Location2.Y=2706.106mil|Absolute=True">Track (-696.095mil,-126.984mil)(-696.095mil,317.11mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5110.567mil|Location2.X=5394.158mil|Location1.Y=2420.252mil|Location2.Y=2522.74mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5110.567mil|Location2.X=5394.158mil|Location1.Y=2420.252mil|Location2.Y=2522.74mil|Absolute=True">Pad L1-1(-613.583mil,95mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6245.945mil|Location2.X=6278.002mil|Location1.Y=2391.35mil|Location2.Y=2437.266mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6245.945mil|Location2.X=6278.002mil|Location1.Y=2391.35mil|Location2.Y=2437.266mil|Absolute=True">Text "&gt;" (385mil,20mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6278.559mil|Location2.X=6325.929mil|Location1.Y=2382.457mil|Location2.Y=2447.543mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6278.559mil|Location2.X=6325.929mil|Location1.Y=2382.457mil|Location2.Y=2447.543mil|Absolute=True">Pad L3-2(436.299mil,38.504mil)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4656.063mil|Location2.X=5008.937mil|Location1.Y=2391.063mil|Location2.Y=2398.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4656.063mil|Location2.X=5008.937mil|Location1.Y=2391.063mil|Location2.Y=2398.937mil|Absolute=True">Track (-1205.945mil,18.504mil)(-860.945mil,18.504mil)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4670.961mil|Location2.X=4738.803mil|Location1.Y=2403.402mil|Location2.Y=2536.598mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4670.961mil|Location2.X=4738.803mil|Location1.Y=2403.402mil|Location2.Y=2536.598mil|Absolute=True">Pad D25-1(-1161.063mil,93.504mil)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4656.063mil|Location2.X=5008.937mil|Location1.Y=2541.063mil|Location2.Y=2548.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4656.063mil|Location2.X=5008.937mil|Location1.Y=2541.063mil|Location2.Y=2548.937mil|Absolute=True">Track (-1205.945mil,168.504mil)(-860.945mil,168.504mil)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4670.961mil|Location2.X=4738.803mil|Location1.Y=2403.402mil|Location2.Y=2536.598mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4670.961mil|Location2.X=4738.803mil|Location1.Y=2403.402mil|Location2.Y=2536.598mil|Absolute=True">Pad D25-1(-1161.063mil,93.504mil)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5001.063mil|Location2.X=5008.937mil|Location1.Y=2391.063mil|Location2.Y=2548.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5001.063mil|Location2.X=5008.937mil|Location1.Y=2391.063mil|Location2.Y=2548.937mil|Absolute=True">Track (-860.945mil,18.504mil)(-860.945mil,168.504mil)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4931.197mil|Location2.X=4999.039mil|Location1.Y=2403.402mil|Location2.Y=2536.598mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4931.197mil|Location2.X=4999.039mil|Location1.Y=2403.402mil|Location2.Y=2536.598mil|Absolute=True">Pad D25-2(-900.827mil,93.504mil)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4656.063mil|Location2.X=5008.937mil|Location1.Y=2391.063mil|Location2.Y=2398.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4656.063mil|Location2.X=5008.937mil|Location1.Y=2391.063mil|Location2.Y=2398.937mil|Absolute=True">Track (-1205.945mil,18.504mil)(-860.945mil,18.504mil)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4931.197mil|Location2.X=4999.039mil|Location1.Y=2403.402mil|Location2.Y=2536.598mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4931.197mil|Location2.X=4999.039mil|Location1.Y=2403.402mil|Location2.Y=2536.598mil|Absolute=True">Pad D25-2(-900.827mil,93.504mil)  Bottom Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4656.063mil|Location2.X=5008.937mil|Location1.Y=2541.063mil|Location2.Y=2548.937mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4656.063mil|Location2.X=5008.937mil|Location1.Y=2541.063mil|Location2.Y=2548.937mil|Absolute=True">Track (-1205.945mil,168.504mil)(-860.945mil,168.504mil)  Bottom Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4931.197mil|Location2.X=4999.039mil|Location1.Y=2403.402mil|Location2.Y=2536.598mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4931.197mil|Location2.X=4999.039mil|Location1.Y=2403.402mil|Location2.Y=2536.598mil|Absolute=True">Pad D25-2(-900.827mil,93.504mil)  Bottom Layer</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><a name="IDRNRFTG4KPZYDIBJCBT0Z05GFNHCNJRWNFNZFK5KIDLFRVVLYWAFP"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Silk to Silk (Clearance=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4885.871mil|Location2.X=4937.039mil|Location1.Y=3791.08mil|Location2.Y=3842.248mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4885.871mil|Location2.X=4937.039mil|Location1.Y=3791.08mil|Location2.Y=3842.248mil|Absolute=True">Text "+" (-984.008mil,1459.847mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4592.047mil|Location2.X=5229.842mil|Location1.Y=3837.598mil|Location2.Y=4475.394mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4592.047mil|Location2.X=5229.842mil|Location1.Y=3837.598mil|Location2.Y=4475.394mil|Absolute=True">Arc (-955mil,1780mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7639.926mil|Location2.X=7691.094mil|Location1.Y=3784.584mil|Location2.Y=3835.752mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7639.926mil|Location2.X=7691.094mil|Location1.Y=3784.584mil|Location2.Y=3835.752mil|Absolute=True">Text "+" (1770.047mil,1453.351mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7346.102mil|Location2.X=7983.898mil|Location1.Y=3831.102mil|Location2.Y=4468.898mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7346.102mil|Location2.X=7983.898mil|Location1.Y=3831.102mil|Location2.Y=4468.898mil|Absolute=True">Arc (1799.055mil,1773.504mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6819.926mil|Location2.X=6871.094mil|Location1.Y=3784.584mil|Location2.Y=3835.752mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6819.926mil|Location2.X=6871.094mil|Location1.Y=3784.584mil|Location2.Y=3835.752mil|Absolute=True">Text "+" (950.047mil,1453.351mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6526.102mil|Location2.X=7163.898mil|Location1.Y=3831.102mil|Location2.Y=4468.898mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6526.102mil|Location2.X=7163.898mil|Location1.Y=3831.102mil|Location2.Y=4468.898mil|Absolute=True">Arc (979.055mil,1773.504mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6245.945mil|Location2.X=6278.002mil|Location1.Y=2391.35mil|Location2.Y=2437.266mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6245.945mil|Location2.X=6278.002mil|Location1.Y=2391.35mil|Location2.Y=2437.266mil|Absolute=True">Text "&gt;" (385mil,20mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6239.252mil|Location2.X=6270.748mil|Location1.Y=2435.669mil|Location2.Y=2443.543mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6239.252mil|Location2.X=6270.748mil|Location1.Y=2435.669mil|Location2.Y=2443.543mil|Absolute=True">Track (377.244mil,63.11mil)(400.866mil,63.11mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6245.945mil|Location2.X=6278.002mil|Location1.Y=2391.35mil|Location2.Y=2437.266mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6245.945mil|Location2.X=6278.002mil|Location1.Y=2391.35mil|Location2.Y=2437.266mil|Absolute=True">Text "&gt;" (385mil,20mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6239.252mil|Location2.X=6270.748mil|Location1.Y=2386.457mil|Location2.Y=2394.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6239.252mil|Location2.X=6270.748mil|Location1.Y=2386.457mil|Location2.Y=2394.331mil|Absolute=True">Track (377.244mil,13.898mil)(400.866mil,13.898mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7680.799mil|Location2.X=7726.715mil|Location1.Y=2804.439mil|Location2.Y=2836.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7680.799mil|Location2.X=7726.715mil|Location1.Y=2804.439mil|Location2.Y=2836.496mil|Absolute=True">Text "&gt;" (1820mil,455mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7671.496mil|Location2.X=7679.37mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7671.496mil|Location2.X=7679.37mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True">Track (1809.488mil,419.409mil)(1809.488mil,470.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7320.799mil|Location2.X=7366.715mil|Location1.Y=2804.439mil|Location2.Y=2836.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7320.799mil|Location2.X=7366.715mil|Location1.Y=2804.439mil|Location2.Y=2836.496mil|Absolute=True">Text "&gt;" (1460mil,455mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7310.551mil|Location2.X=7318.425mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7310.551mil|Location2.X=7318.425mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True">Track (1448.543mil,419.409mil)(1448.543mil,470.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7320.799mil|Location2.X=7366.715mil|Location1.Y=2804.439mil|Location2.Y=2836.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7320.799mil|Location2.X=7366.715mil|Location1.Y=2804.439mil|Location2.Y=2836.496mil|Absolute=True">Text "&gt;" (1460mil,455mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7371.575mil|Location2.X=7379.449mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7371.575mil|Location2.X=7379.449mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True">Track (1509.567mil,419.409mil)(1509.567mil,470.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7790.175mil|Location2.X=7836.091mil|Location1.Y=2806.496mil|Location2.Y=2838.553mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7790.175mil|Location2.X=7836.091mil|Location1.Y=2806.496mil|Location2.Y=2838.553mil|Absolute=True">Text "&gt;" (1965mil,435mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7781.496mil|Location2.X=7789.37mil|Location1.Y=2791.968mil|Location2.Y=2851.023mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7781.496mil|Location2.X=7789.37mil|Location1.Y=2791.968mil|Location2.Y=2851.023mil|Absolute=True">Track (1919.488mil,419.409mil)(1919.488mil,470.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7435.175mil|Location2.X=7481.091mil|Location1.Y=2806.496mil|Location2.Y=2838.553mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7435.175mil|Location2.X=7481.091mil|Location1.Y=2806.496mil|Location2.Y=2838.553mil|Absolute=True">Text "&gt;" (1610mil,435mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7425.551mil|Location2.X=7433.425mil|Location1.Y=2791.968mil|Location2.Y=2851.023mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7425.551mil|Location2.X=7433.425mil|Location1.Y=2791.968mil|Location2.Y=2851.023mil|Absolute=True">Track (1563.543mil,419.409mil)(1563.543mil,470.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4955.799mil|Location2.X=5001.715mil|Location1.Y=2804.439mil|Location2.Y=2836.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4955.799mil|Location2.X=5001.715mil|Location1.Y=2804.439mil|Location2.Y=2836.496mil|Absolute=True">Text "&gt;" (-905mil,455mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4945.551mil|Location2.X=4953.425mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4945.551mil|Location2.X=4953.425mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True">Track (-916.457mil,419.409mil)(-916.457mil,470.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4955.799mil|Location2.X=5001.715mil|Location1.Y=2804.439mil|Location2.Y=2836.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4955.799mil|Location2.X=5001.715mil|Location1.Y=2804.439mil|Location2.Y=2836.496mil|Absolute=True">Text "&gt;" (-905mil,455mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5006.575mil|Location2.X=5014.449mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5006.575mil|Location2.X=5014.449mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True">Track (-855.433mil,419.409mil)(-855.433mil,470.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4250.799mil|Location2.X=4296.715mil|Location1.Y=2804.439mil|Location2.Y=2836.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4250.799mil|Location2.X=4296.715mil|Location1.Y=2804.439mil|Location2.Y=2836.496mil|Absolute=True">Text "&gt;" (-1610mil,455mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4240.551mil|Location2.X=4248.425mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4240.551mil|Location2.X=4248.425mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True">Track (-1621.457mil,419.409mil)(-1621.457mil,470.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4250.799mil|Location2.X=4296.715mil|Location1.Y=2804.439mil|Location2.Y=2836.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4250.799mil|Location2.X=4296.715mil|Location1.Y=2804.439mil|Location2.Y=2836.496mil|Absolute=True">Text "&gt;" (-1610mil,455mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4301.575mil|Location2.X=4309.449mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4301.575mil|Location2.X=4309.449mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True">Track (-1560.433mil,419.409mil)(-1560.433mil,470.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3895.799mil|Location2.X=3941.715mil|Location1.Y=2804.439mil|Location2.Y=2836.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3895.799mil|Location2.X=3941.715mil|Location1.Y=2804.439mil|Location2.Y=2836.496mil|Absolute=True">Text "&gt;" (-1965mil,455mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3885.551mil|Location2.X=3893.425mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3885.551mil|Location2.X=3893.425mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True">Track (-1976.457mil,419.409mil)(-1976.457mil,470.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3895.799mil|Location2.X=3941.715mil|Location1.Y=2804.439mil|Location2.Y=2836.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3895.799mil|Location2.X=3941.715mil|Location1.Y=2804.439mil|Location2.Y=2836.496mil|Absolute=True">Text "&gt;" (-1965mil,455mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3946.575mil|Location2.X=3954.449mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3946.575mil|Location2.X=3954.449mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True">Track (-1915.433mil,419.409mil)(-1915.433mil,470.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3545.799mil|Location2.X=3591.715mil|Location1.Y=2799.439mil|Location2.Y=2831.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3545.799mil|Location2.X=3591.715mil|Location1.Y=2799.439mil|Location2.Y=2831.496mil|Absolute=True">Text "&gt;" (-2315mil,450mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3591.575mil|Location2.X=3599.449mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3591.575mil|Location2.X=3599.449mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True">Track (-2270.433mil,419.409mil)(-2270.433mil,470.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5070.175mil|Location2.X=5116.091mil|Location1.Y=2811.496mil|Location2.Y=2843.553mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5070.175mil|Location2.X=5116.091mil|Location1.Y=2811.496mil|Location2.Y=2843.553mil|Absolute=True">Text "&gt;" (-755mil,440mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5060.551mil|Location2.X=5068.425mil|Location1.Y=2791.968mil|Location2.Y=2851.023mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5060.551mil|Location2.X=5068.425mil|Location1.Y=2791.968mil|Location2.Y=2851.023mil|Absolute=True">Track (-801.457mil,419.409mil)(-801.457mil,470.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4365.175mil|Location2.X=4411.091mil|Location1.Y=2806.496mil|Location2.Y=2838.553mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4365.175mil|Location2.X=4411.091mil|Location1.Y=2806.496mil|Location2.Y=2838.553mil|Absolute=True">Text "&gt;" (-1460mil,435mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4355.551mil|Location2.X=4363.425mil|Location1.Y=2791.968mil|Location2.Y=2851.023mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4355.551mil|Location2.X=4363.425mil|Location1.Y=2791.968mil|Location2.Y=2851.023mil|Absolute=True">Track (-1506.457mil,419.409mil)(-1506.457mil,470.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4010.175mil|Location2.X=4056.091mil|Location1.Y=2811.496mil|Location2.Y=2843.553mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4010.175mil|Location2.X=4056.091mil|Location1.Y=2811.496mil|Location2.Y=2843.553mil|Absolute=True">Text "&gt;" (-1815mil,440mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4000.551mil|Location2.X=4008.425mil|Location1.Y=2791.968mil|Location2.Y=2851.023mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4000.551mil|Location2.X=4008.425mil|Location1.Y=2791.968mil|Location2.Y=2851.023mil|Absolute=True">Track (-1861.457mil,419.409mil)(-1861.457mil,470.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3655.175mil|Location2.X=3701.091mil|Location1.Y=2806.496mil|Location2.Y=2838.553mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3655.175mil|Location2.X=3701.091mil|Location1.Y=2806.496mil|Location2.Y=2838.553mil|Absolute=True">Text "&gt;" (-2170mil,435mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3645.551mil|Location2.X=3653.425mil|Location1.Y=2791.968mil|Location2.Y=2851.023mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3645.551mil|Location2.X=3653.425mil|Location1.Y=2791.968mil|Location2.Y=2851.023mil|Absolute=True">Track (-2216.457mil,419.409mil)(-2216.457mil,470.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5320.799mil|Location2.X=5366.715mil|Location1.Y=2804.439mil|Location2.Y=2836.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5320.799mil|Location2.X=5366.715mil|Location1.Y=2804.439mil|Location2.Y=2836.496mil|Absolute=True">Text "&gt;" (-540mil,455mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5310.551mil|Location2.X=5318.425mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5310.551mil|Location2.X=5318.425mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True">Track (-551.457mil,419.409mil)(-551.457mil,470.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5320.799mil|Location2.X=5366.715mil|Location1.Y=2804.439mil|Location2.Y=2836.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5320.799mil|Location2.X=5366.715mil|Location1.Y=2804.439mil|Location2.Y=2836.496mil|Absolute=True">Text "&gt;" (-540mil,455mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5371.575mil|Location2.X=5379.449mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5371.575mil|Location2.X=5379.449mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True">Track (-490.433mil,419.409mil)(-490.433mil,470.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8035.799mil|Location2.X=8081.715mil|Location1.Y=2804.439mil|Location2.Y=2836.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8035.799mil|Location2.X=8081.715mil|Location1.Y=2804.439mil|Location2.Y=2836.496mil|Absolute=True">Text "&gt;" (2175mil,455mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8026.496mil|Location2.X=8034.37mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8026.496mil|Location2.X=8034.37mil|Location1.Y=2791.968mil|Location2.Y=2851.024mil|Absolute=True">Track (2164.488mil,419.409mil)(2164.488mil,470.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6255.799mil|Location2.X=6301.715mil|Location1.Y=2799.439mil|Location2.Y=2831.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6255.799mil|Location2.X=6301.715mil|Location1.Y=2799.439mil|Location2.Y=2831.496mil|Absolute=True">Text "&gt;" (395mil,450mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6245.551mil|Location2.X=6253.425mil|Location1.Y=2786.968mil|Location2.Y=2846.024mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6245.551mil|Location2.X=6253.425mil|Location1.Y=2786.968mil|Location2.Y=2846.024mil|Absolute=True">Track (383.543mil,414.409mil)(383.543mil,465.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6255.799mil|Location2.X=6301.715mil|Location1.Y=2799.439mil|Location2.Y=2831.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6255.799mil|Location2.X=6301.715mil|Location1.Y=2799.439mil|Location2.Y=2831.496mil|Absolute=True">Text "&gt;" (395mil,450mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6306.575mil|Location2.X=6314.449mil|Location1.Y=2786.968mil|Location2.Y=2846.024mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6306.575mil|Location2.X=6314.449mil|Location1.Y=2786.968mil|Location2.Y=2846.024mil|Absolute=True">Track (444.567mil,414.409mil)(444.567mil,465.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6615.799mil|Location2.X=6661.715mil|Location1.Y=2799.439mil|Location2.Y=2831.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6615.799mil|Location2.X=6661.715mil|Location1.Y=2799.439mil|Location2.Y=2831.496mil|Absolute=True">Text "&gt;" (755mil,450mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6605.551mil|Location2.X=6613.425mil|Location1.Y=2786.968mil|Location2.Y=2846.024mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6605.551mil|Location2.X=6613.425mil|Location1.Y=2786.968mil|Location2.Y=2846.024mil|Absolute=True">Track (743.543mil,414.409mil)(743.543mil,465.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6615.799mil|Location2.X=6661.715mil|Location1.Y=2799.439mil|Location2.Y=2831.496mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6615.799mil|Location2.X=6661.715mil|Location1.Y=2799.439mil|Location2.Y=2831.496mil|Absolute=True">Text "&gt;" (755mil,450mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6666.575mil|Location2.X=6674.449mil|Location1.Y=2786.968mil|Location2.Y=2846.024mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6666.575mil|Location2.X=6674.449mil|Location1.Y=2786.968mil|Location2.Y=2846.024mil|Absolute=True">Track (804.567mil,414.409mil)(804.567mil,465.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5430.175mil|Location2.X=5476.091mil|Location1.Y=2811.496mil|Location2.Y=2843.553mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5430.175mil|Location2.X=5476.091mil|Location1.Y=2811.496mil|Location2.Y=2843.553mil|Absolute=True">Text "&gt;" (-395mil,440mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5420.551mil|Location2.X=5428.425mil|Location1.Y=2791.968mil|Location2.Y=2851.023mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5420.551mil|Location2.X=5428.425mil|Location1.Y=2791.968mil|Location2.Y=2851.023mil|Absolute=True">Track (-441.457mil,419.409mil)(-441.457mil,470.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8145.175mil|Location2.X=8191.091mil|Location1.Y=2806.496mil|Location2.Y=2838.553mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8145.175mil|Location2.X=8191.091mil|Location1.Y=2806.496mil|Location2.Y=2838.553mil|Absolute=True">Text "&gt;" (2320mil,435mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8136.496mil|Location2.X=8144.37mil|Location1.Y=2791.968mil|Location2.Y=2851.023mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8136.496mil|Location2.X=8144.37mil|Location1.Y=2791.968mil|Location2.Y=2851.023mil|Absolute=True">Track (2274.488mil,419.409mil)(2274.488mil,470.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6370.175mil|Location2.X=6416.091mil|Location1.Y=2801.496mil|Location2.Y=2833.553mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6370.175mil|Location2.X=6416.091mil|Location1.Y=2801.496mil|Location2.Y=2833.553mil|Absolute=True">Text "&gt;" (545mil,430mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6360.551mil|Location2.X=6368.425mil|Location1.Y=2786.968mil|Location2.Y=2846.023mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6360.551mil|Location2.X=6368.425mil|Location1.Y=2786.968mil|Location2.Y=2846.023mil|Absolute=True">Track (498.543mil,414.409mil)(498.543mil,465.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6725.175mil|Location2.X=6771.091mil|Location1.Y=2801.496mil|Location2.Y=2833.553mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6725.175mil|Location2.X=6771.091mil|Location1.Y=2801.496mil|Location2.Y=2833.553mil|Absolute=True">Text "&gt;" (900mil,430mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6716.496mil|Location2.X=6724.37mil|Location1.Y=2786.968mil|Location2.Y=2846.023mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6716.496mil|Location2.X=6724.37mil|Location1.Y=2786.968mil|Location2.Y=2846.023mil|Absolute=True">Track (854.488mil,414.409mil)(854.488mil,465.591mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8050.175mil|Location2.X=8096.091mil|Location1.Y=3751.496mil|Location2.Y=3783.553mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8050.175mil|Location2.X=8096.091mil|Location1.Y=3751.496mil|Location2.Y=3783.553mil|Absolute=True">Text "&gt;" (2225mil,1380mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8048.898mil|Location2.X=8056.772mil|Location1.Y=3749.803mil|Location2.Y=3781.299mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8048.898mil|Location2.X=8056.772mil|Location1.Y=3749.803mil|Location2.Y=3781.299mil|Absolute=True">Track (2186.89mil,1377.244mil)(2186.89mil,1400.866mil)  Top Overlay</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8050.175mil|Location2.X=8096.091mil|Location1.Y=3751.496mil|Location2.Y=3783.553mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8050.175mil|Location2.X=8096.091mil|Location1.Y=3751.496mil|Location2.Y=3783.553mil|Absolute=True">Text "&gt;" (2225mil,1380mil)  Top Overlay</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\2016%E5%9B%BD%E8%B5%9B\%E7%94%B5%E8%B7%AF\%E8%8A%82%E8%83%BD%E7%BB%84%E7%90%86%E6%83%B3%E4%BA%8C%E6%9E%81%E7%AE%A1%E9%98%B5%E5%88%97%E5%8F%96%E7%94%B5%E6%9D%BF\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8098.11mil|Location2.X=8105.984mil|Location1.Y=3749.803mil|Location2.Y=3781.299mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\2016国赛\电路\节能组理想二极管阵列取电板\ideal V2.0.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8098.11mil|Location2.X=8105.984mil|Location1.Y=3749.803mil|Location2.Y=3781.299mil|Absolute=True">Track (2236.102mil,1377.244mil)(2236.102mil,1400.866mil)  Top Overlay</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br></body>
+</html>

@@ -1,0 +1,15 @@
+"C:\IAR\arm\bin\armproc.dll" 
+
+"C:\IAR\arm\bin\armjlink2.dll" 
+
+"C:\Users\chengcong\Desktop\电轨节能组V1.16 8.15\电轨节能组V1.16添加十字\landzo_demo\landao_ewp\Release\Exe\Landzo_demo.out" 
+
+--plugin "C:\IAR\arm\bin\armbat.dll" 
+
+--device_macro "C:\IAR\arm\config\debugger\NXP\KLxx.dmac" 
+
+--flash_loader "C:\IAR\arm\config\flashloader\NXP\FlashKLxx128K.board" 
+
+
+
+

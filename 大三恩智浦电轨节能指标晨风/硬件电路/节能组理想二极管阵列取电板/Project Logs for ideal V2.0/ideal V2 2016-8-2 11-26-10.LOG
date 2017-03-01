@@ -1,0 +1,70 @@
+Change Component Designator: OldDesignator=D5 NewDesignator=D7
+Change Component Designator: OldDesignator=D6 NewDesignator=D8
+Change Component Designator: OldDesignator=D7 NewDesignator=D9
+Change Component Designator: OldDesignator=D8 NewDesignator=D10
+Change Component Designator: OldDesignator=D9 NewDesignator=D13
+Change Component Designator: OldDesignator=D10 NewDesignator=D14
+Change Component Designator: OldDesignator=D11 NewDesignator=D18
+Change Component Designator: OldDesignator=D12 NewDesignator=D15
+Change Component Designator: OldDesignator=D13 NewDesignator=D19
+Change Component Designator: OldDesignator=D14 NewDesignator=D20
+Change Component Designator: OldDesignator=D15 NewDesignator=D24
+Change Component Designator: OldDesignator=D16 NewDesignator=D21
+Change Component Designator: OldDesignator=D17 NewDesignator=D25
+Change Component Designator: OldDesignator=PIN*5 NewDesignator=PIN*7
+Change Component Designator: OldDesignator=PIN*6 NewDesignator=PIN*8
+Change Component Designator: OldDesignator=PIN*7 NewDesignator=PIN*12
+Change Component Designator: OldDesignator=PIN*8 NewDesignator=PIN*9
+Added Component: Designator=D5(1206(2))
+Added Component: Designator=D6(1206(2))
+Added Component: Designator=D11(1206(2))
+Added Component: Designator=D12(1206(2))
+Added Component: Designator=D16(1206(2))
+Added Component: Designator=D17(1206(2))
+Added Component: Designator=D22(1206(2))
+Added Component: Designator=D23(1206(2))
+Added Component: Designator=PIN*5(PIN)
+Added Component: Designator=PIN*6(PIN)
+Added Component: Designator=PIN*10(PIN)
+Added Component: Designator=PIN*11(PIN)
+Added Pin To Net: NetName=VCC Pin=D5-2
+Added Pin To Net: NetName=VCC Pin=D6-2
+Added Pin To Net: NetName=GND Pin=D11-1
+Added Pin To Net: NetName=GND Pin=D12-1
+Added Pin To Net: NetName=VCC Pin=D16-2
+Added Pin To Net: NetName=VCC Pin=D17-2
+Added Pin To Net: NetName=GND Pin=D22-1
+Added Pin To Net: NetName=GND Pin=D23-1
+Change Net Name : Old Net Name=NetD9_1 New Net Name=NetD13_1
+Change Net Name : Old Net Name=NetD10_1 New Net Name=NetD14_1
+Change Net Name : Old Net Name=NetD11_1 New Net Name=NetD18_1
+Change Net Name : Old Net Name=NetD12_1 New Net Name=NetD15_1
+Added Pin To Net: NetName=NetD5_1 Pin=D5-1
+Added Pin To Net: NetName=NetD5_1 Pin=D11-2
+Added Pin To Net: NetName=NetD5_1 Pin=PIN*5-1
+Added Net: Name=NetD5_1
+Added Pin To Net: NetName=NetD6_1 Pin=D6-1
+Added Pin To Net: NetName=NetD6_1 Pin=D12-2
+Added Pin To Net: NetName=NetD6_1 Pin=PIN*6-1
+Added Net: Name=NetD6_1
+Added Pin To Net: NetName=NetD16_1 Pin=D16-1
+Added Pin To Net: NetName=NetD16_1 Pin=D22-2
+Added Pin To Net: NetName=NetD16_1 Pin=PIN*10-1
+Added Net: Name=NetD16_1
+Added Pin To Net: NetName=NetD17_1 Pin=D17-1
+Added Pin To Net: NetName=NetD17_1 Pin=D23-2
+Added Pin To Net: NetName=NetD17_1 Pin=PIN*11-1
+Added Net: Name=NetD17_1
+Added Member To Class: ClassName=ideal V2.0 Member=Component D1 S4
+Added Member To Class: ClassName=ideal V2.0 Member=Component D18 S4
+Added Member To Class: ClassName=ideal V2.0 Member=Component D19 S4
+Added Member To Class: ClassName=ideal V2.0 Member=Component D20 S4
+Added Member To Class: ClassName=ideal V2.0 Member=Component D21 S4
+Added Member To Class: ClassName=ideal V2.0 Member=Component D22 S4
+Added Member To Class: ClassName=ideal V2.0 Member=Component D23 S4
+Added Member To Class: ClassName=ideal V2.0 Member=Component D24 S4
+Added Member To Class: ClassName=ideal V2.0 Member=Component D25 Diode 1N4001
+Added Member To Class: ClassName=ideal V2.0 Member=Component PIN*9 PIN
+Added Member To Class: ClassName=ideal V2.0 Member=Component PIN*10 PIN
+Added Member To Class: ClassName=ideal V2.0 Member=Component PIN*11 PIN
+Added Member To Class: ClassName=ideal V2.0 Member=Component PIN*12 PIN

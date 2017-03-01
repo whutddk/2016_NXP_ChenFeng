@@ -1,0 +1,8 @@
+Added Component: Designator=SW1(SW-125V6A(-))
+Added Pin To Net: NetName=NetC8_1 Pin=CB1-1
+Added Pin To Net: NetName=12V Pin=CB1-2
+Added Pin To Net: NetName=VCC Pin=SW1-0
+Added Pin To Net: NetName=NetC7_1 Pin=SW1-1
+Added Pin To Net: NetName=NetC7_1 Pin=SW1-2
+Added Member To Class: ClassName=ideal V2.0 Member=Component CB1 Circuit Breaker
+Added Member To Class: ClassName=ideal V2.0 Member=Component SW1 switch

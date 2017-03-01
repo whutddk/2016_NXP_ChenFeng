@@ -1,0 +1,325 @@
+###############################################################################
+#                                                                             #
+# IAR ELF Linker V6.70.1.5641/W32 for ARM               13/Jun/2014  21:51:49 #
+# Copyright 2007-2013 IAR Systems AB.                                         #
+#                                                                             #
+#    Output file  =  F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25              #
+#                    -urt\bulid\gpio_demo\Debug\Exe\Landzo_gpio_demo.out      #
+#    Map file     =  F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25              #
+#                    -urt\bulid\gpio_demo\Debug\List\Landzo_gpio_demo.map     #
+#    Command line =  "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\adc.o"                    #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\alloc.o"                  #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\arm_cm0.o"                #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\assert.o"                 #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\cmp.o"                    #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\common.o"                 #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\crt0.o"                   #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\dac.o"                    #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\dma.o"                    #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\gpio.o"                   #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\i2c.o"                    #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\io.o"                     #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\isr.o"                    #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\lptmr.o"                  #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\main.o"                   #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\mcg.o"                    #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\memtest.o"                #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\pit.o"                    #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\port.o"                   #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\printf.o"                 #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\queue.o"                  #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\start.o"                  #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\startup.o"                #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\stdlib.o"                 #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\sysinit.o"                #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\systick.o"                #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\tpm.o"                    #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\uart.o"                   #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\uif.o"                    #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Obj\vectors.o" -o             #
+#                    "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25             #
+#                    -urt\bulid\gpio_demo\Debug\Exe\Landzo_gpio_demo.out"     #
+#                    --map "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25       #
+#                    -urt\bulid\gpio_demo\Debug\List\Landzo_gpio_demo.map"    #
+#                    --config "F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25    #
+#                    -urt\bulid\gpio_demo\..\config files\16KB_RAM.icf"       #
+#                    --semihosting --entry __iar_program_start --vfe          #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A1":  place at 0x1ffff000 { ro section .intvec };
+"P1":  place in [from 0x1ffff0c0 to 0x1fffffff] |
+                [from 0x20000000 to 0x20002fff] { ro, block CodeRelocate };
+"P2":  place in [from 0x1ffff0c0 to 0x1fffffff] |
+                [from 0x20000000 to 0x20002fff] {
+          rw, block CodeRelocateRam, block CSTACK, block HEAP };
+
+  Section              Kind        Address    Size  Object
+  -------              ----        -------    ----  ------
+"A1":                                         0xc0
+  .intvec              const    0x1ffff000    0xc0  vectors.o [1]
+                              - 0x1ffff0c0    0xc0
+
+"P1":                                       0x1094
+  .text                ro code  0x20000000   0x534  printf.o [1]
+  .text                ro code  0x20000534    0xe0  I32DivModFast.o [4]
+  .text                ro code  0x20000614    0x24  stdlib.o [1]
+  .text                ro code  0x20000638     0x2  IntDivZer.o [4]
+  .text                ro code  0x2000063a    0x2a  zero_init3.o [4]
+  .text                ro code  0x20000664   0x288  mcg.o [1]
+  .text                ro code  0x200008ec   0x218  uart.o [1]
+  .text                ro code  0x20000b04    0x40  port.o [1]
+  .text                ro code  0x20000b44   0x11c  gpio.o [1]
+  .text                ro code  0x20000c60    0xb8  startup.o [1]
+  .text                ro code  0x20000d18    0x54  arm_cm0.o [1]
+  .text                ro code  0x20000d6c    0x78  pit.o [1]
+  .text                ro code  0x20000de4    0x64  main.o [1]
+  .text                ro code  0x20000e48    0x58  isr.o [1]
+  .text                ro code  0x20000ea0    0x58  sysinit.o [1]
+  .rodata              const    0x20000ef8    0x38  arm_cm0.o [1]
+  .rodata              const    0x20000f30    0x30  vectors.o [1]
+  .text                ro code  0x20000f60    0x28  data_init.o [4]
+  .iar.init_table      const    0x20000f88    0x10  - Linker created -
+  .text                ro code  0x20000f98    0x1c  start.o [1]
+  .data_init                    0x20000fb4    0x1c  <Block>
+    Initializer bytes  ro data  0x20000fb4    0x1c  <for .data-1>
+  .text                ro code  0x20000fd0    0x1a  cmain.o [4]
+  .text                ro code  0x20000fea     0x4  low_level_init.o [3]
+  .text                ro code  0x20000fee     0x8  exit.o [3]
+  .text                ro code  0x20000ff8     0xa  cexit.o [4]
+  .text                ro code  0x20001004    0x14  exit.o [5]
+  .noinit              ro code  0x20001018    0x18  crt0.o [1]
+  .text                ro code  0x20001030    0x18  vectors.o [1]
+  .rodata              const    0x20001048    0x14  gpio.o [1]
+  .rodata              const    0x2000105c    0x14  gpio.o [1]
+  .text                ro code  0x20001070    0x10  io.o [1]
+  .text                ro code  0x20001080     0xc  cstartup_M.o [4]
+  .rodata              const    0x2000108c     0x8  uart.o [1]
+  .rodata              const    0x20001094     0x0  zero_init3.o [4]
+  CodeRelocate                  0x20001094     0x0  <Block>
+                              - 0x20001094  0x1094
+
+"P2", part 1 of 3:                            0x1c
+  .data                         0x20001094    0x1c  <Block>
+    .data-1                     0x20001094    0x1c  <Init block>
+      .data            inited   0x20001094     0x8  mcg.o [1]
+      .data            inited   0x2000109c    0x14  port.o [1]
+                              - 0x200010b0    0x1c
+
+"P2", part 2 of 3:                             0xd
+  .bss                          0x200010b0     0xd  <Block>
+    .bss               zero     0x200010b0     0x4  sysinit.o [1]
+    .bss               zero     0x200010b4     0x4  sysinit.o [1]
+    .bss               zero     0x200010b8     0x4  sysinit.o [1]
+    .bss               zero     0x200010bc     0x1  main.o [1]
+                              - 0x200010bd     0xd
+
+"P2", part 3 of 3:                           0x403
+  CodeRelocateRam               0x200010bd     0x0  <Block>
+  CSTACK                        0x200010c0   0x400  <Block>
+    CSTACK             uninit   0x200010c0   0x400  <Block tail>
+                              - 0x200014c0   0x403
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0xd:
+          0x200010b0   0xd
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module            ro code  ro data  rw data
+    ------            -------  -------  -------
+F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25 -urt\bulid\gpio_demo\Debug\Obj: [1]
+    arm_cm0.o              84       56
+    crt0.o                 24
+    gpio.o                284       40
+    io.o                   16
+    isr.o                  88
+    main.o                100                 1
+    mcg.o                 648        8        8
+    pit.o                 120
+    port.o                 64       20       20
+    printf.o            1 332
+    start.o                28
+    startup.o             184
+    stdlib.o               36
+    sysinit.o              88                12
+    uart.o                536        8
+    vectors.o              24      240
+    -------------------------------------------
+    Total:              3 656      372       41
+
+command line: [2]
+    -------------------------------------------
+    Total:
+
+dl6M_tln.a: [3]
+    exit.o                  8
+    low_level_init.o        4
+    -------------------------------------------
+    Total:                 12
+
+rt6M_tl.a: [4]
+    I32DivModFast.o       224
+    IntDivZer.o             2
+    cexit.o                10
+    cmain.o                26
+    cstartup_M.o           12
+    data_init.o            40
+    zero_init3.o           42
+    -------------------------------------------
+    Total:                356
+
+shb_l.a: [5]
+    exit.o                 20
+    -------------------------------------------
+    Total:                 20
+
+    Gaps                    4
+    Linker created                  16    1 024
+-----------------------------------------------
+    Grand Total:        4 048      388    1 065
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.bss$$Base              0x200010b0          --   Gb  - Linker created -
+.bss$$Limit             0x200010bd          --   Gb  - Linker created -
+.data$$Base             0x20001094          --   Gb  - Linker created -
+.data$$Limit            0x200010b0          --   Gb  - Linker created -
+.data_init$$Base        0x20000fb4          --   Gb  - Linker created -
+.data_init$$Limit       0x20000fd0          --   Gb  - Linker created -
+?main                   0x20000fd1         Code  Gb  cmain.o [4]
+CSTACK$$Base            0x200010c0          --   Gb  - Linker created -
+CSTACK$$Limit           0x200014c0          --   Gb  - Linker created -
+CodeRelocate$$Base      0x20001094          --   Gb  - Linker created -
+CodeRelocate$$Limit     0x20001094          --   Gb  - Linker created -
+CodeRelocateRam$$Base   0x200010bd          --   Gb  - Linker created -
+CodeRelocateRam$$Limit  0x200010bd          --   Gb  - Linker created -
+GPIO_ARR                0x2000105c   0x14  Data  Gb  gpio.o [1]
+PIT_IRQHandler          0x20000e73   0x1e  Code  Gb  isr.o [1]
+PORTX                   0x2000109c   0x14  Data  Gb  port.o [1]
+PORT_ARR                0x20001048   0x14  Data  Gb  gpio.o [1]
+Region$$Table$$Base     0x20000f88          --   Gb  - Linker created -
+Region$$Table$$Limit    0x20000f98          --   Gb  - Linker created -
+Time100flg              0x200010bc    0x1  Data  Gb  main.o [1]
+UART_ARR                0x2000108c    0x8  Data  Gb  uart.o [1]
+__VECTOR_RAM {Abs}      0x1ffff000          --   Gb  command line/config [2]
+__VECTOR_TABLE {Abs}    0x1ffff000          --   Gb  command line/config [2]
+__aeabi_idiv            0x20000561         Code  Gb  I32DivModFast.o [4]
+__aeabi_idiv0           0x20000639         Code  Gb  IntDivZer.o [4]
+__aeabi_idivmod         0x20000561         Code  Gb  I32DivModFast.o [4]
+__aeabi_uidiv           0x20000567         Code  Gb  I32DivModFast.o [4]
+__aeabi_uidivmod        0x20000567         Code  Gb  I32DivModFast.o [4]
+__cmain                 0x20000fd1         Code  Gb  cmain.o [4]
+__exit                  0x20001005   0x14  Code  Gb  exit.o [5]
+__iar_data_init3        0x20000f61   0x28  Code  Gb  data_init.o [4]
+__iar_program_start     0x20001081         Code  Gb  cstartup_M.o [4]
+__iar_zero_init3        0x2000063b   0x2a  Code  Gb  zero_init3.o [4]
+__low_level_init        0x20000feb    0x4  Code  Gb  low_level_init.o [3]
+__startup               0x20001019         Code  Gb  crt0.o [1]
+__vector_table          0x1ffff000   0xc0  Data  Gb  vectors.o [1]
+_call_main              0x20000fdd         Code  Gb  cmain.o [4]
+_exit                   0x20000ff9         Code  Gb  cexit.o [4]
+_main                   0x20000fe7         Code  Gb  cmain.o [4]
+bus_clk_khz             0x200010b8    0x4  Data  Gb  sysinit.o [1]
+common_startup          0x20000c61   0xb8  Code  Gb  startup.o [1]
+core_clk_khz            0x200010b0    0x4  Data  Gb  sysinit.o [1]
+core_clk_mhz            0x200010b4    0x4  Data  Gb  sysinit.o [1]
+default_isr             0x20001031    0xe  Code  Gb  vectors.o [1]
+enable_irq              0x20000d1f   0x3e  Code  Gb  arm_cm0.o [1]
+exit                    0x20000fef    0x8  Code  Gb  exit.o [3]
+gpio_init               0x20000b45   0x6e  Code  Gb  gpio.o [1]
+gpio_reverse            0x20000bff   0x56  Code  Gb  gpio.o [1]
+gpio_set                0x20000bb3   0x4c  Code  Gb  gpio.o [1]
+lptmr_test_handler      0x20000e49    0xe  Code  Gb  isr.o [1]
+main                    0x20000de5   0x64  Code  Gb  main.o [1]
+mcg_div                 0x20001094    0x8  Data  Gb  mcg.o [1]
+out_char                0x20001071   0x10  Code  Gb  io.o [1]
+pit_init                0x20000d6d   0x6c  Code  Gb  pit.o [1]
+pll_init                0x20000665  0x288  Code  Gb  mcg.o [1]
+port_init               0x20000b05   0x36  Code  Gb  port.o [1]
+porta_handler           0x20000e57   0x1c  Code  Gb  isr.o [1]
+printf                  0x20000505   0x2a  Code  Gb  printf.o [1]
+printk                  0x20000127  0x3de  Code  Gb  printf.o [1]
+printk_mknumstr         0x20000035   0xb2  Code  Lc  printf.o [1]
+printk_pad_space        0x20000107   0x20  Code  Lc  printf.o [1]
+printk_pad_zero         0x200000e7   0x20  Code  Lc  printf.o [1]
+printk_putc             0x20000001   0x34  Code  Lc  printf.o [1]
+start                   0x20000f99   0x1c  Code  Gb  start.o [1]
+strlen                  0x20000615   0x24  Code  Gb  stdlib.o [1]
+sys_init                0x20000ea1   0x58  Code  Gb  sysinit.o [1]
+uart_init               0x200008ed  0x19a  Code  Gb  uart.o [1]
+uart_send1              0x20000a87   0x4a  Code  Gb  uart.o [1]
+write_vtor              0x20000d19    0x6  Code  Gb  arm_cm0.o [1]
+
+
+[1] = F:\蓝宙电子MKL25系统板资料\kl25IAR例程\KL25 -urt\bulid\gpio_demo\Debug\Obj
+[2] = command line
+[3] = dl6M_tln.a
+[4] = rt6M_tl.a
+[5] = shb_l.a
+
+  4 048 bytes of readonly  code memory
+    388 bytes of readonly  data memory
+  1 065 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

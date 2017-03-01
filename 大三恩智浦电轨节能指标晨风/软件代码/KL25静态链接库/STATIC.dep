@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>1153010767</fileChecksum>
+  <configuration>
+    <name>Debug</name>
+    <outputs>
+      <file>$PROJ_DIR$\Debug\Exe\STATIC.a</file>
+      <file>$PROJ_DIR$\Debug\Obj\adc.pbi</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\cmp\cmp.c</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\cmp\cmp.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\adc\adc.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\cmp.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\cmp.pbi</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\adc\adc.c</file>
+      <file>$PROJ_DIR$\Debug\Exe\STATIC.out</file>
+      <file>$PROJ_DIR$\Debug\Obj\adc.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\STATIC.pbd</file>
+      <file>$PROJ_DIR$\Debug\Obj\dac.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\dma.pbi</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\DMA\dma.c</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\led\led.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\dac.o</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\gpio\gpio.c</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\DMA\dma.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\dac\dac.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\led.pbi</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\dac\dac.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\gpio.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\dma.o</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\gpio\gpio.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\gpio\gpio_cfg.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\gpio.o</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\USBHost\USBMST.c</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\USBHost\USBMST.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\USBHost\SCSI.c</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\USBHost\SCSI.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\USBHost\USBHost.c</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\USBHost\USBHost.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\lcd\lcd.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\lcd.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\kb.o</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\kb\kb.c</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\lcd\lcd.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\lcd.o</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\i2c\i2c_cfg.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\led\led.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\kb\kb.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\i2c.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\kb.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\led.o</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\i2c\i2c.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\i2c.pbi</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\i2c\i2c.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\systick\systick.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\systick.pbi</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\systick\systick.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\systick.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\rtc.o</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\rtc\rtc.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\rtc.pbi</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\rtc\rtc.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\SPI.o</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\spi\SPI.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\spi\SPI.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\SPI.pbi</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\tick_timer\tick_timer.c</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\tpm\tpm.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\uart.o</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\tpm\tpm.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\uart.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\tick_timer.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\tick_timer.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\usb.o</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\tick_timer\tick_timer.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\mcg\mcg_cfg.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\light.o</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\mcg\Fire_kinetis_MCG_CFG.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\mcg\mcg.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\mcg.pbi</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\lptmr\lptmr.c</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\light\light.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\lptmr.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\lptmr.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\mcg.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\light.pbi</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\light\light.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\lptmr\lptmr.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\mcg\mcg.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\pit.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\port.o</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\pit\pit.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\port\port.c</file>
+      <file>$PROJ_DIR$\Debug\Obj\port.pbi</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\pit\pit.c</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\port\port.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\pit.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\tpm.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\USBHost.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\tsi.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\SCSI.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\USBMST.o</file>
+      <file>$PROJ_DIR$\Debug\Obj\tsi.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\tpm.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\USBMST.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\SCSI.pbi</file>
+      <file>$PROJ_DIR$\Debug\Obj\USBHost.pbi</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\tsi\tsi.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\USBDevice\usb.c</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\uart\uart.c</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\uart\uart.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\tsi\tsi.c</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\USBDevice\usb.h</file>
+      <file>$PROJ_DIR$\Debug\Obj\usb.pbi</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\common\memtest.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\common\typedef.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\common\assert.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\platforms\freedom.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\common\uif.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\app\IIC.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\app\ITAC\freecars.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\common\io.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\fire_drivers_cfg.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\common\queue.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\common\stdlib.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\cpu\arm_cm0.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\cpu\sysinit.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\app\calculate.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\app\LDC1614.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\app\ITAC\BSP.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\app\ITAC\ITAC.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\common\startup.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\cpu\vectors.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\app\ITAC\OLED.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\app\ITAC\ctl.h</file>
+      <file>$TOOLKIT_DIR$\doc\infocenter\index.ENU.html</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\common\common.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\cpu\headers\MKL25Z4.h</file>
+      <file>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\app\include.h</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>IARCHIVE</name>
+          <file> 0</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\cmp\cmp.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 6</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 5</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 3 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 3 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\adc\adc.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 1</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 9</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 4 139 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 118 23 103 46 38 80 84 62 17 126 128 113 127 129 114 132 133</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 4 139 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 118 23 103 46 38 80 84 62 17 126 128 113 127 129 114 132 133</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\DMA\dma.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 12</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 22</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\led\led.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 19</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 39 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 39 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\gpio\gpio.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 21</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 25</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 23 139 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 118 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 23 139 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 118 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\dac\dac.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 11</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 15</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 20 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 20 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\USBHost\USBMST.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 97</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 94</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 27 31</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 27</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\USBHost\SCSI.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 98</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 93</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 29 31</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 29 31</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\USBHost\USBHost.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 99</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 91</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 31</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 31</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\kb\kb.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 42</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 40 139 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 118 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 40 139 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 118 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\lcd\lcd.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 33</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 32 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 32 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\i2c\i2c.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 45</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 41</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 46 38 139 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 118 23 103 4 80 84 62 17 126 128 113 127 129 114 132 133</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 46 38 139 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 118 23 103 4 80 84 62 17 126 128 113 127 129 114 132 133</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\systick\systick.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 48</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 50</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 49 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 49 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\rtc\rtc.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 53</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 51</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 139 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 118 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 54</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 139 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 118 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 54</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\spi\SPI.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 58</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 55</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 56 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 56 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\tick_timer\tick_timer.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 64</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 65</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 67 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 67 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\tpm\tpm.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 96</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 90</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 62 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 62 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\mcg\mcg.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 72</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 77</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118 68</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118 68</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\lptmr\lptmr.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 76</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 75</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 80 139 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 118 23 103 46 38 4 84 62 17 126 128 113 127 129 114 132 133</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 80 139 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 118 23 103 46 38 4 84 62 17 126 128 113 127 129 114 132 133</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\light\light.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 78</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 79 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 79 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\port\port.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 86</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 83</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 88 139 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 118 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 88 139 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 118 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\pit\pit.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 82</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 89</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 84 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 84 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\USBDevice\usb.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 106</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 66</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 105 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 105 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\uart\uart.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 63</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 61</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\tsi\tsi.c</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 95</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 92</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 100 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+        <tool>
+          <name>ICCARM</name>
+          <file> 100 136 138 137 135 119 115 123 112 122 117 109 116 107 120 121 111 108 110 81 70 124 131 130 125 24 88 139 23 103 46 38 4 80 84 62 17 126 128 113 127 129 114 132 133 118</file>
+        </tool>
+      </inputs>
+    </file>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\led\led.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\USBHost\USBMST.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\USBHost\SCSI.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\USBHost\USBHost.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\kb\kb.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\lcd\lcd.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\tick_timer\tick_timer.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\light\light.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>$PROJ_DIR$\..\landzoKL25_LED&#x8C03;&#x8BD5;&#x7A0B;&#x5e8F;\src\drivers\USBDevice\usb.c</name>
+      <tool>ICCARM</tool>
+    </forcedrebuild>
+  </configuration>
+  <configuration>
+    <name>Release</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+

@@ -1,0 +1,9 @@
+Added Component: Designator=L?(C2012)
+Added Component: Designator=R?(R2012)
+Added Pin To Net: NetName=VCC Pin=L?-1
+Added Pin To Net: NetName=GND Pin=R?-2
+Added Pin To Net: NetName=NetL?_2 Pin=L?-2
+Added Pin To Net: NetName=NetL?_2 Pin=R?-1
+Added Net: Name=NetL?_2
+Added Member To Class: ClassName=ideal V2.0 Member=Component L? LED
+Added Member To Class: ClassName=ideal V2.0 Member=Component R? Res

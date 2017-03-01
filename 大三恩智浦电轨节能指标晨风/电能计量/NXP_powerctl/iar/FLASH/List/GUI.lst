@@ -1,0 +1,382 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.20.2.7424/W32 for ARM        15/May/2016  17:22:46
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\app\ITAC\GUI.c
+#    Command line =  
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\app\ITAC\GUI.c
+#        -D LPLD_K60 -lCN
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\FLASH\List\
+#        -lB
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\FLASH\List\
+#        -o
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\FLASH\Obj\
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config "C:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\app\
+#        -I
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\app\BSP\
+#        -I
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\app\ITAC\
+#        -I
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\app\CTL\
+#        -I
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\CPU\
+#        -I
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\common\
+#        -I
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\LPLD\
+#        -I
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\LPLD\HW\
+#        -I
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\LPLD\DEV\
+#        -I
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\uCOS-II\Ports\
+#        -I
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\uCOS-II\Source\
+#        -I
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\FatFs\
+#        -I
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\FatFs\option\
+#        -I
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\USB\common\
+#        -I
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\USB\driver\
+#        -I
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\USB\descriptor\
+#        -I
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\USB\class\
+#        -On -I "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\CMSIS\Include\" -D ARM_MATH_CM4
+#    List file    =  
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\FLASH\List\GUI.lst
+#    Object file  =  
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\FLASH\Obj\GUI.o
+#
+###############################################################################
+
+D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_powerctl\app\ITAC\GUI.c
+      1          //DDK
+      2          //2016 3 14
+      3          
+      4          #include "include.h"
+      5          
+      6          struct _GUI GUI;
+      7          
+      8          /*人机交互开始工作
+      9          在break之前，一直是大循环
+     10          */
+     11          
+     12          int16 AIM_Buff[7]={
+     13            1000,        //Set_Speed----0
+     14            1100,       //Step_Speed----1
+     15            1200,      //Set_Speed---2
+     16            1300,      //Set_Speed---3
+     17            1400,      //Set_Speed---4
+     18            1500,
+     19            1600,
+     20          };
+     21          
+     22          float Dir_Buff[14]={                      
+     23            0.45,      // Dir_Kp_1------0
+     24            1.5,      //Dir_Kd_1------1
+     25            0.45,     //Dir_Kp_2------2
+     26            1.5,        //Dir_Kd_2------3
+     27            0.5,      //Dir_Kp_3-----4
+     28            1.5,      //Dir_Kd_3----5
+     29            0.5,      //Dir_Kp_4-----6
+     30            1.8,      //Dir_Kd_4-----7
+     31            0.47,      //Dir_Kp_5-----8
+     32            1.7,      //Dir_Kd_5----9
+     33            
+     34            0.48,
+     35            1.8,
+     36            
+     37            0.52,
+     38            1.88,
+     39            
+     40          };
+     41          
+     42          void GUI_work()
+     43          {
+     44            uint8 key_temp = 0;
+     45            //大循环
+     46            
+     47            GUI.page = 1;
+     48            GUI.point = 1;
+     49            GUI.para.AI = 0;
+     50            GUI.para.endline = 1;
+     51            for (;;)
+     52            {
+     53              //刷新液晶
+     54              GUI_update();
+     55              //当不按键时，一直循环检测
+     56              while ( !key_temp )
+     57              {   
+     58                key_temp = wait_key();
+     59              }
+     60              //按键之后跳出，对按键值进行判定
+     61              
+     62              /*page，左右键*/
+     63              //左键，左翻页
+     64              if ( key_temp == 2 )
+     65              {
+     66                GUI.page --;
+     67                //最小1页
+     68                if ( GUI.page < 1 )
+     69                {
+     70                  GUI.page = 1;
+     71                }
+     72              }
+     73              //右键，右翻页
+     74              if ( key_temp == 3 )
+     75              {
+     76                GUI.page ++;
+     77                //最多6页，不够再加
+     78                if ( GUI.page > 5 )
+     79                {
+     80                  GUI.page = 5;
+     81                }
+     82              }
+     83              
+     84              //上键 目前只能在第二/4页操作
+     85              if ( key_temp == 1 && (GUI.page == 2 ||GUI.page == 4 ))
+     86              {
+     87                GUI.point --;
+     88                if ( GUI.point < 1 )
+     89                {
+     90                  GUI.point = 1;
+     91                }
+     92              }
+     93              
+     94              //下键，目前只能在第三/4页操作
+     95              if ( key_temp == 4 && (GUI.page == 2 ||GUI.page == 4 ))
+     96              {
+     97                GUI.point ++ ;
+     98                if ( GUI.point > 4 )
+     99                {
+    100                  GUI.point = 4;
+    101                }
+    102              }
+    103              
+    104              //确认键，根据需要写条件
+    105              if ( key_temp == 5 )
+    106              {
+    107                //在第二页
+    108                if ( GUI.page == 2)
+    109                {
+    110                  switch (GUI.point)
+    111                  {
+    112                    case(1): 
+    113                      sensor_isr();
+    114                      break; //调用传感器校准函数
+    115                      
+    116                      case(2):
+    117                        dec_sec += 3;
+    118                        if(dec_sec > 12)
+    119                        {
+    120                          dec_sec = 3;
+    121                        }
+    122                        
+    123                      case(3):
+    124                        
+    125                        GUI.para.endline_time += 2000;
+    126                        if(GUI.para.endline_time > 29000)
+    127                        {
+    128                          GUI.para.endline_time = 10000;
+    129                        }
+    130          
+    131                        
+    132                  }
+    133                }
+    134                //第四页，，改参数
+    135                if(GUI.page == 4)
+    136                {
+    137                  switch (GUI.point)
+    138                  {
+    139                    case(1):
+    140                      GUI.para.AI ++;
+    141                      if (  GUI.para.AI > 5 )
+    142                      {
+    143                        GUI.para.AI = 1;
+    144                      }
+    145                      break;
+    146                      
+    147                      
+    148                      case(2):
+    149                        AIM_Buff[GUI.para.AI - 1] += 100;
+    150                        break;
+    151                        
+    152                        case(3):
+    153                          Dir_Buff[GUI.para.AI * 2 - 2] += 0.01;
+    154                          break;
+    155                          
+    156                          case(4):
+    157                            Dir_Buff[GUI.para.AI * 2-1] += 0.01;
+    158                            break;
+    159                            
+    160                  }
+    161                  
+    162                }
+    163                //在开始比赛界面
+    164                if ( GUI.page == 5 )
+    165                {
+    166                  //退出人机交互函数，进入发车运行状态
+    167                  break;
+    168                }
+    169              }
+    170              key_temp = 0;
+    171            }
+    172          }
+    173          
+    174          
+    175          void GUI_update()
+    176          {
+    177            OLED_CLS();
+    178            switch (GUI.page)
+    179            {
+    180              //显示的页面
+    181              case(1):update_page1();break;
+    182              case(2):update_page2();break;
+    183              case(3):update_page3();break;
+    184              case(4):update_page4();break;
+    185              case(5):update_page5();break;
+    186              
+    187            default:break;
+    188            }
+    189          }
+    190          
+    191          void update_page1()
+    192          {
+    193            Draw_BMP(0,0,66,7,mushroom);
+    194          }
+    195          
+    196          void update_page2()
+    197          {
+    198            OLED_P6x8Str(0,0,"WUT");
+    199            
+    200            //被point选中的会空几格
+    201            if ( GUI.point != 1 )
+    202            {
+    203              OLED_P8x16Str( 0,2 ,"SENSOR_CHECK" );
+    204            }
+    205            else 
+    206            {
+    207              OLED_P8x16Str( 15,2 ,"SENSOR_CHECK" );
+    208            }
+    209            if ( GUI.point != 2 )
+    210            {
+    211              OLED_P8x16Str( 0,4 ,"DEBUG_T" );
+    212            }
+    213            else
+    214            {
+    215              OLED_P8x16Str( 15,4 ,"DEBUG_T" );
+    216            }
+    217            
+    218              if ( dec_sec == 3 )
+    219              OLED_P8x16Str( 90,4 ,"3" );
+    220            else if( dec_sec == 6 )
+    221              OLED_P8x16Str( 90,4 ,"6" );
+    222            else if( dec_sec == 9 )
+    223              OLED_P8x16Str( 90,4 ,"9" );
+    224            else if( dec_sec == 12 )
+    225              OLED_P8x16Str( 90,4 ,"12" );
+    226          
+    227            
+    228            
+    229              if ( GUI.point != 3 )
+    230            {
+    231              OLED_P8x16Str( 0,6 ,"ENDLINE_T" );
+    232            }
+    233            else
+    234            {
+    235              OLED_P8x16Str( 12,6 ,"ENDLINE_T" );
+    236            }
+    237          
+    238            
+    239            OLED_PrintInt16( 70,6 ,GUI.para.endline_time );
+    240           
+    241            
+    242            
+    243            
+    244            
+    245          }
+    246          
+    247          void update_page3()
+    248          {
+    249            //显示1参数，将需要显示的变量代入即可
+    250            OLED_P8x16Str( 0,0,"POS" );
+    251            OLED_PrintInt16(40, 0, line.pos);
+    252            OLED_P8x16Str( 0,2,"M-L" );
+    253            OLED_PrintInt16(50, 2, sensor.error[0]);
+    254            OLED_P8x16Str( 0,4,"M-R" );
+    255            OLED_PrintInt16(50, 4, sensor.error[1]);
+    256            OLED_P8x16Str( 0,6,"R-L" );
+    257            OLED_PrintInt16(50, 6, sensor.error[2]);
+    258          }
+    259          
+    260          void update_page4()
+    261          {
+    262            //选择档位
+    263            if ( GUI.point != 1 )
+    264            {
+    265              OLED_P8x16Str( 0,0 ,"gear" );
+    266            }
+    267            else 
+    268            {
+    269              OLED_P8x16Str( 15,0 ,"gear" );
+    270            }
+    271            
+    272            if ( GUI.para.AI == 0 )
+    273            {
+    274              OLED_P8x16Str( 70,0 ,"AI: 0" );
+    275              OLED_P8x16Str( 0,2,"AIM" );
+    276              OLED_PrintInt16(40, 2,0);
+    277              OLED_P8x16Str( 0,4,"K" );
+    278              OLED_PrintInt16(40, 4,0);
+    279              OLED_P8x16Str( 0,6,"D" );
+    280              OLED_PrintInt16(40, 6,0);
+    281            }
+    282            
+    283            else 
+    284            {
+    285              OLED_P8x16Str( 60,0 ,"AI:" );
+    286              OLED_PrintInt16( 74,0 ,GUI.para.AI );
+    287              OLED_P8x16Str( 0,2,"AIM" );
+    288              OLED_PrintInt16(40, 2,AIM_Buff[GUI.para.AI-1]);
+    289              OLED_P8x16Str( 0,4,"K" );
+    290              OLED_PrintFloat(40, 4,Dir_Buff[GUI.para.AI * 2 - 2]);
+    291              OLED_P8x16Str( 0,6,"D" );
+    292              OLED_PrintFloat(40, 6,Dir_Buff[GUI.para.AI * 2 - 1]);
+    293            }
+    294            
+    295          }
+    296          
+    297          void update_page5()
+    298          {
+    299            switch (sw)
+    300            {
+    301              case(0x00):
+    302                OLED_P8x16Str(2,0,"COMPETITION");
+    303                break;
+    304              case(0x01):
+    305                OLED_P8x16Str(2,0,"NO STOP");
+    306                break;
+    307              case(0x02):
+    308                OLED_P8x16Str(6,0,"TEST");
+    309                break;
+    310            }
+    311            
+    312            
+    313            OLED_P8x16Str(6,4,"START!!!!!");
+    314          }
+
+Errors: 57
+Warnings: 8

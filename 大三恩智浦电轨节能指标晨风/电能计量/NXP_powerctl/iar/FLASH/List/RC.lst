@@ -1,0 +1,376 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.20.2.7424/W32 for ARM        14/Aug/2016  11:12:34
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\app\CTL\RC.c
+#    Command line =  
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\app\CTL\RC.c
+#        -D LPLD_K60 -lCN
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\FLASH\List\
+#        -lB
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\FLASH\List\
+#        -o
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\FLASH\Obj\
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config "C:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\app\
+#        -I
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\app\BSP\
+#        -I
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\app\ITAC\
+#        -I
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\app\CTL\
+#        -I
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\CPU\
+#        -I
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\common\
+#        -I
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\LPLD\
+#        -I
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\LPLD\HW\
+#        -I
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\LPLD\DEV\
+#        -I
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\uCOS-II\Ports\
+#        -I
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\uCOS-II\Source\
+#        -I
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\FatFs\
+#        -I
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\FatFs\option\
+#        -I
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\USB\common\
+#        -I
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\USB\driver\
+#        -I
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\USB\descriptor\
+#        -I
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\..\..\..\lib\USB\class\
+#        -On -I "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\CMSIS\Include\" -D ARM_MATH_CM4
+#    List file    =  
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\FLASH\List\RC.lst
+#    Object file  =  
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\iar\FLASH\Obj\RC.o
+#
+###############################################################################
+
+C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\project\NXP_powerctl\app\CTL\RC.c
+      1          #include "include.h"
+      2          
+
+   \                                 In section .text, align 2, keep-with-next
+      3          void order()
+      4          {
+   \                     order: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+      5            LPLD_LPTMR_DelayMs(10);
+   \   00000002   0x200A             MOVS     R0,#+10
+   \   00000004   0x.... 0x....      BL       LPLD_LPTMR_DelayMs
+      6            LPLD_GPIO_ClearIntFlag(PORTD);
+   \   00000008   0xF05F 0x30FF      MOVS     R0,#-1
+   \   0000000C   0x....             LDR.N    R1,??DataTable2  ;; 0x4004c0a0
+   \   0000000E   0x6008             STR      R0,[R1, #+0]
+      7            
+      8            if ( PTD0_I )//BBBBBDDDDDD
+   \   00000010   0x....             LDR.N    R0,??DataTable2_1  ;; 0x43fe1a00
+   \   00000012   0x6800             LDR      R0,[R0, #+0]
+   \   00000014   0x2800             CMP      R0,#+0
+   \   00000016   0xD006             BEQ.N    ??order_0
+      9            {
+     10              bz_set(datarec);
+   \   00000018   0x2001             MOVS     R0,#+1
+   \   0000001A   0x.... 0x....      BL       bz_set
+     11              ctl.flag_on = 0;
+   \   0000001E   0x2000             MOVS     R0,#+0
+   \   00000020   0x....             LDR.N    R1,??DataTable2_2
+   \   00000022   0x7008             STRB     R0,[R1, #+0]
+   \   00000024   0xE009             B.N      ??order_1
+     12            }
+     13          
+     14            else if( PTD2_I  )/////AAAAAAAAAACCCCCCCC
+   \                     ??order_0: (+1)
+   \   00000026   0x....             LDR.N    R0,??DataTable2_3  ;; 0x43fe1a08
+   \   00000028   0x6800             LDR      R0,[R0, #+0]
+   \   0000002A   0x2800             CMP      R0,#+0
+   \   0000002C   0xD005             BEQ.N    ??order_1
+     15            {
+     16              bz_set(datarec);
+   \   0000002E   0x2001             MOVS     R0,#+1
+   \   00000030   0x.... 0x....      BL       bz_set
+     17              ctl.flag_on = 1;
+   \   00000034   0x2001             MOVS     R0,#+1
+   \   00000036   0x....             LDR.N    R1,??DataTable2_2
+   \   00000038   0x7008             STRB     R0,[R1, #+0]
+     18            }
+     19          
+     20            else
+     21            {}
+     22          //  if (LPLD_GPIO_IsPinxExt(PORTD, GPIO_Pin0)||LPLD_GPIO_IsPinxExt(PORTD, GPIO_Pin2))
+     23          //  {
+     24          //    LPLD_GPIO_ClearIntFlag(PORTD);
+     25          //    bz_set(datarec);
+     26          //    
+     27          //    //BBBBBBBBBBBBBBBBB DDDDDD
+     28          //  }
+     29          //  if (LPLD_GPIO_IsPinxExt(PORTD, GPIO_Pin1)||LPLD_GPIO_IsPinxExt(PORTD, GPIO_Pin3))
+     30          //  {
+     31          //    LPLD_GPIO_ClearIntFlag(PORTD);
+     32          //    bz_set(datarec);
+     33          //    
+     34          //    //AAAAAAAAAAAAAAAAAAAA CCCCCCC
+     35          //  }
+     36          
+     37            
+     38          }
+   \                     ??order_1: (+1)
+   \   0000003A   0xBD01             POP      {R0,PC}          ;; return
+     39            
+     40            
+     41          
+     42          
+
+   \                                 In section .text, align 2, keep-with-next
+     43          void RC_init()
+     44          {
+   \                     RC_init: (+1)
+   \   00000000   0xB500             PUSH     {LR}
+   \   00000002   0xB087             SUB      SP,SP,#+28
+     45            GPIO_InitTypeDef RCgpio_inittype;
+     46            RCgpio_inittype.GPIO_PTx = PTD;
+   \   00000004   0x....             LDR.N    R0,??DataTable2_4  ;; 0x400ff0c0
+   \   00000006   0x9001             STR      R0,[SP, #+4]
+     47            RCgpio_inittype.GPIO_Pins = GPIO_Pin0 | GPIO_Pin1 |  GPIO_Pin2 |  GPIO_Pin3 ; 
+   \   00000008   0x200F             MOVS     R0,#+15
+   \   0000000A   0x9002             STR      R0,[SP, #+8]
+     48            RCgpio_inittype.GPIO_Dir = DIR_INPUT;        //输入
+   \   0000000C   0x2000             MOVS     R0,#+0
+   \   0000000E   0xF88D 0x0010      STRB     R0,[SP, #+16]
+     49            RCgpio_inittype.GPIO_PinControl = INPUT_PULL_DOWN | IRQC_RI; //
+   \   00000012   0x....             LDR.N    R0,??DataTable2_5  ;; 0x90002
+   \   00000014   0x9003             STR      R0,[SP, #+12]
+     50            RCgpio_inittype.GPIO_Isr =  order;
+   \   00000016   0x....             LDR.N    R0,??DataTable2_6
+   \   00000018   0x9005             STR      R0,[SP, #+20]
+     51            LPLD_GPIO_Init(RCgpio_inittype);
+   \   0000001A   0xA901             ADD      R1,SP,#+4
+   \   0000001C   0xB084             SUB      SP,SP,#+16
+   \   0000001E   0x4668             MOV      R0,SP
+   \   00000020   0x2214             MOVS     R2,#+20
+   \   00000022   0x.... 0x....      BL       __aeabi_memcpy4
+   \   00000026   0xBC0F             POP      {R0-R3}
+   \   00000028   0x.... 0x....      BL       LPLD_GPIO_Init
+     52            LPLD_GPIO_EnableIrq(RCgpio_inittype);
+   \   0000002C   0xA901             ADD      R1,SP,#+4
+   \   0000002E   0xB084             SUB      SP,SP,#+16
+   \   00000030   0x4668             MOV      R0,SP
+   \   00000032   0x2214             MOVS     R2,#+20
+   \   00000034   0x.... 0x....      BL       __aeabi_memcpy4
+   \   00000038   0xBC0F             POP      {R0-R3}
+   \   0000003A   0x.... 0x....      BL       LPLD_GPIO_EnableIrq
+     53          }
+   \   0000003E   0xB007             ADD      SP,SP,#+28
+   \   00000040   0xBD00             POP      {PC}             ;; return
+     54          
+
+   \                                 In section .text, align 2, keep-with-next
+     55          void check_sw()
+     56          {
+   \                     check_sw: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     57           
+     58            LPLD_LPTMR_DelayMs(100);
+   \   00000002   0x2064             MOVS     R0,#+100
+   \   00000004   0x.... 0x....      BL       LPLD_LPTMR_DelayMs
+     59            if ( LPLD_GPIO_IsPinxExt(PORTE, GPIO_Pin6))//up
+   \   00000008   0x....             LDR.N    R0,??DataTable2_7  ;; 0x4004d0a0
+   \   0000000A   0x6800             LDR      R0,[R0, #+0]
+   \   0000000C   0x0640             LSLS     R0,R0,#+25
+   \   0000000E   0xD508             BPL.N    ??check_sw_0
+     60            { 
+     61              ctl.flag_on = 1;
+   \   00000010   0x2001             MOVS     R0,#+1
+   \   00000012   0x....             LDR.N    R1,??DataTable2_2
+   \   00000014   0x7008             STRB     R0,[R1, #+0]
+     62              while( !LPLD_GPIO_Input_b(PTE, 6) );
+   \                     ??check_sw_1: (+1)
+   \   00000016   0x2106             MOVS     R1,#+6
+   \   00000018   0x....             LDR.N    R0,??DataTable2_8  ;; 0x400ff100
+   \   0000001A   0x.... 0x....      BL       LPLD_GPIO_Input_b
+   \   0000001E   0x2800             CMP      R0,#+0
+   \   00000020   0xD0F9             BEQ.N    ??check_sw_1
+     63            }
+     64            
+     65            if ( LPLD_GPIO_IsPinxExt(PORTE, GPIO_Pin7))//left
+   \                     ??check_sw_0: (+1)
+   \   00000022   0x....             LDR.N    R0,??DataTable2_7  ;; 0x4004d0a0
+   \   00000024   0x6800             LDR      R0,[R0, #+0]
+   \   00000026   0x0600             LSLS     R0,R0,#+24
+   \   00000028   0xD508             BPL.N    ??check_sw_2
+     66            {
+     67              ctl.flag_start = 1; 
+   \   0000002A   0x2001             MOVS     R0,#+1
+   \   0000002C   0x....             LDR.N    R1,??DataTable2_2
+   \   0000002E   0x7048             STRB     R0,[R1, #+1]
+     68              while( !LPLD_GPIO_Input_b(PTE, 7) );
+   \                     ??check_sw_3: (+1)
+   \   00000030   0x2107             MOVS     R1,#+7
+   \   00000032   0x....             LDR.N    R0,??DataTable2_8  ;; 0x400ff100
+   \   00000034   0x.... 0x....      BL       LPLD_GPIO_Input_b
+   \   00000038   0x2800             CMP      R0,#+0
+   \   0000003A   0xD0F9             BEQ.N    ??check_sw_3
+     69            }
+     70              if ( LPLD_GPIO_IsPinxExt(PORTE, GPIO_Pin10))//down
+   \                     ??check_sw_2: (+1)
+   \   0000003C   0x....             LDR.N    R0,??DataTable2_7  ;; 0x4004d0a0
+   \   0000003E   0x6800             LDR      R0,[R0, #+0]
+   \   00000040   0x0540             LSLS     R0,R0,#+21
+   \   00000042   0xD508             BPL.N    ??check_sw_4
+     71            {
+     72              ctl.flag_on = 0; 
+   \   00000044   0x2000             MOVS     R0,#+0
+   \   00000046   0x....             LDR.N    R1,??DataTable2_2
+   \   00000048   0x7008             STRB     R0,[R1, #+0]
+     73              while( !LPLD_GPIO_Input_b(PTE, 10) );
+   \                     ??check_sw_5: (+1)
+   \   0000004A   0x210A             MOVS     R1,#+10
+   \   0000004C   0x....             LDR.N    R0,??DataTable2_8  ;; 0x400ff100
+   \   0000004E   0x.... 0x....      BL       LPLD_GPIO_Input_b
+   \   00000052   0x2800             CMP      R0,#+0
+   \   00000054   0xD0F9             BEQ.N    ??check_sw_5
+     74            }
+     75            
+     76            if ( LPLD_GPIO_IsPinxExt(PORTE, GPIO_Pin11))//click
+   \                     ??check_sw_4: (+1)
+   \   00000056   0x....             LDR.N    R0,??DataTable2_7  ;; 0x4004d0a0
+   \   00000058   0x6800             LDR      R0,[R0, #+0]
+   \   0000005A   0x0500             LSLS     R0,R0,#+20
+   \   0000005C   0xD508             BPL.N    ??check_sw_6
+     77            {
+     78              //bz_set(datarec);
+     79              ctl.current_sum = 0;
+   \   0000005E   0x2000             MOVS     R0,#+0
+   \   00000060   0x....             LDR.N    R1,??DataTable2_2
+   \   00000062   0x60C8             STR      R0,[R1, #+12]
+     80              while( !LPLD_GPIO_Input_b(PTE, 11) );
+   \                     ??check_sw_7: (+1)
+   \   00000064   0x210B             MOVS     R1,#+11
+   \   00000066   0x....             LDR.N    R0,??DataTable2_8  ;; 0x400ff100
+   \   00000068   0x.... 0x....      BL       LPLD_GPIO_Input_b
+   \   0000006C   0x2800             CMP      R0,#+0
+   \   0000006E   0xD0F9             BEQ.N    ??check_sw_7
+     81            }
+     82            if ( LPLD_GPIO_IsPinxExt(PORTE, GPIO_Pin12))//right
+   \                     ??check_sw_6: (+1)
+   \   00000070   0x....             LDR.N    R0,??DataTable2_7  ;; 0x4004d0a0
+   \   00000072   0x6800             LDR      R0,[R0, #+0]
+   \   00000074   0x04C0             LSLS     R0,R0,#+19
+   \   00000076   0xD508             BPL.N    ??check_sw_8
+     83            {
+     84              ctl.flag_start = 0; 
+   \   00000078   0x2000             MOVS     R0,#+0
+   \   0000007A   0x....             LDR.N    R1,??DataTable2_2
+   \   0000007C   0x7048             STRB     R0,[R1, #+1]
+     85              while( !LPLD_GPIO_Input_b(PTE, 12));
+   \                     ??check_sw_9: (+1)
+   \   0000007E   0x210C             MOVS     R1,#+12
+   \   00000080   0x....             LDR.N    R0,??DataTable2_8  ;; 0x400ff100
+   \   00000082   0x.... 0x....      BL       LPLD_GPIO_Input_b
+   \   00000086   0x2800             CMP      R0,#+0
+   \   00000088   0xD0F9             BEQ.N    ??check_sw_9
+     86            }
+     87            bz_set(datarec);
+   \                     ??check_sw_8: (+1)
+   \   0000008A   0x2001             MOVS     R0,#+1
+   \   0000008C   0x.... 0x....      BL       bz_set
+     88            LPLD_GPIO_ClearIntFlag(PORTE);
+   \   00000090   0xF05F 0x30FF      MOVS     R0,#-1
+   \   00000094   0x....             LDR.N    R1,??DataTable2_7  ;; 0x4004d0a0
+   \   00000096   0x6008             STR      R0,[R1, #+0]
+     89          }
+   \   00000098   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2:
+   \   00000000   0x4004C0A0         DC32     0x4004c0a0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_1:
+   \   00000000   0x43FE1A00         DC32     0x43fe1a00
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_2:
+   \   00000000   0x........         DC32     ctl
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_3:
+   \   00000000   0x43FE1A08         DC32     0x43fe1a08
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_4:
+   \   00000000   0x400FF0C0         DC32     0x400ff0c0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_5:
+   \   00000000   0x00090002         DC32     0x90002
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_6:
+   \   00000000   0x........         DC32     order
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_7:
+   \   00000000   0x4004D0A0         DC32     0x4004d0a0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_8:
+   \   00000000   0x400FF100         DC32     0x400ff100
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      48   RC_init
+        32   -> LPLD_GPIO_EnableIrq
+        32   -> LPLD_GPIO_Init
+        48   -> __aeabi_memcpy4
+       8   check_sw
+         8   -> LPLD_GPIO_Input_b
+         8   -> LPLD_LPTMR_DelayMs
+         8   -> bz_set
+       8   order
+         8   -> LPLD_LPTMR_DelayMs
+         8   -> bz_set
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable2
+       4  ??DataTable2_1
+       4  ??DataTable2_2
+       4  ??DataTable2_3
+       4  ??DataTable2_4
+       4  ??DataTable2_5
+       4  ??DataTable2_6
+       4  ??DataTable2_7
+       4  ??DataTable2_8
+      66  RC_init
+     154  check_sw
+      60  order
+
+ 
+ 316 bytes in section .text
+ 
+ 316 bytes of CODE memory
+
+Errors: none
+Warnings: none
