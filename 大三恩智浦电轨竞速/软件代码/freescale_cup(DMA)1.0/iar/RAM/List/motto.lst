@@ -1,0 +1,303 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.20.2.7424/W32 for ARM        06/Mar/2016  20:36:36
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\app\CTL\motto.c
+#    Command line =  
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\app\CTL\motto.c"
+#        -D LPLD_K60 -D USE_K60DZ10 -lCN
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\RAM\List\"
+#        -lB
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\RAM\List\"
+#        -o
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\RAM\Obj\"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config "C:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\app\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\app\MAIN\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\app\BSP\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\app\ITAC\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\app\CTL\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\app\SENSOR\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\CPU\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\common\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\LPLD\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\LPLD\HW\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\LPLD\DEV\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\LPLD\FUNC\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\uCOS-II\Ports\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\uCOS-II\Source\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\FatFs\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\FatFs\option\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\USB\common\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\USB\driver\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\USB\descriptor\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\USB\class\"
+#        -On -I "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\CMSIS\Include\" -D ARM_MATH_CM4
+#    List file    =  
+#        D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\RAM\List\motto.lst
+#    Object file  =  
+#        D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\RAM\Obj\motto.o
+#
+###############################################################################
+
+D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\app\CTL\motto.c
+      1          //电机控制
+      2          #include "include.h"
+      3          
+
+   \                                 In section .text, align 2, keep-with-next
+      4          void motto_set()
+      5          {
+   \                     motto_set: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+      6            //限幅
+      7            if ( ctl.motto.out > 7000 )
+   \   00000002   0x....             LDR.N    R0,??DataTable2
+   \   00000004   0x6BC0             LDR      R0,[R0, #+60]
+   \   00000006   0x....             LDR.N    R1,??DataTable2_1  ;; 0x45dac001
+   \   00000008   0x.... 0x....      BL       __aeabi_cfrcmple
+   \   0000000C   0xD803             BHI.N    ??motto_set_0
+      8            {
+      9              ctl.motto.out = 7000;
+   \   0000000E   0x....             LDR.N    R0,??DataTable2_2  ;; 0x45dac000
+   \   00000010   0x....             LDR.N    R1,??DataTable2
+   \   00000012   0x63C8             STR      R0,[R1, #+60]
+   \   00000014   0xE008             B.N      ??motto_set_1
+     10            }
+     11            else if ( ctl.motto.out < -7000 )
+   \                     ??motto_set_0: (+1)
+   \   00000016   0x....             LDR.N    R0,??DataTable2
+   \   00000018   0x6BC0             LDR      R0,[R0, #+60]
+   \   0000001A   0x....             LDR.N    R1,??DataTable2_3  ;; 0xc5dac000
+   \   0000001C   0x.... 0x....      BL       __aeabi_cfcmple
+   \   00000020   0xD202             BCS.N    ??motto_set_1
+     12            {
+     13              ctl.motto.out = -7000;
+   \   00000022   0x....             LDR.N    R0,??DataTable2_3  ;; 0xc5dac000
+   \   00000024   0x....             LDR.N    R1,??DataTable2
+   \   00000026   0x63C8             STR      R0,[R1, #+60]
+     14            }
+     15          
+     16              
+     17            if ( ctl.motto.out >= 0.000000  )
+   \                     ??motto_set_1: (+1)
+   \   00000028   0x....             LDR.N    R0,??DataTable2
+   \   0000002A   0x6BC0             LDR      R0,[R0, #+60]
+   \   0000002C   0x2100             MOVS     R1,#+0
+   \   0000002E   0x.... 0x....      BL       __aeabi_cfrcmple
+   \   00000032   0xD80E             BHI.N    ??motto_set_2
+     18            {
+     19              LPLD_FTM_PWM_ChangeDuty(FTM0, FTM_Ch0, (uint32) ( ctl.motto.out ) );
+   \   00000034   0x....             LDR.N    R0,??DataTable2
+   \   00000036   0x6BC0             LDR      R0,[R0, #+60]
+   \   00000038   0x.... 0x....      BL       __aeabi_f2uiz
+   \   0000003C   0x0002             MOVS     R2,R0
+   \   0000003E   0x2100             MOVS     R1,#+0
+   \   00000040   0x....             LDR.N    R0,??DataTable2_4  ;; 0x40038000
+   \   00000042   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+     20              LPLD_FTM_PWM_ChangeDuty(FTM0, FTM_Ch1, (uint32) 0 );
+   \   00000046   0x2200             MOVS     R2,#+0
+   \   00000048   0x2101             MOVS     R1,#+1
+   \   0000004A   0x....             LDR.N    R0,??DataTable2_4  ;; 0x40038000
+   \   0000004C   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+   \   00000050   0xE015             B.N      ??motto_set_3
+     21            }
+     22            else if ( ctl.motto.out < 0.000000 )
+   \                     ??motto_set_2: (+1)
+   \   00000052   0x....             LDR.N    R0,??DataTable2
+   \   00000054   0x6BC0             LDR      R0,[R0, #+60]
+   \   00000056   0x2100             MOVS     R1,#+0
+   \   00000058   0x.... 0x....      BL       __aeabi_cfcmple
+   \   0000005C   0xD20F             BCS.N    ??motto_set_3
+     23            {
+     24              LPLD_FTM_PWM_ChangeDuty(FTM0, FTM_Ch0, 0 );
+   \   0000005E   0x2200             MOVS     R2,#+0
+   \   00000060   0x2100             MOVS     R1,#+0
+   \   00000062   0x....             LDR.N    R0,??DataTable2_4  ;; 0x40038000
+   \   00000064   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+     25              LPLD_FTM_PWM_ChangeDuty(FTM0, FTM_Ch1, (uint32) ( -ctl.motto.out ) );
+   \   00000068   0x....             LDR.N    R0,??DataTable2
+   \   0000006A   0x6BC0             LDR      R0,[R0, #+60]
+   \   0000006C   0xF090 0x4000      EORS     R0,R0,#0x80000000
+   \   00000070   0x.... 0x....      BL       __aeabi_f2uiz
+   \   00000074   0x0002             MOVS     R2,R0
+   \   00000076   0x2101             MOVS     R1,#+1
+   \   00000078   0x....             LDR.N    R0,??DataTable2_4  ;; 0x40038000
+   \   0000007A   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+     26            }
+     27            
+     28          
+     29          }
+   \                     ??motto_set_3: (+1)
+   \   0000007E   0xBD01             POP      {R0,PC}          ;; return
+     30          
+
+   \                                 In section .text, align 2, keep-with-next
+     31          void motto_getsped()
+     32          {
+   \                     motto_getsped: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     33            ctl.motto.sped_cur =  LPLD_FTM_GetCounter(FTM2);
+   \   00000002   0x....             LDR.N    R0,??DataTable2_5  ;; 0x400b8000
+   \   00000004   0x.... 0x....      BL       LPLD_FTM_GetCounter
+   \   00000008   0x....             LDR.N    R1,??DataTable2
+   \   0000000A   0x8488             STRH     R0,[R1, #+36]
+     34            LPLD_FTM_ClearCounter(FTM2);
+   \   0000000C   0x....             LDR.N    R0,??DataTable2_5  ;; 0x400b8000
+   \   0000000E   0x.... 0x....      BL       LPLD_FTM_ClearCounter
+     35          }
+   \   00000012   0xBD01             POP      {R0,PC}          ;; return
+     36          
+
+   \                                 In section .text, align 2, keep-with-next
+     37          void ctl_sped() //速度控制，增量式PI控制
+     38          {
+   \                     ctl_sped: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     39            ctl.motto.error[1] = ctl.motto.sped_cur - ctl.motto.aim;
+   \   00000002   0x....             LDR.N    R0,??DataTable2
+   \   00000004   0xF9B0 0x0024      LDRSH    R0,[R0, #+36]
+   \   00000008   0x....             LDR.N    R1,??DataTable2
+   \   0000000A   0xF9B1 0x1026      LDRSH    R1,[R1, #+38]
+   \   0000000E   0x1A40             SUBS     R0,R0,R1
+   \   00000010   0x.... 0x....      BL       __aeabi_i2f
+   \   00000014   0x....             LDR.N    R1,??DataTable2
+   \   00000016   0x6448             STR      R0,[R1, #+68]
+     40            
+     41            ctl.motto.result  = -ctl.motto.Kp  * ( ctl.motto.error[1] - ctl.motto.error[0] );
+   \   00000018   0x....             LDR.N    R0,??DataTable2
+   \   0000001A   0x6C40             LDR      R0,[R0, #+68]
+   \   0000001C   0x....             LDR.N    R1,??DataTable2
+   \   0000001E   0x6C09             LDR      R1,[R1, #+64]
+   \   00000020   0x.... 0x....      BL       __aeabi_fsub
+   \   00000024   0x....             LDR.N    R1,??DataTable2
+   \   00000026   0x6A89             LDR      R1,[R1, #+40]
+   \   00000028   0xF091 0x4100      EORS     R1,R1,#0x80000000
+   \   0000002C   0x.... 0x....      BL       __aeabi_fmul
+   \   00000030   0x....             LDR.N    R1,??DataTable2
+   \   00000032   0x6388             STR      R0,[R1, #+56]
+     42            ctl.motto.result += -ctl.motto.Ki  *   ctl.motto.error[1];
+   \   00000034   0x....             LDR.N    R0,??DataTable2
+   \   00000036   0x6AC1             LDR      R1,[R0, #+44]
+   \   00000038   0xF091 0x4100      EORS     R1,R1,#0x80000000
+   \   0000003C   0x....             LDR.N    R0,??DataTable2
+   \   0000003E   0x6C40             LDR      R0,[R0, #+68]
+   \   00000040   0x.... 0x....      BL       __aeabi_fmul
+   \   00000044   0x....             LDR.N    R1,??DataTable2
+   \   00000046   0x6B89             LDR      R1,[R1, #+56]
+   \   00000048   0x.... 0x....      BL       __aeabi_fadd
+   \   0000004C   0x....             LDR.N    R1,??DataTable2
+   \   0000004E   0x6388             STR      R0,[R1, #+56]
+     43            
+     44            ctl.motto.error[0] = ctl.motto.error[1];  
+   \   00000050   0x....             LDR.N    R0,??DataTable2
+   \   00000052   0x6C40             LDR      R0,[R0, #+68]
+   \   00000054   0x....             LDR.N    R1,??DataTable2
+   \   00000056   0x6408             STR      R0,[R1, #+64]
+     45            ctl.motto.out += ctl.motto.result;
+   \   00000058   0x....             LDR.N    R0,??DataTable2
+   \   0000005A   0x6BC1             LDR      R1,[R0, #+60]
+   \   0000005C   0x....             LDR.N    R0,??DataTable2
+   \   0000005E   0x6B80             LDR      R0,[R0, #+56]
+   \   00000060   0x.... 0x....      BL       __aeabi_fadd
+   \   00000064   0x....             LDR.N    R1,??DataTable2
+   \   00000066   0x63C8             STR      R0,[R1, #+60]
+     46            
+     47          }
+   \   00000068   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2:
+   \   00000000   0x........         DC32     ctl
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_1:
+   \   00000000   0x45DAC001         DC32     0x45dac001
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_2:
+   \   00000000   0x45DAC000         DC32     0x45dac000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_3:
+   \   00000000   0xC5DAC000         DC32     0xc5dac000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_4:
+   \   00000000   0x40038000         DC32     0x40038000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_5:
+   \   00000000   0x400B8000         DC32     0x400b8000
+     48          
+     49          
+     50          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   ctl_sped
+         8   -> __aeabi_fadd
+         8   -> __aeabi_fmul
+         8   -> __aeabi_fsub
+         8   -> __aeabi_i2f
+       8   motto_getsped
+         8   -> LPLD_FTM_ClearCounter
+         8   -> LPLD_FTM_GetCounter
+       8   motto_set
+         8   -> LPLD_FTM_PWM_ChangeDuty
+         8   -> __aeabi_f2uiz
+         8 __aeabi_cfcmple
+         8 __aeabi_cfrcmple
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable2
+       4  ??DataTable2_1
+       4  ??DataTable2_2
+       4  ??DataTable2_3
+       4  ??DataTable2_4
+       4  ??DataTable2_5
+     106  ctl_sped
+      20  motto_getsped
+     128  motto_set
+
+ 
+ 278 bytes in section .text
+ 
+ 278 bytes of CODE memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,45 @@
+[System]
+Name='FUZZYV1'
+Type='mamdani'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=7
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='input1'
+Range=[-4 4]
+NumMFs=7
+MF1='Z':'trimf',[-1.98 0.0634081902245693 2]
+MF2='NS':'trimf',[-2.29 -0.977 -0.0211360634081914]
+MF3='PB':'trimf',[2.10397622192867 3.39397622192867 4.03397622192867]
+MF4='NB':'trimf',[-4.02 -3.31836195508587 -2]
+MF5='NM':'trimf',[-3.56 -2.27212681638045 -1]
+MF6='PS':'trimf',[-0.0423 1.10964332892999 2.46]
+MF7='PM':'trimf',[1.06 2.46235138705416 3.53]
+
+[Output1]
+Name='output1'
+Range=[1000 2000]
+NumMFs=7
+MF1='NM':'trimf',[1100 1250 1400]
+MF2='NS':'trimf',[1200 1350 1500]
+MF3='PM':'trimf',[1600 1750 1900]
+MF4='NB':'trimf',[995 1050 1300]
+MF5='Z':'trimf',[1300 1500 1700]
+MF6='PS':'trimf',[1500 1650 1800]
+MF7='PB':'trimf',[1700 1950 2005]
+
+[Rules]
+1, 5 (1) : 1
+2, 2 (1) : 1
+3, 7 (1) : 1
+4, 4 (1) : 1
+5, 1 (1) : 1
+6, 6 (1) : 1
+7, 3 (1) : 1

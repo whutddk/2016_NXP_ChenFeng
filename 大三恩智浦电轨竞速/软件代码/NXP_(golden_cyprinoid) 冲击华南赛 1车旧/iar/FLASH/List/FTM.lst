@@ -1,0 +1,327 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.20.2.7424/W32 for ARM        08/Aug/2016  13:02:44
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\app\BSP\FTM.c
+#    Command line =  
+#        "C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\app\BSP\FTM.c" -D LPLD_K60 -lCN
+#        "C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\iar\FLASH\List\" -lB
+#        "C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\iar\FLASH\List\" -o
+#        "C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\iar\FLASH\Obj\" --no_cse --no_unroll --no_inline
+#        --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug
+#        --endian=little --cpu=Cortex-M4 -e --fpu=None --dlib_config
+#        "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        "C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\iar\..\app\" -I
+#        "C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\iar\..\app\BSP\" -I
+#        "C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\iar\..\app\ITAC\" -I
+#        "C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\iar\..\app\CTL\" -I
+#        "C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\iar\..\app\MAIN\" -I
+#        "C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\iar\..\app\SENSOR\" -I
+#        "C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\iar\..\..\..\lib\CPU\" -I
+#        "C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\iar\..\..\..\lib\common\" -I
+#        "C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\iar\..\..\..\lib\LPLD\" -I
+#        "C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\iar\..\..\..\lib\LPLD\HW\" -I
+#        "C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\iar\..\..\..\lib\LPLD\DEV\" -I
+#        "C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\iar\..\..\..\lib\uCOS-II\Ports\" -I
+#        "C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\iar\..\..\..\lib\uCOS-II\Source\" -I
+#        "C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\iar\..\..\..\lib\FatFs\" -I
+#        "C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\iar\..\..\..\lib\FatFs\option\" -I
+#        "C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\iar\..\..\..\lib\USB\common\" -I
+#        "C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\iar\..\..\..\lib\USB\driver\" -I
+#        "C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\iar\..\..\..\lib\USB\descriptor\" -I
+#        "C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\iar\..\..\..\lib\USB\class\" -On -I "C:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench 7.0\arm\CMSIS\Include\" -D
+#        ARM_MATH_CM4
+#    List file    =  
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\iar\FLASH\List\FTM.lst
+#    Object file  =  
+#        C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid)
+#        冲击华南赛 1车\iar\FLASH\Obj\FTM.o
+#
+###############################################################################
+
+C:\百度云同步盘\比赛代码\LPLD_OSKinetis_V3\launch\NXP_(golden_cyprinoid) 冲击华南赛 1车\app\BSP\FTM.c
+      1          //FTM初始化
+      2          #include "include.h"
+      3          
+
+   \                                 In section .bss, align 4
+      4          FTM_InitTypeDef ftm_init_struct;
+   \                     ftm_init_struct:
+   \   00000000                      DS8 28
+
+   \                                 In section .bss, align 4
+      5          FTM_InitTypeDef qei_init_struct;
+   \                     qei_init_struct:
+   \   00000000                      DS8 28
+      6          
+
+   \                                 In section .text, align 2, keep-with-next
+      7          void PWM_init()
+      8          {
+   \                     PWM_init: (+1)
+   \   00000000   0xB5E0             PUSH     {R5-R7,LR}
+      9            //pwm  
+     10            ftm_init_struct.FTM_Ftmx = FTM0;	//使能FTM0通道
+   \   00000002   0x....             LDR.N    R0,??DataTable2  ;; 0x40038000
+   \   00000004   0x....             LDR.N    R1,??DataTable2_1
+   \   00000006   0x6008             STR      R0,[R1, #+0]
+     11            ftm_init_struct.FTM_Mode = FTM_MODE_PWM;	//使能PWM模式
+   \   00000008   0x2001             MOVS     R0,#+1
+   \   0000000A   0x....             LDR.N    R1,??DataTable2_1
+   \   0000000C   0x7108             STRB     R0,[R1, #+4]
+     12            ftm_init_struct.FTM_PwmFreq = 20000;	//PWM频率20000Hz
+   \   0000000E   0xF644 0x6020      MOVW     R0,#+20000
+   \   00000012   0x....             LDR.N    R1,??DataTable2_1
+   \   00000014   0x6088             STR      R0,[R1, #+8]
+     13            ftm_init_struct.FTM_PwmDeadtimeCfg = DEADTIME_CH23;
+   \   00000016   0xF44F 0x5080      MOV      R0,#+4096
+   \   0000001A   0x....             LDR.N    R1,??DataTable2_1
+   \   0000001C   0x60C8             STR      R0,[R1, #+12]
+     14            ftm_init_struct.FTM_PwmDeadtimeDiv = DEADTIME_DIV1;
+   \   0000001E   0x2000             MOVS     R0,#+0
+   \   00000020   0x....             LDR.N    R1,??DataTable2_1
+   \   00000022   0x7408             STRB     R0,[R1, #+16]
+     15            ftm_init_struct.FTM_PwmDeadtimeVal=0;
+   \   00000024   0x2000             MOVS     R0,#+0
+   \   00000026   0x....             LDR.N    R1,??DataTable2_1
+   \   00000028   0x7448             STRB     R0,[R1, #+17]
+     16            ftm_init_struct.FTM_ToiEnable = FALSE;
+   \   0000002A   0x2000             MOVS     R0,#+0
+   \   0000002C   0x....             LDR.N    R1,??DataTable2_1
+   \   0000002E   0x7508             STRB     R0,[R1, #+20]
+     17            ftm_init_struct.FTM_Isr = NULL;
+   \   00000030   0x2000             MOVS     R0,#+0
+   \   00000032   0x....             LDR.N    R1,??DataTable2_1
+   \   00000034   0x6188             STR      R0,[R1, #+24]
+     18            LPLD_FTM_Init(ftm_init_struct);
+   \   00000036   0x....             LDR.N    R1,??DataTable2_1
+   \   00000038   0xB084             SUB      SP,SP,#+16
+   \   0000003A   0x4668             MOV      R0,SP
+   \   0000003C   0x221C             MOVS     R2,#+28
+   \   0000003E   0x.... 0x....      BL       __aeabi_memcpy4
+   \   00000042   0xBC0F             POP      {R0-R3}
+   \   00000044   0x.... 0x....      BL       LPLD_FTM_Init
+     19            
+     20            LPLD_FTM_PWM_Enable(FTM0, //使用FTM0
+     21                                FTM_Ch0, //使能Ch0通道
+     22                                1, //初始化DUTY
+     23                                PTC1, //使用Ch0通道的PTC1引脚
+     24                                ALIGN_LEFT        //脉宽左对齐
+     25                                  ); 
+   \   00000048   0x2028             MOVS     R0,#+40
+   \   0000004A   0x9000             STR      R0,[SP, #+0]
+   \   0000004C   0x233D             MOVS     R3,#+61
+   \   0000004E   0x2201             MOVS     R2,#+1
+   \   00000050   0x2100             MOVS     R1,#+0
+   \   00000052   0x....             LDR.N    R0,??DataTable2  ;; 0x40038000
+   \   00000054   0x.... 0x....      BL       LPLD_FTM_PWM_Enable
+     26            LPLD_FTM_PWM_Enable(FTM0, //使用FTM0
+     27                                FTM_Ch1, //使能Ch1通道
+     28                                1, //初始化DUTY
+     29                                PTC2, //使用Ch1通道的PTC2引脚
+     30                                ALIGN_LEFT        //脉宽左对齐
+     31                                  ); 
+   \   00000058   0x2028             MOVS     R0,#+40
+   \   0000005A   0x9000             STR      R0,[SP, #+0]
+   \   0000005C   0x233E             MOVS     R3,#+62
+   \   0000005E   0x2201             MOVS     R2,#+1
+   \   00000060   0x2101             MOVS     R1,#+1
+   \   00000062   0x....             LDR.N    R0,??DataTable2  ;; 0x40038000
+   \   00000064   0x.... 0x....      BL       LPLD_FTM_PWM_Enable
+     32          
+     33          }
+   \   00000068   0xBD07             POP      {R0-R2,PC}       ;; return
+     34          
+     35          
+
+   \                                 In section .text, align 2, keep-with-next
+     36          void S3010_init()
+     37          {
+   \                     S3010_init: (+1)
+   \   00000000   0xB5E0             PUSH     {R5-R7,LR}
+     38            //pwm
+     39            ftm_init_struct.FTM_Ftmx = FTM1;	//使能FTM0通道
+   \   00000002   0x....             LDR.N    R0,??DataTable2_2  ;; 0x40039000
+   \   00000004   0x....             LDR.N    R1,??DataTable2_1
+   \   00000006   0x6008             STR      R0,[R1, #+0]
+     40            ftm_init_struct.FTM_Mode = FTM_MODE_PWM;	//使能PWM模式
+   \   00000008   0x2001             MOVS     R0,#+1
+   \   0000000A   0x....             LDR.N    R1,??DataTable2_1
+   \   0000000C   0x7108             STRB     R0,[R1, #+4]
+     41            ftm_init_struct.FTM_PwmFreq = 50;	//PWM频率50Hz
+   \   0000000E   0x2032             MOVS     R0,#+50
+   \   00000010   0x....             LDR.N    R1,??DataTable2_1
+   \   00000012   0x6088             STR      R0,[R1, #+8]
+     42            ftm_init_struct.FTM_PwmDeadtimeCfg = DEADTIME_CH23;
+   \   00000014   0xF44F 0x5080      MOV      R0,#+4096
+   \   00000018   0x....             LDR.N    R1,??DataTable2_1
+   \   0000001A   0x60C8             STR      R0,[R1, #+12]
+     43            ftm_init_struct.FTM_PwmDeadtimeVal=0;
+   \   0000001C   0x2000             MOVS     R0,#+0
+   \   0000001E   0x....             LDR.N    R1,??DataTable2_1
+   \   00000020   0x7448             STRB     R0,[R1, #+17]
+     44            LPLD_FTM_Init(ftm_init_struct);
+   \   00000022   0x....             LDR.N    R1,??DataTable2_1
+   \   00000024   0xB084             SUB      SP,SP,#+16
+   \   00000026   0x4668             MOV      R0,SP
+   \   00000028   0x221C             MOVS     R2,#+28
+   \   0000002A   0x.... 0x....      BL       __aeabi_memcpy4
+   \   0000002E   0xBC0F             POP      {R0-R3}
+   \   00000030   0x.... 0x....      BL       LPLD_FTM_Init
+     45            
+     46            LPLD_FTM_PWM_Enable(FTM1, //使用FTM1
+     47                                FTM_Ch0, //使能Ch0通道
+     48                                753, //初始化DUTY
+     49                                PTA8, //使用Ch0通道的PTC1引脚
+     50                                ALIGN_LEFT        //脉宽左对齐
+     51                                  ); 
+   \   00000034   0x2028             MOVS     R0,#+40
+   \   00000036   0x9000             STR      R0,[SP, #+0]
+   \   00000038   0x2308             MOVS     R3,#+8
+   \   0000003A   0xF240 0x22F1      MOVW     R2,#+753
+   \   0000003E   0x2100             MOVS     R1,#+0
+   \   00000040   0x....             LDR.N    R0,??DataTable2_2  ;; 0x40039000
+   \   00000042   0x.... 0x....      BL       LPLD_FTM_PWM_Enable
+     52            
+     53          }
+   \   00000046   0xBD07             POP      {R0-R2,PC}       ;; return
+     54          
+
+   \                                 In section .text, align 2, keep-with-next
+     55          void qei_init()  
+     56          {   
+   \                     qei_init: (+1)
+   \   00000000   0xB5E0             PUSH     {R5-R7,LR}
+     57            //配置正交解码功能参数
+     58            qei_init_struct.FTM_Ftmx = FTM2;              //只有FTM1和FTM2有正交解码功能
+   \   00000002   0x....             LDR.N    R0,??DataTable2_3  ;; 0x400b8000
+   \   00000004   0x....             LDR.N    R1,??DataTable2_4
+   \   00000006   0x6008             STR      R0,[R1, #+0]
+     59            qei_init_struct.FTM_Mode = FTM_MODE_QD;       //正交解码功能
+   \   00000008   0x2004             MOVS     R0,#+4
+   \   0000000A   0x....             LDR.N    R1,??DataTable2_4
+   \   0000000C   0x7108             STRB     R0,[R1, #+4]
+     60            qei_init_struct.FTM_QdMode = QD_MODE_PHAB;    //AB相输入模式
+   \   0000000E   0x2000             MOVS     R0,#+0
+   \   00000010   0x....             LDR.N    R1,??DataTable2_4
+   \   00000012   0x7488             STRB     R0,[R1, #+18]
+     61            qei_init_struct.FTM_ToiEnable = FALSE;
+   \   00000014   0x2000             MOVS     R0,#+0
+   \   00000016   0x....             LDR.N    R1,??DataTable2_4
+   \   00000018   0x7508             STRB     R0,[R1, #+20]
+     62            qei_init_struct.FTM_Isr = NULL;
+   \   0000001A   0x2000             MOVS     R0,#+0
+   \   0000001C   0x....             LDR.N    R1,??DataTable2_4
+   \   0000001E   0x6188             STR      R0,[R1, #+24]
+     63            //初始化FTM
+     64            LPLD_FTM_Init(qei_init_struct);
+   \   00000020   0x....             LDR.N    R1,??DataTable2_4
+   \   00000022   0xB084             SUB      SP,SP,#+16
+   \   00000024   0x4668             MOV      R0,SP
+   \   00000026   0x221C             MOVS     R2,#+28
+   \   00000028   0x.... 0x....      BL       __aeabi_memcpy4
+   \   0000002C   0xBC0F             POP      {R0-R3}
+   \   0000002E   0x.... 0x....      BL       LPLD_FTM_Init
+     65            //使能AB相输入通道
+     66            //PTB18引脚接A相输入、PTB19引脚接B相输入
+     67            LPLD_FTM_QD_Enable(FTM2, PTB18, PTB19); 
+   \   00000032   0x2233             MOVS     R2,#+51
+   \   00000034   0x2132             MOVS     R1,#+50
+   \   00000036   0x....             LDR.N    R0,??DataTable2_3  ;; 0x400b8000
+   \   00000038   0x.... 0x....      BL       LPLD_FTM_QD_Enable
+     68          }
+   \   0000003C   0xBD07             POP      {R0-R2,PC}       ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2:
+   \   00000000   0x40038000         DC32     0x40038000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_1:
+   \   00000000   0x........         DC32     ftm_init_struct
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_2:
+   \   00000000   0x40039000         DC32     0x40039000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_3:
+   \   00000000   0x400B8000         DC32     0x400b8000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_4:
+   \   00000000   0x........         DC32     qei_init_struct
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      32   PWM_init
+        16   -> LPLD_FTM_Init
+        16   -> LPLD_FTM_PWM_Enable
+        32   -> __aeabi_memcpy4
+      32   S3010_init
+        16   -> LPLD_FTM_Init
+        16   -> LPLD_FTM_PWM_Enable
+        32   -> __aeabi_memcpy4
+      32   qei_init
+        16   -> LPLD_FTM_Init
+        16   -> LPLD_FTM_QD_Enable
+        32   -> __aeabi_memcpy4
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable2
+       4  ??DataTable2_1
+       4  ??DataTable2_2
+       4  ??DataTable2_3
+       4  ??DataTable2_4
+     106  PWM_init
+      72  S3010_init
+      28  ftm_init_struct
+      62  qei_init
+      28  qei_init_struct
+
+ 
+  56 bytes in section .bss
+ 260 bytes in section .text
+ 
+ 260 bytes of CODE memory
+  56 bytes of DATA memory
+
+Errors: none
+Warnings: none

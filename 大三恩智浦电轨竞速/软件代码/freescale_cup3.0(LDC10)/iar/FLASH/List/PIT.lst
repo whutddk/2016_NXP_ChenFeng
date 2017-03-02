@@ -1,0 +1,206 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.20.2.7424/W32 for ARM        13/Mar/2016  16:39:20
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\app\BSP\PIT.c
+#    Command line =  
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\app\BSP\PIT.c"
+#        -D LPLD_K60 -D USE_K60DZ10 -lCN
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\FLASH\List\"
+#        -lB
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\FLASH\List\"
+#        -o
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\FLASH\Obj\"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config "C:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\app\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\app\MAIN\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\app\BSP\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\app\CTL\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\app\sensor\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\app\ITAC\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\CPU\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\common\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\LPLD\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\LPLD\HW\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\LPLD\DEV\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\LPLD\FUNC\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\uCOS-II\Ports\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\uCOS-II\Source\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\FatFs\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\FatFs\option\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\USB\common\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\USB\driver\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\USB\descriptor\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\USB\class\"
+#        -On -I "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\CMSIS\Include\" -D ARM_MATH_CM4
+#    List file    =  
+#        D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\FLASH\List\PIT.lst
+#    Object file  =  
+#        D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\FLASH\Obj\PIT.o
+#
+###############################################################################
+
+D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\app\BSP\PIT.c
+      1          #include "include.h"
+      2          
+
+   \                                 In section .bss, align 4
+      3          PIT_InitTypeDef pit_init_struct;
+   \                     pit_init_struct:
+   \   00000000                      DS8 20
+      4          
+      5          //主系统时钟 //1MS 一次中断
+
+   \                                 In section .text, align 2, keep-with-next
+      6          void PIT0_init()
+      7          {
+   \                     PIT0_init: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+      8            pit_init_struct.PIT_Pitx = PIT0;
+   \   00000002   0x2000             MOVS     R0,#+0
+   \   00000004   0x....             LDR.N    R1,??DataTable1
+   \   00000006   0x7008             STRB     R0,[R1, #+0]
+      9            pit_init_struct.PIT_PeriodS = 0;
+   \   00000008   0x2000             MOVS     R0,#+0
+   \   0000000A   0x....             LDR.N    R1,??DataTable1
+   \   0000000C   0x60C8             STR      R0,[R1, #+12]
+     10            pit_init_struct.PIT_PeriodMs = 1;
+   \   0000000E   0x2001             MOVS     R0,#+1
+   \   00000010   0x....             LDR.N    R1,??DataTable1
+   \   00000012   0x6088             STR      R0,[R1, #+8]
+     11            pit_init_struct.PIT_PeriodUs = 0;     //定时周期
+   \   00000014   0x2000             MOVS     R0,#+0
+   \   00000016   0x....             LDR.N    R1,??DataTable1
+   \   00000018   0x6048             STR      R0,[R1, #+4]
+     12            pit_init_struct.PIT_Isr = MCNT_isr;  //设置中断函数
+   \   0000001A   0x....             LDR.N    R0,??DataTable1_1
+   \   0000001C   0x....             LDR.N    R1,??DataTable1
+   \   0000001E   0x6108             STR      R0,[R1, #+16]
+     13           
+     14            LPLD_PIT_Init(pit_init_struct);  //初始化PIT0
+   \   00000020   0x....             LDR.N    R1,??DataTable1
+   \   00000022   0xB084             SUB      SP,SP,#+16
+   \   00000024   0x4668             MOV      R0,SP
+   \   00000026   0x2214             MOVS     R2,#+20
+   \   00000028   0x.... 0x....      BL       __aeabi_memcpy4
+   \   0000002C   0xBC0F             POP      {R0-R3}
+   \   0000002E   0x.... 0x....      BL       LPLD_PIT_Init
+     15            
+     16            //LPLD_PIT_EnableIrq(pit_init_struct);
+     17          }
+   \   00000032   0xBD01             POP      {R0,PC}          ;; return
+     18          
+     19          //控制系统时钟 //暂定10ms
+
+   \                                 In section .text, align 2, keep-with-next
+     20          void PIT1_init()
+     21          {
+   \                     PIT1_init: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     22            //配置PIT2参数
+     23            pit_init_struct.PIT_Pitx = PIT1;
+   \   00000002   0x2001             MOVS     R0,#+1
+   \   00000004   0x....             LDR.N    R1,??DataTable1
+   \   00000006   0x7008             STRB     R0,[R1, #+0]
+     24            pit_init_struct.PIT_PeriodS = 0;
+   \   00000008   0x2000             MOVS     R0,#+0
+   \   0000000A   0x....             LDR.N    R1,??DataTable1
+   \   0000000C   0x60C8             STR      R0,[R1, #+12]
+     25            pit_init_struct.PIT_PeriodMs = 10;
+   \   0000000E   0x200A             MOVS     R0,#+10
+   \   00000010   0x....             LDR.N    R1,??DataTable1
+   \   00000012   0x6088             STR      R0,[R1, #+8]
+     26            pit_init_struct.PIT_PeriodUs = 0;     //定时周期
+   \   00000014   0x2000             MOVS     R0,#+0
+   \   00000016   0x....             LDR.N    R1,??DataTable1
+   \   00000018   0x6048             STR      R0,[R1, #+4]
+     27            pit_init_struct.PIT_Isr = CTL_isr;  //设置中断函数
+   \   0000001A   0x....             LDR.N    R0,??DataTable1_2
+   \   0000001C   0x....             LDR.N    R1,??DataTable1
+   \   0000001E   0x6108             STR      R0,[R1, #+16]
+     28            
+     29            LPLD_PIT_Init(pit_init_struct); //初始化PIT1 
+   \   00000020   0x....             LDR.N    R1,??DataTable1
+   \   00000022   0xB084             SUB      SP,SP,#+16
+   \   00000024   0x4668             MOV      R0,SP
+   \   00000026   0x2214             MOVS     R2,#+20
+   \   00000028   0x.... 0x....      BL       __aeabi_memcpy4
+   \   0000002C   0xBC0F             POP      {R0-R3}
+   \   0000002E   0x.... 0x....      BL       LPLD_PIT_Init
+     30            //LPLD_PIT_EnableIrq(pit_init_struct);
+     31          }
+   \   00000032   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \   00000000   0x........         DC32     pit_init_struct
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_1:
+   \   00000000   0x........         DC32     MCNT_isr
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_2:
+   \   00000000   0x........         DC32     CTL_isr
+     32          
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      24   PIT0_init
+         8   -> LPLD_PIT_Init
+        24   -> __aeabi_memcpy4
+      24   PIT1_init
+         8   -> LPLD_PIT_Init
+        24   -> __aeabi_memcpy4
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable1_1
+       4  ??DataTable1_2
+      52  PIT0_init
+      52  PIT1_init
+      20  pit_init_struct
+
+ 
+  20 bytes in section .bss
+ 116 bytes in section .text
+ 
+ 116 bytes of CODE memory
+  20 bytes of DATA memory
+
+Errors: none
+Warnings: none

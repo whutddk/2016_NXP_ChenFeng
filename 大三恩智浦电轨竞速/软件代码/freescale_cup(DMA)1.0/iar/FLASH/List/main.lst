@@ -1,0 +1,264 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.20.2.7424/W32 for ARM        02/Jan/2016  16:00:26
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\app\MAIN\main.c
+#    Command line =  
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\app\MAIN\main.c"
+#        -D LPLD_K60 -D USE_K60DZ10 -lCN
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\FLASH\List\"
+#        -lB
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\FLASH\List\"
+#        -o
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\FLASH\Obj\"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config "D:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\app\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\app\MAIN\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\app\BSP\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\app\CTL\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\app\sensor\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\app\ITAC\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\CPU\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\common\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\LPLD\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\LPLD\HW\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\LPLD\DEV\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\LPLD\FUNC\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\uCOS-II\Ports\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\uCOS-II\Source\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\FatFs\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\FatFs\option\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\USB\common\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\USB\driver\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\USB\descriptor\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\USB\class\"
+#        -On -I "D:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\CMSIS\Include\" -D ARM_MATH_CM4
+#    List file    =  
+#        G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\FLASH\List\main.lst
+#    Object file  =  
+#        G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\FLASH\Obj\main.o
+#
+###############################################################################
+
+G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\app\MAIN\main.c
+      1          //Ö÷º¯Êý²¿·Ö
+      2          //DDK 
+      3          
+      4          
+      5          
+      6          #include "include.h"
+      7          
+
+   \                                 In section .bss, align 1
+      8          uint8 send_cnt = 0;
+   \                     send_cnt:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 2
+      9          uint16 timer_cnt = 0;
+   \                     timer_cnt:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 4
+     10          vuint32 temp1 = 0; 
+   \                     temp1:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+     11          vuint32 temp2 = 0; 
+   \                     temp2:
+   \   00000000                      DS8 4
+     12          
+
+   \                                 In section .text, align 2, keep-with-next
+     13          void main (void)
+     14          {
+   \                     main: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     15            sysinit();
+   \   00000002   0x.... 0x....      BL       sysinit
+     16            
+     17            gpio_init();
+   \   00000006   0x.... 0x....      BL       gpio_init
+     18            dma_init();
+   \   0000000A   0x.... 0x....      BL       dma_init
+     19            
+     20            LPLD_LPTMR_DelayMs(300);
+   \   0000000E   0xF44F 0x7096      MOV      R0,#+300
+   \   00000012   0x.... 0x....      BL       LPLD_LPTMR_DelayMs
+     21          
+     22            
+     23            bz_set(ready);//³õÊ¼»¯Íê±Ï£¬·äÃùÆ÷ÌáÊ¾
+   \   00000016   0x2000             MOVS     R0,#+0
+   \   00000018   0x.... 0x....      BL       bz_set
+     24            
+     25            while(1)
+     26            {
+     27              bzled_work();
+   \                     ??main_0: (+1)
+   \   0000001C   0x.... 0x....      BL       bzled_work
+     28              //30ms·¢ËÍÒ»´ÎÊ¾²¨Æ÷Êý¾Ý
+     29              if ( send_cnt >= 30 )
+   \   00000020   0x....             LDR.N    R0,??DataTable1
+   \   00000022   0x7800             LDRB     R0,[R0, #+0]
+   \   00000024   0x281E             CMP      R0,#+30
+   \   00000026   0xDBF9             BLT.N    ??main_0
+     30              {
+     31                sendDataToScope();
+   \   00000028   0x.... 0x....      BL       sendDataToScope
+   \   0000002C   0xE7F6             B.N      ??main_0
+     32              }
+     33            } 
+     34          }
+     35          
+     36          
+
+   \                                 In section .text, align 2, keep-with-next
+     37          void MCNT_isr() // Ö÷ÏµÍ³¼ÆÊ±
+     38          {
+   \                     MCNT_isr: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     39            timer_cnt++ ;
+   \   00000002   0x....             LDR.N    R0,??DataTable1_1
+   \   00000004   0x8800             LDRH     R0,[R0, #+0]
+   \   00000006   0x1C40             ADDS     R0,R0,#+1
+   \   00000008   0x....             LDR.N    R1,??DataTable1_1
+   \   0000000A   0x8008             STRH     R0,[R1, #+0]
+     40            bz_cnt++;
+   \   0000000C   0x....             LDR.N    R0,??DataTable1_2
+   \   0000000E   0x8800             LDRH     R0,[R0, #+0]
+   \   00000010   0x1C40             ADDS     R0,R0,#+1
+   \   00000012   0x....             LDR.N    R1,??DataTable1_2
+   \   00000014   0x8008             STRH     R0,[R1, #+0]
+     41            send_cnt++;
+   \   00000016   0x....             LDR.N    R0,??DataTable1
+   \   00000018   0x7800             LDRB     R0,[R0, #+0]
+   \   0000001A   0x1C40             ADDS     R0,R0,#+1
+   \   0000001C   0x....             LDR.N    R1,??DataTable1
+   \   0000001E   0x7008             STRB     R0,[R1, #+0]
+     42            
+     43            if ( timer_cnt % 10 == 0 )
+   \   00000020   0x....             LDR.N    R0,??DataTable1_1
+   \   00000022   0x8800             LDRH     R0,[R0, #+0]
+   \   00000024   0x210A             MOVS     R1,#+10
+   \   00000026   0xFB90 0xF2F1      SDIV     R2,R0,R1
+   \   0000002A   0xFB01 0x0012      MLS      R0,R1,R2,R0
+   \   0000002E   0x2800             CMP      R0,#+0
+   \   00000030   0xD107             BNE.N    ??MCNT_isr_0
+     44            {
+     45              temp1 = DMA_cntget0();
+   \   00000032   0x.... 0x....      BL       DMA_cntget0
+   \   00000036   0x....             LDR.N    R1,??DataTable1_3
+   \   00000038   0x6008             STR      R0,[R1, #+0]
+     46              temp2 = DMA_cntget1();
+   \   0000003A   0x.... 0x....      BL       DMA_cntget1
+   \   0000003E   0x....             LDR.N    R1,??DataTable1_4
+   \   00000040   0x6008             STR      R0,[R1, #+0]
+     47            }
+     48            
+     49            if (timer_cnt == 1000)//1s
+   \                     ??MCNT_isr_0: (+1)
+   \   00000042   0x....             LDR.N    R0,??DataTable1_1
+   \   00000044   0x8800             LDRH     R0,[R0, #+0]
+   \   00000046   0xF5B0 0x7F7A      CMP      R0,#+1000
+   \   0000004A   0xD102             BNE.N    ??MCNT_isr_1
+     50            {
+     51              timer_cnt = 0;
+   \   0000004C   0x2000             MOVS     R0,#+0
+   \   0000004E   0x....             LDR.N    R1,??DataTable1_1
+   \   00000050   0x8008             STRH     R0,[R1, #+0]
+     52            }
+     53          }  
+   \                     ??MCNT_isr_1: (+1)
+   \   00000052   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \   00000000   0x........         DC32     send_cnt
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_1:
+   \   00000000   0x........         DC32     timer_cnt
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_2:
+   \   00000000   0x........         DC32     bz_cnt
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_3:
+   \   00000000   0x........         DC32     temp1
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_4:
+   \   00000000   0x........         DC32     temp2
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   MCNT_isr
+         8   -> DMA_cntget0
+         8   -> DMA_cntget1
+       8   main
+         8   -> LPLD_LPTMR_DelayMs
+         8   -> bz_set
+         8   -> bzled_work
+         8   -> dma_init
+         8   -> gpio_init
+         8   -> sendDataToScope
+         8   -> sysinit
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable1_1
+       4  ??DataTable1_2
+       4  ??DataTable1_3
+       4  ??DataTable1_4
+      84  MCNT_isr
+      46  main
+       1  send_cnt
+       4  temp1
+       4  temp2
+       2  timer_cnt
+
+ 
+  11 bytes in section .bss
+ 150 bytes in section .text
+ 
+ 150 bytes of CODE memory
+  11 bytes of DATA memory
+
+Errors: none
+Warnings: 4

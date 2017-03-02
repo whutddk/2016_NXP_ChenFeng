@@ -1,0 +1,240 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.20.2.7424/W32 for ARM        11/Mar/2016  11:02:51
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\app\CTL\dirctl.c
+#    Command line =  
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\app\CTL\dirctl.c"
+#        -D LPLD_K60 -D USE_K60DZ10 -lCN
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\FLASH\List\"
+#        -lB
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\FLASH\List\"
+#        -o
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\FLASH\Obj\"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config "C:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\app\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\app\MAIN\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\app\BSP\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\app\CTL\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\app\sensor\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\app\ITAC\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\CPU\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\common\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\LPLD\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\LPLD\HW\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\LPLD\DEV\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\LPLD\FUNC\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\uCOS-II\Ports\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\uCOS-II\Source\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\FatFs\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\FatFs\option\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\USB\common\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\USB\driver\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\USB\descriptor\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\USB\class\"
+#        -On -I "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\CMSIS\Include\" -D ARM_MATH_CM4
+#    List file    =  
+#        D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\FLASH\List\dirctl.lst
+#    Object file  =  
+#        D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\FLASH\Obj\dirctl.o
+#
+###############################################################################
+
+D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\app\CTL\dirctl.c
+      1          //舵机位置控制
+      2          #include "include.h"
+      3          
+      4          //方向控制
+      5          
+      6          /*input(-100 +100)*/
+      7          /*output（1400 1575 1750）(-175 ~ +175)  */
+
+   \                                 In section .text, align 4, keep-with-next
+      8          void S3010_CTL()
+      9          {
+   \                     S3010_CTL: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     10             
+     11            if ( line.pos[0] > 100 )
+   \   00000002   0x4827             LDR.N    R0,??S3010_CTL_0
+   \   00000004   0xF9B0 0x0002      LDRSH    R0,[R0, #+2]
+   \   00000008   0x2865             CMP      R0,#+101
+   \   0000000A   0xDB02             BLT.N    ??S3010_CTL_1
+     12            {
+     13              line.pos[0] =  100;
+   \   0000000C   0x2064             MOVS     R0,#+100
+   \   0000000E   0x4924             LDR.N    R1,??S3010_CTL_0
+   \   00000010   0x8048             STRH     R0,[R1, #+2]
+     14            }
+     15            if ( line.pos[0] < -100 )
+   \                     ??S3010_CTL_1: (+1)
+   \   00000012   0x4823             LDR.N    R0,??S3010_CTL_0
+   \   00000014   0xF9B0 0x0002      LDRSH    R0,[R0, #+2]
+   \   00000018   0xF110 0x0F64      CMN      R0,#+100
+   \   0000001C   0xDA03             BGE.N    ??S3010_CTL_2
+     16            {
+     17              line.pos[0] = -100;
+   \   0000001E   0xF07F 0x0063      MVNS     R0,#+99
+   \   00000022   0x491F             LDR.N    R1,??S3010_CTL_0
+   \   00000024   0x8048             STRH     R0,[R1, #+2]
+     18            }
+     19            
+     20            
+     21            ctl.S3010.error[0] = -line.pos[0];
+   \                     ??S3010_CTL_2: (+1)
+   \   00000026   0x481E             LDR.N    R0,??S3010_CTL_0
+   \   00000028   0xF9B0 0x0002      LDRSH    R0,[R0, #+2]
+   \   0000002C   0x4240             RSBS     R0,R0,#+0
+   \   0000002E   0x.... 0x....      BL       __aeabi_i2f
+   \   00000032   0x491C             LDR.N    R1,??S3010_CTL_0+0x4
+   \   00000034   0x6188             STR      R0,[R1, #+24]
+     22            
+     23            if ( ctl.S3010.error[0] <= -200 || ctl.S3010.error[0] >= 200)
+   \   00000036   0x481B             LDR.N    R0,??S3010_CTL_0+0x4
+   \   00000038   0x6980             LDR      R0,[R0, #+24]
+   \   0000003A   0x491B             LDR.N    R1,??S3010_CTL_0+0x8  ;; 0xc347ffff
+   \   0000003C   0x.... 0x....      BL       __aeabi_cfcmple
+   \   00000040   0xD305             BCC.N    ??S3010_CTL_3
+   \   00000042   0x4818             LDR.N    R0,??S3010_CTL_0+0x4
+   \   00000044   0x6980             LDR      R0,[R0, #+24]
+   \   00000046   0x4919             LDR.N    R1,??S3010_CTL_0+0xC  ;; 0x43480000
+   \   00000048   0x.... 0x....      BL       __aeabi_cfrcmple
+   \   0000004C   0xD803             BHI.N    ??S3010_CTL_4
+     24            {
+     25              bz_set(warn);
+   \                     ??S3010_CTL_3: (+1)
+   \   0000004E   0x2002             MOVS     R0,#+2
+   \   00000050   0x.... 0x....      BL       bz_set
+     26              return;
+   \   00000054   0xE023             B.N      ??S3010_CTL_5
+     27            }
+     28            
+     29          #if FUZZY
+     30            ctl.S3010.result[1] = fuzzy_online(ctl.S3010.error[0] , (ctl.S3010.error[0] - ctl.S3010.error[1]) );
+     31            ctl.S3010.result[1] *= 1.75;
+     32            ctl.S3010.error[1] = ctl.S3010.error[0];
+     33          #endif
+     34            
+     35          #if PID
+     36            PID_out();
+   \                     ??S3010_CTL_4: (+1)
+   \   00000056   0x.... 0x....      BL       PID_out
+     37          #endif
+     38            
+     39            ctl.S3010.out = ctl.S3010.result + 1350;
+   \   0000005A   0x4812             LDR.N    R0,??S3010_CTL_0+0x4
+   \   0000005C   0x6901             LDR      R1,[R0, #+16]
+   \   0000005E   0x4814             LDR.N    R0,??S3010_CTL_0+0x10  ;; 0x44a8c000
+   \   00000060   0x.... 0x....      BL       __aeabi_fadd
+   \   00000064   0x490F             LDR.N    R1,??S3010_CTL_0+0x4
+   \   00000066   0x6148             STR      R0,[R1, #+20]
+     40            if ( ctl.S3010.out > 1650 )
+   \   00000068   0x480E             LDR.N    R0,??S3010_CTL_0+0x4
+   \   0000006A   0x6940             LDR      R0,[R0, #+20]
+   \   0000006C   0x4911             LDR.N    R1,??S3010_CTL_0+0x14  ;; 0x44ce4001
+   \   0000006E   0x.... 0x....      BL       __aeabi_cfrcmple
+   \   00000072   0xD802             BHI.N    ??S3010_CTL_6
+     41            {
+     42              ctl.S3010.out = 1650;
+   \   00000074   0x4810             LDR.N    R0,??S3010_CTL_0+0x18  ;; 0x44ce4000
+   \   00000076   0x490B             LDR.N    R1,??S3010_CTL_0+0x4
+   \   00000078   0x6148             STR      R0,[R1, #+20]
+     43            }
+     44            if ( ctl.S3010.out < 1050)
+   \                     ??S3010_CTL_6: (+1)
+   \   0000007A   0x480A             LDR.N    R0,??S3010_CTL_0+0x4
+   \   0000007C   0x6940             LDR      R0,[R0, #+20]
+   \   0000007E   0x490F             LDR.N    R1,??S3010_CTL_0+0x1C  ;; 0x44834000
+   \   00000080   0x.... 0x....      BL       __aeabi_cfcmple
+   \   00000084   0xD202             BCS.N    ??S3010_CTL_7
+     45            {
+     46              ctl.S3010.out = 1050;
+   \   00000086   0x480D             LDR.N    R0,??S3010_CTL_0+0x1C  ;; 0x44834000
+   \   00000088   0x4906             LDR.N    R1,??S3010_CTL_0+0x4
+   \   0000008A   0x6148             STR      R0,[R1, #+20]
+     47            }
+     48            
+     49              
+     50            LPLD_FTM_PWM_ChangeDuty(FTM1, FTM_Ch0, (uint32) ctl.S3010.out ); 
+   \                     ??S3010_CTL_7: (+1)
+   \   0000008C   0x4805             LDR.N    R0,??S3010_CTL_0+0x4
+   \   0000008E   0x6940             LDR      R0,[R0, #+20]
+   \   00000090   0x.... 0x....      BL       __aeabi_f2uiz
+   \   00000094   0x0002             MOVS     R2,R0
+   \   00000096   0x2100             MOVS     R1,#+0
+   \   00000098   0x4809             LDR.N    R0,??S3010_CTL_0+0x20  ;; 0x40039000
+   \   0000009A   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+     51            
+     52            
+     53            //最后控制结果的输出
+     54          
+     55          }
+   \                     ??S3010_CTL_5: (+1)
+   \   0000009E   0xBD01             POP      {R0,PC}          ;; return
+   \                     ??S3010_CTL_0:
+   \   000000A0   0x........         DC32     line
+   \   000000A4   0x........         DC32     ctl
+   \   000000A8   0xC347FFFF         DC32     0xc347ffff
+   \   000000AC   0x43480000         DC32     0x43480000
+   \   000000B0   0x44A8C000         DC32     0x44a8c000
+   \   000000B4   0x44CE4001         DC32     0x44ce4001
+   \   000000B8   0x44CE4000         DC32     0x44ce4000
+   \   000000BC   0x44834000         DC32     0x44834000
+   \   000000C0   0x40039000         DC32     0x40039000
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   S3010_CTL
+         8   -> LPLD_FTM_PWM_ChangeDuty
+         8   -> PID_out
+         8   -> __aeabi_f2uiz
+         8   -> __aeabi_fadd
+         8   -> __aeabi_i2f
+         8   -> bz_set
+         8 __aeabi_cfcmple
+         8 __aeabi_cfrcmple
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+     196  S3010_CTL
+
+ 
+ 196 bytes in section .text
+ 
+ 196 bytes of CODE memory
+
+Errors: none
+Warnings: none

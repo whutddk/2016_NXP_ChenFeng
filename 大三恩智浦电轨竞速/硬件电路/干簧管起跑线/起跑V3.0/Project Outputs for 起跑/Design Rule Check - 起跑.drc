@@ -1,0 +1,52 @@
+Protel Design System Design Rule Check
+PCB File : D:\快盘同步\2016省赛\电路图\起跑V3.0\起跑.PcbDoc
+Date     : 2016/6/29
+Time     : 22:51:26
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=6mil) (Max=50mil) (Preferred=30mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (All)
+   Violation between Hole Size Constraint (118.11mil > 100mil) : Pad Free-0(1516.48mil,89.48mil)  Multi-Layer
+   Violation between Hole Size Constraint (118.11mil > 100mil) : Pad Free-1(-1515.016mil,89.48mil)  Multi-Layer
+Rule Violations :2
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=10mil) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=10mil) (All),(All)
+   Violation between Text "IO" (-25mil,-176mil)  Top Overlay and 
+                     Track (-300mil,-187.85mil)(300mil,-187.85mil)  Top Overlay
+   Violation between Text "GND" (-147mil,-177mil)  Top Overlay and 
+                     Track (-300mil,-187.85mil)(300mil,-187.85mil)  Top Overlay
+   Violation between Text "3.3V" (60mil,-177mil)  Top Overlay and 
+                     Track (-300mil,-187.85mil)(300mil,-187.85mil)  Top Overlay
+Rule Violations :3
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+Rule Violations :0
+
+
+Violations Detected : 5
+Time Elapsed        : 00:00:02

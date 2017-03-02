@@ -1,0 +1,310 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.20.2.7424/W32 for ARM        13/Mar/2016  16:39:06
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\app\CTL\control.c
+#    Command line =  
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\app\CTL\control.c"
+#        -D LPLD_K60 -D USE_K60DZ10 -lCN
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\FLASH\List\"
+#        -lB
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\FLASH\List\"
+#        -o
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\FLASH\Obj\"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config "C:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\app\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\app\MAIN\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\app\BSP\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\app\CTL\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\app\sensor\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\app\ITAC\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\CPU\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\common\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\LPLD\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\LPLD\HW\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\LPLD\DEV\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\LPLD\FUNC\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\uCOS-II\Ports\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\uCOS-II\Source\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\FatFs\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\FatFs\option\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\USB\common\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\USB\driver\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\USB\descriptor\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\USB\class\"
+#        -On -I "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\CMSIS\Include\" -D ARM_MATH_CM4
+#    List file    =  
+#        D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\FLASH\List\control.lst
+#    Object file  =  
+#        D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\FLASH\Obj\control.o
+#
+###############################################################################
+
+D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\app\CTL\control.c
+      1          //控制部分通用代码
+      2          #include "include.h"
+      3          
+
+   \                                 In section .bss, align 4
+      4          struct _ctl ctl;
+   \                     ctl:
+   \   00000000                      DS8 112
+      5          
+
+   \                                 In section .text, align 2, keep-with-next
+      6          void CTL_SEN_init()//控制参数初始化
+      7          {
+      8            ctl.S3010.Kp_S = 0;
+   \                     CTL_SEN_init: (+1)
+   \   00000000   0x2000             MOVS     R0,#+0
+   \   00000002   0x....             LDR.N    R1,??DataTable1
+   \   00000004   0x6108             STR      R0,[R1, #+16]
+      9            ctl.S3010.Kp_B = 0;
+   \   00000006   0x2000             MOVS     R0,#+0
+   \   00000008   0x....             LDR.N    R1,??DataTable1
+   \   0000000A   0x6148             STR      R0,[R1, #+20]
+     10            
+     11            ctl.S3010.Kd_S = 0;
+   \   0000000C   0x2000             MOVS     R0,#+0
+   \   0000000E   0x....             LDR.N    R1,??DataTable1
+   \   00000010   0x6188             STR      R0,[R1, #+24]
+     12            ctl.S3010.Kd_B = 0;
+   \   00000012   0x2000             MOVS     R0,#+0
+   \   00000014   0x....             LDR.N    R1,??DataTable1
+   \   00000016   0x61C8             STR      R0,[R1, #+28]
+     13            
+     14            ctl.motto.aim = 0;
+   \   00000018   0x2000             MOVS     R0,#+0
+   \   0000001A   0x....             LDR.N    R1,??DataTable1
+   \   0000001C   0x8748             STRH     R0,[R1, #+58]
+     15            
+     16            ctl.motto.Kp = 2.25;
+   \   0000001E   0x....             LDR.N    R0,??DataTable1_1  ;; 0x40100000
+   \   00000020   0x....             LDR.N    R1,??DataTable1
+   \   00000022   0x63C8             STR      R0,[R1, #+60]
+     17            ctl.motto.Ki = 0.6;
+   \   00000024   0x....             LDR.N    R0,??DataTable1_2  ;; 0x3f19999a
+   \   00000026   0x....             LDR.N    R1,??DataTable1
+   \   00000028   0x6408             STR      R0,[R1, #+64]
+     18            
+     19            ctl.motto.out = 0;
+   \   0000002A   0x2000             MOVS     R0,#+0
+   \   0000002C   0x....             LDR.N    R1,??DataTable1
+   \   0000002E   0x6608             STR      R0,[R1, #+96]
+     20             
+     21            line.pos = 0;
+   \   00000030   0x2000             MOVS     R0,#+0
+   \   00000032   0x....             LDR.N    R1,??DataTable1_3
+   \   00000034   0x8048             STRH     R0,[R1, #+2]
+     22            sensor.max[0] = 128;  
+   \   00000036   0xF05F 0x4086      MOVS     R0,#+1124073472
+   \   0000003A   0x....             LDR.N    R1,??DataTable1_4
+   \   0000003C   0x61C8             STR      R0,[R1, #+28]
+     23            sensor.max[1] = 120;
+   \   0000003E   0x....             LDR.N    R0,??DataTable1_5  ;; 0x42f00000
+   \   00000040   0x....             LDR.N    R1,??DataTable1_4
+   \   00000042   0x6208             STR      R0,[R1, #+32]
+     24          }
+   \   00000044   0x4770             BX       LR               ;; return
+     25          
+     26          
+     27          //控制中断函数
+
+   \                                 In section .text, align 2, keep-with-next
+     28          void CTL_isr()//控制系统调度 //10ms
+     29          {
+   \                     CTL_isr: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     30            
+     31            static uint8 cnt = 0;
+     32            
+     33            cnt++;
+   \   00000002   0x....             LDR.N    R0,??DataTable1_6
+   \   00000004   0x7800             LDRB     R0,[R0, #+0]
+   \   00000006   0x1C40             ADDS     R0,R0,#+1
+   \   00000008   0x....             LDR.N    R1,??DataTable1_6
+   \   0000000A   0x7008             STRB     R0,[R1, #+0]
+     34            
+     35          
+     36            DateAnalyse();
+   \   0000000C   0x.... 0x....      BL       DateAnalyse
+     37            
+     38            if ( flag_stop == 0 ) //无急停标志
+   \   00000010   0x....             LDR.N    R0,??DataTable1_7
+   \   00000012   0x7800             LDRB     R0,[R0, #+0]
+   \   00000014   0x2800             CMP      R0,#+0
+   \   00000016   0xD10F             BNE.N    ??CTL_isr_0
+     39            {
+     40              S3010_CTL();
+   \   00000018   0x.... 0x....      BL       S3010_CTL
+     41              
+     42              //20ms中断区
+     43              if ( cnt >= 2 )
+   \   0000001C   0x....             LDR.N    R0,??DataTable1_6
+   \   0000001E   0x7800             LDRB     R0,[R0, #+0]
+   \   00000020   0x2802             CMP      R0,#+2
+   \   00000022   0xDB19             BLT.N    ??CTL_isr_1
+     44              {
+     45                cnt = 0;
+   \   00000024   0x2000             MOVS     R0,#+0
+   \   00000026   0x....             LDR.N    R1,??DataTable1_6
+   \   00000028   0x7008             STRB     R0,[R1, #+0]
+     46                
+     47                motto_getsped();//测速
+   \   0000002A   0x.... 0x....      BL       motto_getsped
+     48                ctl_sped();//速度控制
+   \   0000002E   0x.... 0x....      BL       ctl_sped
+     49                motto_set();//电机输出    
+   \   00000032   0x.... 0x....      BL       motto_set
+   \   00000036   0xE00F             B.N      ??CTL_isr_1
+     50              }
+     51              
+     52            }
+     53            else
+     54            {
+     55              LPLD_FTM_PWM_ChangeDuty(FTM0, FTM_Ch0, 0 );
+   \                     ??CTL_isr_0: (+1)
+   \   00000038   0x2200             MOVS     R2,#+0
+   \   0000003A   0x2100             MOVS     R1,#+0
+   \   0000003C   0x....             LDR.N    R0,??DataTable1_8  ;; 0x40038000
+   \   0000003E   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+     56              LPLD_FTM_PWM_ChangeDuty(FTM0, FTM_Ch1, 0 );
+   \   00000042   0x2200             MOVS     R2,#+0
+   \   00000044   0x2101             MOVS     R1,#+1
+   \   00000046   0x....             LDR.N    R0,??DataTable1_8  ;; 0x40038000
+   \   00000048   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+     57              
+     58              
+     59              LPLD_FTM_PWM_ChangeDuty(FTM1, FTM_Ch0, 1543 );
+   \   0000004C   0xF240 0x6207      MOVW     R2,#+1543
+   \   00000050   0x2100             MOVS     R1,#+0
+   \   00000052   0x....             LDR.N    R0,??DataTable1_9  ;; 0x40039000
+   \   00000054   0x.... 0x....      BL       LPLD_FTM_PWM_ChangeDuty
+     60              
+     61            }
+     62            //此处是代码冗余
+     63            safty_check();
+   \                     ??CTL_isr_1: (+1)
+   \   00000058   0x.... 0x....      BL       safty_check
+     64            
+     65                sendDataToScope();
+   \   0000005C   0x.... 0x....      BL       sendDataToScope
+     66          }
+   \   00000060   0xBD01             POP      {R0,PC}          ;; return
+
+   \                                 In section .bss, align 1
+   \                     ??cnt:
+   \   00000000                      DS8 1
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \   00000000   0x........         DC32     ctl
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_1:
+   \   00000000   0x40100000         DC32     0x40100000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_2:
+   \   00000000   0x3F19999A         DC32     0x3f19999a
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_3:
+   \   00000000   0x........         DC32     line
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_4:
+   \   00000000   0x........         DC32     sensor
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_5:
+   \   00000000   0x42F00000         DC32     0x42f00000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_6:
+   \   00000000   0x........         DC32     ??cnt
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_7:
+   \   00000000   0x........         DC32     flag_stop
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_8:
+   \   00000000   0x40038000         DC32     0x40038000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_9:
+   \   00000000   0x40039000         DC32     0x40039000
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   CTL_SEN_init
+       8   CTL_isr
+         8   -> DateAnalyse
+         8   -> LPLD_FTM_PWM_ChangeDuty
+         8   -> S3010_CTL
+         8   -> ctl_sped
+         8   -> motto_getsped
+         8   -> motto_set
+         8   -> safty_check
+         8   -> sendDataToScope
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable1_1
+       4  ??DataTable1_2
+       4  ??DataTable1_3
+       4  ??DataTable1_4
+       4  ??DataTable1_5
+       4  ??DataTable1_6
+       4  ??DataTable1_7
+       4  ??DataTable1_8
+       4  ??DataTable1_9
+      70  CTL_SEN_init
+      98  CTL_isr
+       1  cnt
+     112  ctl
+
+ 
+ 113 bytes in section .bss
+ 208 bytes in section .text
+ 
+ 208 bytes of CODE memory
+ 113 bytes of DATA memory
+
+Errors: none
+Warnings: none

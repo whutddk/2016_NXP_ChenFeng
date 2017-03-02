@@ -1,0 +1,312 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.20.2.7424/W32 for ARM        02/Jan/2016  16:00:26
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\app\BSP\FTM.c
+#    Command line =  
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\app\BSP\FTM.c"
+#        -D LPLD_K60 -D USE_K60DZ10 -lCN
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\FLASH\List\"
+#        -lB
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\FLASH\List\"
+#        -o
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\FLASH\Obj\"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config "D:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\app\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\app\MAIN\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\app\BSP\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\app\CTL\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\app\sensor\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\app\ITAC\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\CPU\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\common\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\LPLD\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\LPLD\HW\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\LPLD\DEV\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\LPLD\FUNC\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\uCOS-II\Ports\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\uCOS-II\Source\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\FatFs\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\FatFs\option\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\USB\common\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\USB\driver\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\USB\descriptor\"
+#        -I
+#        "G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\..\..\..\lib\USB\class\"
+#        -On -I "D:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\CMSIS\Include\" -D ARM_MATH_CM4
+#    List file    =  
+#        G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\FLASH\List\FTM.lst
+#    Object file  =  
+#        G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\iar\FLASH\Obj\FTM.o
+#
+###############################################################################
+
+G:\¿ìÅÌÍøÂç³·Àë\whutddk\·ÉË¼¿¨¶û\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(DMA)1.0\app\BSP\FTM.c
+      1          //FTM³õÊ¼»¯
+      2          #include "include.h"
+      3          
+
+   \                                 In section .bss, align 4
+      4          FTM_InitTypeDef ftm_init_struct;
+   \                     ftm_init_struct:
+   \   00000000                      DS8 28
+
+   \                                 In section .bss, align 4
+      5          FTM_InitTypeDef qei_init_struct;
+   \                     qei_init_struct:
+   \   00000000                      DS8 28
+      6          
+
+   \                                 In section .text, align 2, keep-with-next
+      7          void PWM_init()
+      8          {
+   \                     PWM_init: (+1)
+   \   00000000   0xB5E0             PUSH     {R5-R7,LR}
+      9            //pwm
+     10            ftm_init_struct.FTM_Ftmx = FTM0;	//Ê¹ÄÜFTM0Í¨µÀ
+   \   00000002   0x....             LDR.N    R0,??DataTable2  ;; 0x40038000
+   \   00000004   0x....             LDR.N    R1,??DataTable2_1
+   \   00000006   0x6008             STR      R0,[R1, #+0]
+     11            ftm_init_struct.FTM_Mode = FTM_MODE_PWM;	//Ê¹ÄÜPWMÄ£Ê½
+   \   00000008   0x2001             MOVS     R0,#+1
+   \   0000000A   0x....             LDR.N    R1,??DataTable2_1
+   \   0000000C   0x7108             STRB     R0,[R1, #+4]
+     12            ftm_init_struct.FTM_PwmFreq = 700000;	//PWMÆµÂÊ20000Hz
+   \   0000000E   0x....             LDR.N    R0,??DataTable2_2  ;; 0xaae60
+   \   00000010   0x....             LDR.N    R1,??DataTable2_1
+   \   00000012   0x6088             STR      R0,[R1, #+8]
+     13            ftm_init_struct.FTM_PwmDeadtimeCfg = DEADTIME_CH23;
+   \   00000014   0xF44F 0x5080      MOV      R0,#+4096
+   \   00000018   0x....             LDR.N    R1,??DataTable2_1
+   \   0000001A   0x60C8             STR      R0,[R1, #+12]
+     14            ftm_init_struct.FTM_PwmDeadtimeVal=0;
+   \   0000001C   0x2000             MOVS     R0,#+0
+   \   0000001E   0x....             LDR.N    R1,??DataTable2_1
+   \   00000020   0x7448             STRB     R0,[R1, #+17]
+     15            LPLD_FTM_Init(ftm_init_struct);
+   \   00000022   0x....             LDR.N    R1,??DataTable2_1
+   \   00000024   0xB084             SUB      SP,SP,#+16
+   \   00000026   0x4668             MOV      R0,SP
+   \   00000028   0x221C             MOVS     R2,#+28
+   \   0000002A   0x.... 0x....      BL       __aeabi_memcpy4
+   \   0000002E   0xBC0F             POP      {R0-R3}
+   \   00000030   0x.... 0x....      BL       LPLD_FTM_Init
+     16            
+     17            LPLD_FTM_PWM_Enable(FTM0, //Ê¹ÓÃFTM0
+     18                                FTM_Ch0, //Ê¹ÄÜCh0Í¨µÀ
+     19                                5000, //³õÊ¼»¯DUTY
+     20                                PTC1, //Ê¹ÓÃCh0Í¨µÀµÄPTC1Òý½Å
+     21                                ALIGN_LEFT        //Âö¿í×ó¶ÔÆë
+     22                                  ); 
+   \   00000034   0x2028             MOVS     R0,#+40
+   \   00000036   0x9000             STR      R0,[SP, #+0]
+   \   00000038   0x233D             MOVS     R3,#+61
+   \   0000003A   0xF241 0x3288      MOVW     R2,#+5000
+   \   0000003E   0x2100             MOVS     R1,#+0
+   \   00000040   0x....             LDR.N    R0,??DataTable2  ;; 0x40038000
+   \   00000042   0x.... 0x....      BL       LPLD_FTM_PWM_Enable
+     23            LPLD_FTM_PWM_Enable(FTM0, //Ê¹ÓÃFTM0
+     24                                FTM_Ch2, //Ê¹ÄÜCh1Í¨µÀ
+     25                                5000, //³õÊ¼»¯DUTY
+     26                                PTC3, //Ê¹ÓÃCh1Í¨µÀµÄPTC2Òý½Å
+     27                                ALIGN_LEFT        //Âö¿í×ó¶ÔÆë
+     28                                  ); 
+   \   00000046   0x2028             MOVS     R0,#+40
+   \   00000048   0x9000             STR      R0,[SP, #+0]
+   \   0000004A   0x233F             MOVS     R3,#+63
+   \   0000004C   0xF241 0x3288      MOVW     R2,#+5000
+   \   00000050   0x2102             MOVS     R1,#+2
+   \   00000052   0x....             LDR.N    R0,??DataTable2  ;; 0x40038000
+   \   00000054   0x.... 0x....      BL       LPLD_FTM_PWM_Enable
+     29          
+     30          }
+   \   00000058   0xBD07             POP      {R0-R2,PC}       ;; return
+     31          
+     32          
+
+   \                                 In section .text, align 2, keep-with-next
+     33          void S3010_init()
+     34          {
+   \                     S3010_init: (+1)
+   \   00000000   0xB5E0             PUSH     {R5-R7,LR}
+     35            //pwm
+     36            ftm_init_struct.FTM_Ftmx = FTM1;	//Ê¹ÄÜFTM0Í¨µÀ
+   \   00000002   0x....             LDR.N    R0,??DataTable2_3  ;; 0x40039000
+   \   00000004   0x....             LDR.N    R1,??DataTable2_1
+   \   00000006   0x6008             STR      R0,[R1, #+0]
+     37            ftm_init_struct.FTM_Mode = FTM_MODE_PWM;	//Ê¹ÄÜPWMÄ£Ê½
+   \   00000008   0x2001             MOVS     R0,#+1
+   \   0000000A   0x....             LDR.N    R1,??DataTable2_1
+   \   0000000C   0x7108             STRB     R0,[R1, #+4]
+     38            ftm_init_struct.FTM_PwmFreq = 100;	//PWMÆµÂÊ100Hz
+   \   0000000E   0x2064             MOVS     R0,#+100
+   \   00000010   0x....             LDR.N    R1,??DataTable2_1
+   \   00000012   0x6088             STR      R0,[R1, #+8]
+     39            ftm_init_struct.FTM_PwmDeadtimeCfg = DEADTIME_CH23;
+   \   00000014   0xF44F 0x5080      MOV      R0,#+4096
+   \   00000018   0x....             LDR.N    R1,??DataTable2_1
+   \   0000001A   0x60C8             STR      R0,[R1, #+12]
+     40            ftm_init_struct.FTM_PwmDeadtimeVal=0;
+   \   0000001C   0x2000             MOVS     R0,#+0
+   \   0000001E   0x....             LDR.N    R1,??DataTable2_1
+   \   00000020   0x7448             STRB     R0,[R1, #+17]
+     41            LPLD_FTM_Init(ftm_init_struct);
+   \   00000022   0x....             LDR.N    R1,??DataTable2_1
+   \   00000024   0xB084             SUB      SP,SP,#+16
+   \   00000026   0x4668             MOV      R0,SP
+   \   00000028   0x221C             MOVS     R2,#+28
+   \   0000002A   0x.... 0x....      BL       __aeabi_memcpy4
+   \   0000002E   0xBC0F             POP      {R0-R3}
+   \   00000030   0x.... 0x....      BL       LPLD_FTM_Init
+     42            
+     43            LPLD_FTM_PWM_Enable(FTM1, //Ê¹ÓÃFTM1
+     44                                FTM_Ch0, //Ê¹ÄÜCh0Í¨µÀ
+     45                                1520, //³õÊ¼»¯DUTY
+     46                                PTA8, //Ê¹ÓÃCh0Í¨µÀµÄPTC1Òý½Å
+     47                                ALIGN_LEFT        //Âö¿í×ó¶ÔÆë
+     48                                  ); 
+   \   00000034   0x2028             MOVS     R0,#+40
+   \   00000036   0x9000             STR      R0,[SP, #+0]
+   \   00000038   0x2308             MOVS     R3,#+8
+   \   0000003A   0xF44F 0x62BE      MOV      R2,#+1520
+   \   0000003E   0x2100             MOVS     R1,#+0
+   \   00000040   0x....             LDR.N    R0,??DataTable2_3  ;; 0x40039000
+   \   00000042   0x.... 0x....      BL       LPLD_FTM_PWM_Enable
+     49            
+     50          }
+   \   00000046   0xBD07             POP      {R0-R2,PC}       ;; return
+     51          
+
+   \                                 In section .text, align 2, keep-with-next
+     52          void qei_init()
+     53          {   
+   \                     qei_init: (+1)
+   \   00000000   0xB5E0             PUSH     {R5-R7,LR}
+     54            //ÅäÖÃÕý½»½âÂë¹¦ÄÜ²ÎÊý
+     55            
+     56            qei_init_struct.FTM_Ftmx = FTM2;              //Ö»ÓÐFTM1ºÍFTM2ÓÐÕý½»½âÂë¹¦ÄÜ
+   \   00000002   0x....             LDR.N    R0,??DataTable2_4  ;; 0x400b8000
+   \   00000004   0x....             LDR.N    R1,??DataTable2_5
+   \   00000006   0x6008             STR      R0,[R1, #+0]
+     57            qei_init_struct.FTM_Mode = FTM_MODE_QD;       //Õý½»½âÂë¹¦ÄÜ
+   \   00000008   0x2004             MOVS     R0,#+4
+   \   0000000A   0x....             LDR.N    R1,??DataTable2_5
+   \   0000000C   0x7108             STRB     R0,[R1, #+4]
+     58            qei_init_struct.FTM_QdMode = QD_MODE_PHAB;    //ABÏàÊäÈëÄ£Ê½
+   \   0000000E   0x2000             MOVS     R0,#+0
+   \   00000010   0x....             LDR.N    R1,??DataTable2_5
+   \   00000012   0x7488             STRB     R0,[R1, #+18]
+     59            //³õÊ¼»¯FTM
+     60            LPLD_FTM_Init(qei_init_struct);
+   \   00000014   0x....             LDR.N    R1,??DataTable2_5
+   \   00000016   0xB084             SUB      SP,SP,#+16
+   \   00000018   0x4668             MOV      R0,SP
+   \   0000001A   0x221C             MOVS     R2,#+28
+   \   0000001C   0x.... 0x....      BL       __aeabi_memcpy4
+   \   00000020   0xBC0F             POP      {R0-R3}
+   \   00000022   0x.... 0x....      BL       LPLD_FTM_Init
+     61            //Ê¹ÄÜABÏàÊäÈëÍ¨µÀ
+     62            //PTB18Òý½Å½ÓAÏàÊäÈë¡¢PTB19Òý½Å½ÓBÏàÊäÈë
+     63            LPLD_FTM_QD_Enable(FTM2, PTB18, PTB19);
+   \   00000026   0x2233             MOVS     R2,#+51
+   \   00000028   0x2132             MOVS     R1,#+50
+   \   0000002A   0x....             LDR.N    R0,??DataTable2_4  ;; 0x400b8000
+   \   0000002C   0x.... 0x....      BL       LPLD_FTM_QD_Enable
+     64            
+     65          }
+   \   00000030   0xBD07             POP      {R0-R2,PC}       ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2:
+   \   00000000   0x40038000         DC32     0x40038000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_1:
+   \   00000000   0x........         DC32     ftm_init_struct
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_2:
+   \   00000000   0x000AAE60         DC32     0xaae60
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_3:
+   \   00000000   0x40039000         DC32     0x40039000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_4:
+   \   00000000   0x400B8000         DC32     0x400b8000
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_5:
+   \   00000000   0x........         DC32     qei_init_struct
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      32   PWM_init
+        16   -> LPLD_FTM_Init
+        16   -> LPLD_FTM_PWM_Enable
+        32   -> __aeabi_memcpy4
+      32   S3010_init
+        16   -> LPLD_FTM_Init
+        16   -> LPLD_FTM_PWM_Enable
+        32   -> __aeabi_memcpy4
+      32   qei_init
+        16   -> LPLD_FTM_Init
+        16   -> LPLD_FTM_QD_Enable
+        32   -> __aeabi_memcpy4
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable2
+       4  ??DataTable2_1
+       4  ??DataTable2_2
+       4  ??DataTable2_3
+       4  ??DataTable2_4
+       4  ??DataTable2_5
+      90  PWM_init
+      72  S3010_init
+      28  ftm_init_struct
+      50  qei_init
+      28  qei_init_struct
+
+ 
+  56 bytes in section .bss
+ 236 bytes in section .text
+ 
+ 236 bytes of CODE memory
+  56 bytes of DATA memory
+
+Errors: none
+Warnings: none

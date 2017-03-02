@@ -1,0 +1,8 @@
+删掉 exti ，改成用 port 来配置端口属性，可配置 DMA触发、中断、端口上拉下拉电阻、滤波等功能。修改了DMA的接口，DMA_PORTx2BUFF_Init 和 DMA_count_Init 后面，都需要调用 port_init 来配置端口属性。
+
+例如配置中断：
+port_init(PTA29,IRQ_RISING | PULLUP | PF);    //PTA29中断，下拉，下降沿触发中断，带滤波
+
+例如配置DMA：
+DMA_PORTx2BUFF_Init(CAMERA_DMA_CH, (void *)&PTB_BYTE0_IN, (void *)IMG_BUFF, PTB8, DMA_BYTE1, CAMERA_SIZE , KEEPON);
+port_init(PTB8,DMA_RISING | PULLUP ); 

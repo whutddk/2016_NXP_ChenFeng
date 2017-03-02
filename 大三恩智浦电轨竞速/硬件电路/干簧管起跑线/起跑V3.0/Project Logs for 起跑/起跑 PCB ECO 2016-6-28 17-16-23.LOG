@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=GND Pin=P2-1
+Removed Pin From Net: NetName=IO1 Pin=P2-2
+Removed Pin From Net: NetName=IO1 Pin=P2-3
+Removed Pin From Net: NetName=GND Pin=P2-7
+Added Component: Designator=C1(C2012)
+Added Component: Designator=P1(HDR1X7H)
+Added Component: Designator=R1(R2012)
+Added Component: Designator=S1(AXIAL-0.9)
+Added Component: Designator=S2(AXIAL-0.9)
+Added Component: Designator=S3(AXIAL-0.9)
+Added Component: Designator=S4(AXIAL-0.9)
+Added Component: Designator=S5(AXIAL-0.9)
+Added Component: Designator=S6(AXIAL-0.9)
+Added Component: Designator=S7(AXIAL-0.9)
+Added Component: Designator=S8(AXIAL-0.9)

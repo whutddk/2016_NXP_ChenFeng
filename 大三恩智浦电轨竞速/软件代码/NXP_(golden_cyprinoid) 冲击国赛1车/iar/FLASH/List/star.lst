@@ -1,0 +1,635 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.30.3.8024/W32 for ARM        16/Aug/2016  11:11:19
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\app\ITAC\star.c
+#    Command line =  
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\app\ITAC\star.c" -D LPLD_K60 -lCN
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\FLASH\List\" -lB
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\FLASH\List\" -o
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\FLASH\Obj\" --no_cse --no_unroll --no_inline --no_code_motion
+#        --no_tbaa --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config
+#        D:\IAR\arm\INC\c\DLib_Config_Normal.h -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\app\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\app\BSP\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\app\ITAC\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\app\CTL\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\app\MAIN\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\app\SENSOR\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\CPU\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\common\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\LPLD\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\LPLD\HW\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\LPLD\DEV\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\uCOS-II\Ports\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\uCOS-II\Source\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\FatFs\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\FatFs\option\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\USB\common\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\USB\driver\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\USB\descriptor\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\USB\class\" -On -I D:\IAR\arm\CMSIS\Include\ -D
+#        ARM_MATH_CM4
+#    List file    =  
+#        E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\FLASH\List\star.lst
+#    Object file  =  
+#        E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\FLASH\Obj\star.o
+#
+###############################################################################
+
+E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid) 1.9\app\ITAC\star.c
+      1          #include "include.h"
+      2          
+
+   \                                 In section .text, align 2, keep-with-next
+      3          void star()
+      4          {
+   \                     star: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+      5            uint8 Flash_Result=0;
+   \   00000002   0x2400             MOVS     R4,#+0
+      6            
+      7            if(write_flash_flag == 1)
+   \   00000004   0x....             LDR.N    R0,??DataTable1
+   \   00000006   0x7800             LDRB     R0,[R0, #+0]
+   \   00000008   0x2801             CMP      R0,#+1
+   \   0000000A   0xD14F             BNE.N    ??star_0
+      8            {
+      9              DisableInterrupts;
+   \   0000000C   0xB672             CPSID    I
+     10              
+     11              Flash_Result = LPLD_Flash_SectorErase(FLASH_TEST_ADDR);
+   \   0000000E   0xF45F 0x20FF      MOVS     R0,#+522240
+   \   00000012   0x.... 0x....      BL       LPLD_Flash_SectorErase
+   \   00000016   0x0004             MOVS     R4,R0
+     12              while(Flash_Result!=0)
+   \                     ??star_1: (+1)
+   \   00000018   0xB2E4             UXTB     R4,R4            ;; ZeroExt  R4,R4,#+24,#+24
+   \   0000001A   0x2C00             CMP      R4,#+0
+   \   0000001C   0xD013             BEQ.N    ??star_2
+     13              {
+     14                BZ_ON;
+   \   0000001E   0x2201             MOVS     R2,#+1
+   \   00000020   0x210A             MOVS     R1,#+10
+   \   00000022   0x....             LDR.N    R0,??DataTable1_1  ;; 0x400ff100
+   \   00000024   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     15                LPLD_LPTMR_DelayMs(500);
+   \   00000028   0xF44F 0x70FA      MOV      R0,#+500
+   \   0000002C   0x.... 0x....      BL       LPLD_LPTMR_DelayMs
+     16                Flash_Result=LPLD_Flash_SectorErase(FLASH_TEST_ADDR);  
+   \   00000030   0xF45F 0x20FF      MOVS     R0,#+522240
+   \   00000034   0x.... 0x....      BL       LPLD_Flash_SectorErase
+   \   00000038   0x0004             MOVS     R4,R0
+     17                BZ_OFF;
+   \   0000003A   0x2200             MOVS     R2,#+0
+   \   0000003C   0x210A             MOVS     R1,#+10
+   \   0000003E   0x....             LDR.N    R0,??DataTable1_1  ;; 0x400ff100
+   \   00000040   0x.... 0x....      BL       LPLD_GPIO_Output_b
+   \   00000044   0xE7E8             B.N      ??star_1
+     18              }
+     19              
+     20              flash_write(FLASH_TEST_SECTOR,0,GUI.para.endline_time);
+   \                     ??star_2: (+1)
+   \   00000046   0x....             LDR.N    R0,??DataTable1_2
+   \   00000048   0xF9B0 0x2004      LDRSH    R2,[R0, #+4]
+   \   0000004C   0xB212             SXTH     R2,R2            ;; SignExt  R2,R2,#+16,#+16
+   \   0000004E   0x2100             MOVS     R1,#+0
+   \   00000050   0x20FF             MOVS     R0,#+255
+   \   00000052   0x.... 0x....      BL       flash_write
+     21              
+     22              flash_write(FLASH_TEST_SECTOR,20,sensor.max[0]);
+   \   00000056   0x....             LDR.N    R0,??DataTable1_3
+   \   00000058   0xF9B0 0x204C      LDRSH    R2,[R0, #+76]
+   \   0000005C   0x2114             MOVS     R1,#+20
+   \   0000005E   0x20FF             MOVS     R0,#+255
+   \   00000060   0x.... 0x....      BL       flash_write
+     23              flash_write(FLASH_TEST_SECTOR,40,sensor.max[1]);
+   \   00000064   0x....             LDR.N    R0,??DataTable1_3
+   \   00000066   0xF9B0 0x204E      LDRSH    R2,[R0, #+78]
+   \   0000006A   0x2128             MOVS     R1,#+40
+   \   0000006C   0x20FF             MOVS     R0,#+255
+   \   0000006E   0x.... 0x....      BL       flash_write
+     24              flash_write(FLASH_TEST_SECTOR,60,sensor.max[2]);
+   \   00000072   0x....             LDR.N    R0,??DataTable1_3
+   \   00000074   0xF9B0 0x2050      LDRSH    R2,[R0, #+80]
+   \   00000078   0x213C             MOVS     R1,#+60
+   \   0000007A   0x20FF             MOVS     R0,#+255
+   \   0000007C   0x.... 0x....      BL       flash_write
+     25              flash_write(FLASH_TEST_SECTOR,80,sensor.min[0]);
+   \   00000080   0x....             LDR.N    R0,??DataTable1_3
+   \   00000082   0xF9B0 0x2052      LDRSH    R2,[R0, #+82]
+   \   00000086   0x2150             MOVS     R1,#+80
+   \   00000088   0x20FF             MOVS     R0,#+255
+   \   0000008A   0x.... 0x....      BL       flash_write
+     26              flash_write(FLASH_TEST_SECTOR,100,sensor.min[1]);
+   \   0000008E   0x....             LDR.N    R0,??DataTable1_3
+   \   00000090   0xF9B0 0x2054      LDRSH    R2,[R0, #+84]
+   \   00000094   0x2164             MOVS     R1,#+100
+   \   00000096   0x20FF             MOVS     R0,#+255
+   \   00000098   0x.... 0x....      BL       flash_write
+     27              flash_write(FLASH_TEST_SECTOR,120,sensor.min[2]);
+   \   0000009C   0x....             LDR.N    R0,??DataTable1_3
+   \   0000009E   0xF9B0 0x2056      LDRSH    R2,[R0, #+86]
+   \   000000A2   0x2178             MOVS     R1,#+120
+   \   000000A4   0x20FF             MOVS     R0,#+255
+   \   000000A6   0x.... 0x....      BL       flash_write
+     28              
+     29              EnableInterrupts;
+   \   000000AA   0xB662             CPSIE    I
+     30              
+     31            }
+     32            
+     33            
+     34            
+     35            
+     36            if(1 == flag_bihuan)     //闭环参数
+   \                     ??star_0: (+1)
+   \   000000AC   0x....             LDR.N    R0,??DataTable1_4
+   \   000000AE   0x7800             LDRB     R0,[R0, #+0]
+   \   000000B0   0x2801             CMP      R0,#+1
+   \   000000B2   0xF040 0x8087      BNE.W    ??star_3
+     37            {
+     38              if(GUI.para.AI > 0 && GUI.para.AI < 3)
+   \   000000B6   0x....             LDR.N    R0,??DataTable1_2
+   \   000000B8   0x7980             LDRB     R0,[R0, #+6]
+   \   000000BA   0x2800             CMP      R0,#+0
+   \   000000BC   0xD022             BEQ.N    ??star_4
+   \   000000BE   0x....             LDR.N    R0,??DataTable1_2
+   \   000000C0   0x7980             LDRB     R0,[R0, #+6]
+   \   000000C2   0x2803             CMP      R0,#+3
+   \   000000C4   0xDA1E             BGE.N    ??star_4
+     39              {
+     40                ctl.motto.v = AIM_Buff[GUI.para.AI-1];
+   \   000000C6   0x....             LDR.N    R0,??DataTable1_5
+   \   000000C8   0x....             LDR.N    R1,??DataTable1_2
+   \   000000CA   0x7989             LDRB     R1,[R1, #+6]
+   \   000000CC   0xEB10 0x0041      ADDS     R0,R0,R1, LSL #+1
+   \   000000D0   0xF830 0x0C02      LDRH     R0,[R0, #-2]
+   \   000000D4   0x....             LDR.N    R1,??DataTable1_6
+   \   000000D6   0xF8A1 0x0068      STRH     R0,[R1, #+104]
+     41                ctl.S3010.Kp_S = Dir_Buff[GUI.para.AI*2-2];
+   \   000000DA   0x....             LDR.N    R0,??DataTable1_7
+   \   000000DC   0x....             LDR.N    R1,??DataTable1_2
+   \   000000DE   0x7989             LDRB     R1,[R1, #+6]
+   \   000000E0   0x0049             LSLS     R1,R1,#+1
+   \   000000E2   0xEB10 0x0081      ADDS     R0,R0,R1, LSL #+2
+   \   000000E6   0xF850 0x0C08      LDR      R0,[R0, #-8]
+   \   000000EA   0x....             LDR.N    R1,??DataTable1_6
+   \   000000EC   0x6148             STR      R0,[R1, #+20]
+     42                ctl.S3010.Kd_S = Dir_Buff[GUI.para.AI*2-1];
+   \   000000EE   0x....             LDR.N    R0,??DataTable1_7
+   \   000000F0   0x....             LDR.N    R1,??DataTable1_2
+   \   000000F2   0x7989             LDRB     R1,[R1, #+6]
+   \   000000F4   0x0049             LSLS     R1,R1,#+1
+   \   000000F6   0xEB10 0x0081      ADDS     R0,R0,R1, LSL #+2
+   \   000000FA   0xF850 0x0C04      LDR      R0,[R0, #-4]
+   \   000000FE   0x....             LDR.N    R1,??DataTable1_6
+   \   00000100   0x6248             STR      R0,[R1, #+36]
+   \   00000102   0xE096             B.N      ??star_5
+     43                
+     44              }
+     45              else if(GUI.para.AI >= 3)       //高速转向参数分段
+   \                     ??star_4: (+1)
+   \   00000104   0x....             LDR.N    R0,??DataTable1_2
+   \   00000106   0x7980             LDRB     R0,[R0, #+6]
+   \   00000108   0x2803             CMP      R0,#+3
+   \   0000010A   0xF2C0 0x8092      BLT.W    ??star_5
+     46              {
+     47                ctl.motto.v = AIM_Buff[GUI.para.AI-1];
+   \   0000010E   0x....             LDR.N    R0,??DataTable1_5
+   \   00000110   0x....             LDR.N    R1,??DataTable1_2
+   \   00000112   0x7989             LDRB     R1,[R1, #+6]
+   \   00000114   0xEB10 0x0041      ADDS     R0,R0,R1, LSL #+1
+   \   00000118   0xF830 0x0C02      LDRH     R0,[R0, #-2]
+   \   0000011C   0x....             LDR.N    R1,??DataTable1_6
+   \   0000011E   0xF8A1 0x0068      STRH     R0,[R1, #+104]
+     48                ctl.S3010.Kp_S = Dir_Buff[GUI.para.AI*8-20];
+   \   00000122   0x....             LDR.N    R0,??DataTable1_7
+   \   00000124   0x....             LDR.N    R1,??DataTable1_2
+   \   00000126   0x7989             LDRB     R1,[R1, #+6]
+   \   00000128   0x00C9             LSLS     R1,R1,#+3
+   \   0000012A   0xEB10 0x0081      ADDS     R0,R0,R1, LSL #+2
+   \   0000012E   0xF850 0x0C50      LDR      R0,[R0, #-80]
+   \   00000132   0x....             LDR.N    R1,??DataTable1_6
+   \   00000134   0x6148             STR      R0,[R1, #+20]
+     49                ctl.S3010.Kd_S = Dir_Buff[GUI.para.AI*8-19];
+   \   00000136   0x....             LDR.N    R0,??DataTable1_7
+   \   00000138   0x....             LDR.N    R1,??DataTable1_2
+   \   0000013A   0x7989             LDRB     R1,[R1, #+6]
+   \   0000013C   0x00C9             LSLS     R1,R1,#+3
+   \   0000013E   0xEB10 0x0081      ADDS     R0,R0,R1, LSL #+2
+   \   00000142   0xF850 0x0C4C      LDR      R0,[R0, #-76]
+   \   00000146   0x....             LDR.N    R1,??DataTable1_6
+   \   00000148   0x6248             STR      R0,[R1, #+36]
+     50                
+     51                ctl.S3010.Kp_M1 = Dir_Buff[GUI.para.AI*8-18];
+   \   0000014A   0x....             LDR.N    R0,??DataTable1_7
+   \   0000014C   0x....             LDR.N    R1,??DataTable1_2
+   \   0000014E   0x7989             LDRB     R1,[R1, #+6]
+   \   00000150   0x00C9             LSLS     R1,R1,#+3
+   \   00000152   0xEB10 0x0081      ADDS     R0,R0,R1, LSL #+2
+   \   00000156   0xF850 0x0C48      LDR      R0,[R0, #-72]
+   \   0000015A   0x....             LDR.N    R1,??DataTable1_6
+   \   0000015C   0x6188             STR      R0,[R1, #+24]
+     52                ctl.S3010.Kd_M1 = Dir_Buff[GUI.para.AI*8-17];
+   \   0000015E   0x....             LDR.N    R0,??DataTable1_7
+   \   00000160   0x....             LDR.N    R1,??DataTable1_2
+   \   00000162   0x7989             LDRB     R1,[R1, #+6]
+   \   00000164   0x00C9             LSLS     R1,R1,#+3
+   \   00000166   0xEB10 0x0081      ADDS     R0,R0,R1, LSL #+2
+   \   0000016A   0xF850 0x0C44      LDR      R0,[R0, #-68]
+   \   0000016E   0x....             LDR.N    R1,??DataTable1_6
+   \   00000170   0x6288             STR      R0,[R1, #+40]
+     53                    
+     54                ctl.S3010.Kp_M2 = Dir_Buff[GUI.para.AI*8-16];
+   \   00000172   0x....             LDR.N    R0,??DataTable1_7
+   \   00000174   0x....             LDR.N    R1,??DataTable1_2
+   \   00000176   0x7989             LDRB     R1,[R1, #+6]
+   \   00000178   0x00C9             LSLS     R1,R1,#+3
+   \   0000017A   0xEB10 0x0081      ADDS     R0,R0,R1, LSL #+2
+   \   0000017E   0xF850 0x0C40      LDR      R0,[R0, #-64]
+   \   00000182   0x....             LDR.N    R1,??DataTable1_6
+   \   00000184   0x61C8             STR      R0,[R1, #+28]
+     55                ctl.S3010.Kd_M2 = Dir_Buff[GUI.para.AI*8-15];
+   \   00000186   0x....             LDR.N    R0,??DataTable1_7
+   \   00000188   0x....             LDR.N    R1,??DataTable1_2
+   \   0000018A   0x7989             LDRB     R1,[R1, #+6]
+   \   0000018C   0x00C9             LSLS     R1,R1,#+3
+   \   0000018E   0xEB10 0x0081      ADDS     R0,R0,R1, LSL #+2
+   \   00000192   0xF850 0x0C3C      LDR      R0,[R0, #-60]
+   \   00000196   0x....             LDR.N    R1,??DataTable1_6
+   \   00000198   0x62C8             STR      R0,[R1, #+44]
+     56          
+     57                
+     58                ctl.S3010.Kp_B = Dir_Buff[GUI.para.AI*8-14];
+   \   0000019A   0x....             LDR.N    R0,??DataTable1_7
+   \   0000019C   0x....             LDR.N    R1,??DataTable1_2
+   \   0000019E   0x7989             LDRB     R1,[R1, #+6]
+   \   000001A0   0x00C9             LSLS     R1,R1,#+3
+   \   000001A2   0xEB10 0x0081      ADDS     R0,R0,R1, LSL #+2
+   \   000001A6   0xF850 0x0C38      LDR      R0,[R0, #-56]
+   \   000001AA   0x....             LDR.N    R1,??DataTable1_6
+   \   000001AC   0x6208             STR      R0,[R1, #+32]
+     59                ctl.S3010.Kd_B = Dir_Buff[GUI.para.AI*8-13];
+   \   000001AE   0x....             LDR.N    R0,??DataTable1_7
+   \   000001B0   0x....             LDR.N    R1,??DataTable1_2
+   \   000001B2   0x7989             LDRB     R1,[R1, #+6]
+   \   000001B4   0x00C9             LSLS     R1,R1,#+3
+   \   000001B6   0xEB10 0x0081      ADDS     R0,R0,R1, LSL #+2
+   \   000001BA   0xF850 0x0C34      LDR      R0,[R0, #-52]
+   \   000001BE   0x....             LDR.N    R1,??DataTable1_6
+   \   000001C0   0x6308             STR      R0,[R1, #+48]
+   \   000001C2   0xE036             B.N      ??star_5
+     60                
+     61              }
+     62              
+     63              else  // AI = 0
+     64              {
+     65                
+     66              }
+     67            }
+     68            
+     69            else                      //开环参数
+     70            {
+     71              switch(GUI.para.AI)
+   \                     ??star_3: (+1)
+   \   000001C4   0x....             LDR.N    R0,??DataTable1_2
+   \   000001C6   0x7980             LDRB     R0,[R0, #+6]
+   \   000001C8   0x2801             CMP      R0,#+1
+   \   000001CA   0xD004             BEQ.N    ??star_6
+   \   000001CC   0xD331             BCC.N    ??star_5
+   \   000001CE   0x2803             CMP      R0,#+3
+   \   000001D0   0xD020             BEQ.N    ??star_7
+   \   000001D2   0xD310             BCC.N    ??star_8
+   \   000001D4   0xE02D             B.N      ??star_5
+     72              {
+     73                case(1):
+     74                  ctl.motto.out = kaihuan_Buff[0];
+   \                     ??star_6: (+1)
+   \   000001D6   0x....             LDR.N    R0,??DataTable1_8
+   \   000001D8   0xF9B0 0x0000      LDRSH    R0,[R0, #+0]
+   \   000001DC   0x.... 0x....      BL       __aeabi_i2f
+   \   000001E0   0x....             LDR.N    R1,??DataTable1_6
+   \   000001E2   0xF8C1 0x00A0      STR      R0,[R1, #+160]
+     75                  ctl.S3010.Kp_S = 0.39;
+   \   000001E6   0x....             LDR.N    R0,??DataTable1_9  ;; 0x3ec7ae14
+   \   000001E8   0x....             LDR.N    R1,??DataTable1_6
+   \   000001EA   0x6148             STR      R0,[R1, #+20]
+     76                  ctl.S3010.Kd_S = 0.5;
+   \   000001EC   0xF05F 0x507C      MOVS     R0,#+1056964608
+   \   000001F0   0x....             LDR.N    R1,??DataTable1_6
+   \   000001F2   0x6248             STR      R0,[R1, #+36]
+     77                  break;
+   \   000001F4   0xE01D             B.N      ??star_5
+     78                  
+     79                  case(2):
+     80                    ctl.motto.out = kaihuan_Buff[1];
+   \                     ??star_8: (+1)
+   \   000001F6   0x....             LDR.N    R0,??DataTable1_8
+   \   000001F8   0xF9B0 0x0002      LDRSH    R0,[R0, #+2]
+   \   000001FC   0x.... 0x....      BL       __aeabi_i2f
+   \   00000200   0x....             LDR.N    R1,??DataTable1_6
+   \   00000202   0xF8C1 0x00A0      STR      R0,[R1, #+160]
+     81                    ctl.S3010.Kp_S = 0.4;
+   \   00000206   0x....             LDR.N    R0,??DataTable1_10  ;; 0x3ecccccd
+   \   00000208   0x....             LDR.N    R1,??DataTable1_6
+   \   0000020A   0x6148             STR      R0,[R1, #+20]
+     82                    ctl.S3010.Kd_S = 1.2;
+   \   0000020C   0x....             LDR.N    R0,??DataTable1_11  ;; 0x3f99999a
+   \   0000020E   0x....             LDR.N    R1,??DataTable1_6
+   \   00000210   0x6248             STR      R0,[R1, #+36]
+     83                    break;
+   \   00000212   0xE00E             B.N      ??star_5
+     84                    
+     85                    case(3):
+     86                      ctl.motto.out = kaihuan_Buff[2];
+   \                     ??star_7: (+1)
+   \   00000214   0x....             LDR.N    R0,??DataTable1_8
+   \   00000216   0xF9B0 0x0004      LDRSH    R0,[R0, #+4]
+   \   0000021A   0x.... 0x....      BL       __aeabi_i2f
+   \   0000021E   0x....             LDR.N    R1,??DataTable1_6
+   \   00000220   0xF8C1 0x00A0      STR      R0,[R1, #+160]
+     87                      ctl.S3010.Kp_S = 0.41;
+   \   00000224   0x....             LDR.N    R0,??DataTable1_12  ;; 0x3ed1eb85
+   \   00000226   0x....             LDR.N    R1,??DataTable1_6
+   \   00000228   0x6148             STR      R0,[R1, #+20]
+     88                      ctl.S3010.Kd_S = 1.5;
+   \   0000022A   0xF05F 0x507F      MOVS     R0,#+1069547520
+   \   0000022E   0x....             LDR.N    R1,??DataTable1_6
+   \   00000230   0x6248             STR      R0,[R1, #+36]
+     89                      break;
+     90                      
+     91                      
+     92              default: ;
+     93              }
+     94            }
+     95            
+     96            
+     97            LPLD_LPTMR_DelayMs(1500);
+   \                     ??star_5: (+1)
+   \   00000232   0xF240 0x50DC      MOVW     R0,#+1500
+   \   00000236   0x.... 0x....      BL       LPLD_LPTMR_DelayMs
+     98            bz_set(ready);//初始化完毕，蜂鸣器提示
+   \   0000023A   0x2000             MOVS     R0,#+0
+   \   0000023C   0x.... 0x....      BL       bz_set
+     99            
+    100            if(1 == debug_Enable)
+   \   00000240   0x....             LDR.N    R0,??DataTable1_13
+   \   00000242   0x7800             LDRB     R0,[R0, #+0]
+   \   00000244   0x2801             CMP      R0,#+1
+   \   00000246   0xD101             BNE.N    ??star_9
+    101            {
+    102              timer_debug();
+   \   00000248   0x.... 0x....      BL       timer_debug
+    103            }
+    104            
+    105            flag_stop = 0;
+   \                     ??star_9: (+1)
+   \   0000024C   0x2000             MOVS     R0,#+0
+   \   0000024E   0x....             LDR.N    R1,??DataTable1_14
+   \   00000250   0x7008             STRB     R0,[R1, #+0]
+    106            
+    107          }
+   \   00000252   0xBD10             POP      {R4,PC}          ;; return
+    108          
+    109          
+    110          
+
+   \                                 In section .text, align 2, keep-with-next
+    111          void portd_isr()
+    112          {
+   \                     portd_isr: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+    113            uint16 i,j;
+    114              i = GUI.para.endline_time * 1000;
+   \   00000002   0x....             LDR.N    R0,??DataTable1_2
+   \   00000004   0x8880             LDRH     R0,[R0, #+4]
+   \   00000006   0xF44F 0x717A      MOV      R1,#+1000
+   \   0000000A   0xFB10 0xF001      SMULBB   R0,R0,R1
+   \   0000000E   0x0004             MOVS     R4,R0
+    115              LPLD_GPIO_ClearIntFlag(PORTD);
+   \   00000010   0xF05F 0x30FF      MOVS     R0,#-1
+   \   00000014   0x....             LDR.N    R1,??DataTable1_15  ;; 0x4004c0a0
+   \   00000016   0x6008             STR      R0,[R1, #+0]
+    116              
+    117              j = 0;
+   \   00000018   0x2000             MOVS     R0,#+0
+   \   0000001A   0x0005             MOVS     R5,R0
+    118              j = PTD1_I + PTD5_I + PTD6_I + PTD15_I;
+   \   0000001C   0x....             LDR.N    R0,??DataTable1_16  ;; 0x43fe1a04
+   \   0000001E   0x6800             LDR      R0,[R0, #+0]
+   \   00000020   0x....             LDR.N    R1,??DataTable1_17  ;; 0x43fe1a14
+   \   00000022   0x6809             LDR      R1,[R1, #+0]
+   \   00000024   0x....             LDR.N    R2,??DataTable1_18  ;; 0x43fe1a18
+   \   00000026   0x6812             LDR      R2,[R2, #+0]
+   \   00000028   0x1808             ADDS     R0,R1,R0
+   \   0000002A   0x1810             ADDS     R0,R2,R0
+   \   0000002C   0x....             LDR.N    R1,??DataTable1_19  ;; 0x43fe1a3c
+   \   0000002E   0x6809             LDR      R1,[R1, #+0]
+   \   00000030   0x1808             ADDS     R0,R1,R0
+   \   00000032   0x0005             MOVS     R5,R0
+    119              
+    120              if( j < 3)
+   \   00000034   0xB2AD             UXTH     R5,R5            ;; ZeroExt  R5,R5,#+16,#+16
+   \   00000036   0x2D03             CMP      R5,#+3
+   \   00000038   0xDA15             BGE.N    ??portd_isr_0
+    121              {
+    122                if(1 == GUI.para.endline &&  timer_cnt > i)  //一个可调的值
+   \   0000003A   0x....             LDR.N    R0,??DataTable1_2
+   \   0000003C   0x7880             LDRB     R0,[R0, #+2]
+   \   0000003E   0x2801             CMP      R0,#+1
+   \   00000040   0xD10E             BNE.N    ??portd_isr_1
+   \   00000042   0x....             LDR.N    R0,??DataTable1_20
+   \   00000044   0x8800             LDRH     R0,[R0, #+0]
+   \   00000046   0xB2A4             UXTH     R4,R4            ;; ZeroExt  R4,R4,#+16,#+16
+   \   00000048   0x4284             CMP      R4,R0
+   \   0000004A   0xD209             BCS.N    ??portd_isr_1
+    123                {
+    124                  flag_bihuan = 0;
+   \   0000004C   0x2000             MOVS     R0,#+0
+   \   0000004E   0x....             LDR.N    R1,??DataTable1_4
+   \   00000050   0x7008             STRB     R0,[R1, #+0]
+    125                  ctl.motto.out = 0;
+   \   00000052   0x2000             MOVS     R0,#+0
+   \   00000054   0x....             LDR.N    R1,??DataTable1_6
+   \   00000056   0xF8C1 0x00A0      STR      R0,[R1, #+160]
+    126                  timer_cnt = 0;
+   \   0000005A   0x2000             MOVS     R0,#+0
+   \   0000005C   0x....             LDR.N    R1,??DataTable1_20
+   \   0000005E   0x8008             STRH     R0,[R1, #+0]
+    127                }
+    128                bz_set(datarec);
+   \                     ??portd_isr_1: (+1)
+   \   00000060   0x2001             MOVS     R0,#+1
+   \   00000062   0x.... 0x....      BL       bz_set
+    129              }
+    130          }
+   \                     ??portd_isr_0: (+1)
+   \   00000066   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \   00000000   0x........         DC32     write_flash_flag
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_1:
+   \   00000000   0x400FF100         DC32     0x400ff100
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_2:
+   \   00000000   0x........         DC32     GUI
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_3:
+   \   00000000   0x........         DC32     sensor
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_4:
+   \   00000000   0x........         DC32     flag_bihuan
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_5:
+   \   00000000   0x........         DC32     AIM_Buff
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_6:
+   \   00000000   0x........         DC32     ctl
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_7:
+   \   00000000   0x........         DC32     Dir_Buff
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_8:
+   \   00000000   0x........         DC32     kaihuan_Buff
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_9:
+   \   00000000   0x3EC7AE14         DC32     0x3ec7ae14
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_10:
+   \   00000000   0x3ECCCCCD         DC32     0x3ecccccd
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_11:
+   \   00000000   0x3F99999A         DC32     0x3f99999a
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_12:
+   \   00000000   0x3ED1EB85         DC32     0x3ed1eb85
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_13:
+   \   00000000   0x........         DC32     debug_Enable
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_14:
+   \   00000000   0x........         DC32     flag_stop
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_15:
+   \   00000000   0x4004C0A0         DC32     0x4004c0a0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_16:
+   \   00000000   0x43FE1A04         DC32     0x43fe1a04
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_17:
+   \   00000000   0x43FE1A14         DC32     0x43fe1a14
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_18:
+   \   00000000   0x43FE1A18         DC32     0x43fe1a18
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_19:
+   \   00000000   0x43FE1A3C         DC32     0x43fe1a3c
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_20:
+   \   00000000   0x........         DC32     timer_cnt
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      16   portd_isr
+        16   -> bz_set
+       8   star
+         8   -> LPLD_Flash_SectorErase
+         8   -> LPLD_GPIO_Output_b
+         8   -> LPLD_LPTMR_DelayMs
+         8   -> __aeabi_i2f
+         8   -> bz_set
+         8   -> flash_write
+         8   -> timer_debug
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable1_1
+       4  ??DataTable1_10
+       4  ??DataTable1_11
+       4  ??DataTable1_12
+       4  ??DataTable1_13
+       4  ??DataTable1_14
+       4  ??DataTable1_15
+       4  ??DataTable1_16
+       4  ??DataTable1_17
+       4  ??DataTable1_18
+       4  ??DataTable1_19
+       4  ??DataTable1_2
+       4  ??DataTable1_20
+       4  ??DataTable1_3
+       4  ??DataTable1_4
+       4  ??DataTable1_5
+       4  ??DataTable1_6
+       4  ??DataTable1_7
+       4  ??DataTable1_8
+       4  ??DataTable1_9
+     104  portd_isr
+     596  star
+
+ 
+ 784 bytes in section .text
+ 
+ 784 bytes of CODE memory
+
+Errors: none
+Warnings: 1

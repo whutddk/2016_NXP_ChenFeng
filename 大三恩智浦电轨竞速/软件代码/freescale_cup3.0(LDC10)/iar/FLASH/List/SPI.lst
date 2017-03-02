@@ -1,0 +1,565 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.20.2.7424/W32 for ARM        13/Mar/2016  16:39:21
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\app\BSP\SPI.c
+#    Command line =  
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\app\BSP\SPI.c"
+#        -D LPLD_K60 -D USE_K60DZ10 -lCN
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\FLASH\List\"
+#        -lB
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\FLASH\List\"
+#        -o
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\FLASH\Obj\"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config "C:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\app\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\app\MAIN\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\app\BSP\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\app\CTL\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\app\sensor\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\app\ITAC\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\CPU\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\common\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\LPLD\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\LPLD\HW\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\LPLD\DEV\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\LPLD\FUNC\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\uCOS-II\Ports\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\uCOS-II\Source\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\FatFs\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\FatFs\option\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\USB\common\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\USB\driver\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\USB\descriptor\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\..\..\..\lib\USB\class\"
+#        -On -I "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\CMSIS\Include\" -D ARM_MATH_CM4
+#    List file    =  
+#        D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\FLASH\List\SPI.lst
+#    Object file  =  
+#        D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\iar\FLASH\Obj\SPI.o
+#
+###############################################################################
+
+D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup3.0(LDC10)\app\BSP\SPI.c
+      1          #include "include.h"
+
+   \                                 In section .bss, align 4
+      2          GPIO_InitTypeDef SPI_inittypedef;
+   \                     SPI_inittypedef:
+   \   00000000                      DS8 20
+
+   \                                 In section .text, align 2, keep-with-next
+      3          void SPI_GPIO_Init(void)
+      4          {
+   \                     SPI_GPIO_Init: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+      5            /***** LDC_CS LDC_SCL MOSI 配置为输出模式*****/
+      6            
+      7            SPI_inittypedef.GPIO_PTx = PTC;
+   \   00000002   0x....             LDR.N    R0,??DataTable5  ;; 0x400ff080
+   \   00000004   0x....             LDR.N    R1,??DataTable5_1
+   \   00000006   0x6008             STR      R0,[R1, #+0]
+      8            SPI_inittypedef.GPIO_Pins = GPIO_Pin10 | GPIO_Pin16 | GPIO_Pin15;
+   \   00000008   0xF45F 0x30C2      MOVS     R0,#+99328
+   \   0000000C   0x....             LDR.N    R1,??DataTable5_1
+   \   0000000E   0x6048             STR      R0,[R1, #+4]
+      9            SPI_inittypedef.GPIO_Dir = DIR_OUTPUT;
+   \   00000010   0x2001             MOVS     R0,#+1
+   \   00000012   0x....             LDR.N    R1,??DataTable5_1
+   \   00000014   0x7308             STRB     R0,[R1, #+12]
+     10            SPI_inittypedef.GPIO_PinControl = IRQC_DIS;
+   \   00000016   0x2000             MOVS     R0,#+0
+   \   00000018   0x....             LDR.N    R1,??DataTable5_1
+   \   0000001A   0x6088             STR      R0,[R1, #+8]
+     11            SPI_inittypedef.GPIO_Output = OUTPUT_H;
+   \   0000001C   0x2001             MOVS     R0,#+1
+   \   0000001E   0x....             LDR.N    R1,??DataTable5_1
+   \   00000020   0x7348             STRB     R0,[R1, #+13]
+     12            LPLD_GPIO_Init(SPI_inittypedef);
+   \   00000022   0x....             LDR.N    R1,??DataTable5_1
+   \   00000024   0xB084             SUB      SP,SP,#+16
+   \   00000026   0x4668             MOV      R0,SP
+   \   00000028   0x2214             MOVS     R2,#+20
+   \   0000002A   0x.... 0x....      BL       __aeabi_memcpy4
+   \   0000002E   0xBC0F             POP      {R0-R3}
+   \   00000030   0x.... 0x....      BL       LPLD_GPIO_Init
+     13            
+     14            /********* MISO 配置为输入模式********/
+     15            SPI_inittypedef.GPIO_PTx = PTC;
+   \   00000034   0x....             LDR.N    R0,??DataTable5  ;; 0x400ff080
+   \   00000036   0x....             LDR.N    R1,??DataTable5_1
+   \   00000038   0x6008             STR      R0,[R1, #+0]
+     16            SPI_inittypedef.GPIO_Pins = GPIO_Pin11;
+   \   0000003A   0xF44F 0x6000      MOV      R0,#+2048
+   \   0000003E   0x....             LDR.N    R1,??DataTable5_1
+   \   00000040   0x6048             STR      R0,[R1, #+4]
+     17            SPI_inittypedef.GPIO_Dir = DIR_INPUT;
+   \   00000042   0x2000             MOVS     R0,#+0
+   \   00000044   0x....             LDR.N    R1,??DataTable5_1
+   \   00000046   0x7308             STRB     R0,[R1, #+12]
+     18            SPI_inittypedef.GPIO_PinControl = IRQC_DIS;
+   \   00000048   0x2000             MOVS     R0,#+0
+   \   0000004A   0x....             LDR.N    R1,??DataTable5_1
+   \   0000004C   0x6088             STR      R0,[R1, #+8]
+     19            SPI_inittypedef.GPIO_Output = OUTPUT_H;
+   \   0000004E   0x2001             MOVS     R0,#+1
+   \   00000050   0x....             LDR.N    R1,??DataTable5_1
+   \   00000052   0x7348             STRB     R0,[R1, #+13]
+     20            
+     21            LPLD_GPIO_Init(SPI_inittypedef);
+   \   00000054   0x....             LDR.N    R1,??DataTable5_1
+   \   00000056   0xB084             SUB      SP,SP,#+16
+   \   00000058   0x4668             MOV      R0,SP
+   \   0000005A   0x2214             MOVS     R2,#+20
+   \   0000005C   0x.... 0x....      BL       __aeabi_memcpy4
+   \   00000060   0xBC0F             POP      {R0-R3}
+   \   00000062   0x.... 0x....      BL       LPLD_GPIO_Init
+     22            
+     23            CSN_H;
+   \   00000066   0x2201             MOVS     R2,#+1
+   \   00000068   0x2110             MOVS     R1,#+16
+   \   0000006A   0x....             LDR.N    R0,??DataTable5  ;; 0x400ff080
+   \   0000006C   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     24            SCK_L;
+   \   00000070   0x2200             MOVS     R2,#+0
+   \   00000072   0x210A             MOVS     R1,#+10
+   \   00000074   0x....             LDR.N    R0,??DataTable5  ;; 0x400ff080
+   \   00000076   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     25            MOSI_L;
+   \   0000007A   0x2200             MOVS     R2,#+0
+   \   0000007C   0x210F             MOVS     R1,#+15
+   \   0000007E   0x....             LDR.N    R0,??DataTable5  ;; 0x400ff080
+   \   00000080   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     26            
+     27          }
+   \   00000084   0xBD01             POP      {R0,PC}          ;; return
+     28          ///******上升沿写据******/
+
+   \                                 In section .text, align 2, keep-with-next
+     29          uint8 SPI_Write_OneByte(uint8 dt)
+     30          {
+   \                     SPI_Write_OneByte: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+     31            uint8 i;  
+     32            uint8 temp = 0;
+   \   00000004   0x2600             MOVS     R6,#+0
+     33            for ( i = 8;i > 0;i --)  
+   \   00000006   0x2008             MOVS     R0,#+8
+   \   00000008   0x0005             MOVS     R5,R0
+   \                     ??SPI_Write_OneByte_0: (+1)
+   \   0000000A   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   0000000C   0x2D00             CMP      R5,#+0
+   \   0000000E   0xD028             BEQ.N    ??SPI_Write_OneByte_1
+     34            {  
+     35              if ( dt & 0x80 )//MOSI准备数据位  
+   \   00000010   0x0620             LSLS     R0,R4,#+24
+   \   00000012   0xD505             BPL.N    ??SPI_Write_OneByte_2
+     36              {
+     37                MOSI_H;  
+   \   00000014   0x2201             MOVS     R2,#+1
+   \   00000016   0x210F             MOVS     R1,#+15
+   \   00000018   0x....             LDR.N    R0,??DataTable5  ;; 0x400ff080
+   \   0000001A   0x.... 0x....      BL       LPLD_GPIO_Output_b
+   \   0000001E   0xE004             B.N      ??SPI_Write_OneByte_3
+     38              }
+     39              else 
+     40              {
+     41                MOSI_L;  
+   \                     ??SPI_Write_OneByte_2: (+1)
+   \   00000020   0x2200             MOVS     R2,#+0
+   \   00000022   0x210F             MOVS     R1,#+15
+   \   00000024   0x....             LDR.N    R0,??DataTable5  ;; 0x400ff080
+   \   00000026   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     42              }
+     43              dt <<= 1;   //左移抛弃已经输出的最高位
+   \                     ??SPI_Write_OneByte_3: (+1)
+   \   0000002A   0x0064             LSLS     R4,R4,#+1
+     44              temp <<= 1;
+   \   0000002C   0x0076             LSLS     R6,R6,#+1
+     45          
+     46              SCK_L;   
+   \   0000002E   0x2200             MOVS     R2,#+0
+   \   00000030   0x210A             MOVS     R1,#+10
+   \   00000032   0x....             LDR.N    R0,??DataTable5  ;; 0x400ff080
+   \   00000034   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     47              LPLD_SYSTICK_DelayUs(2);  
+   \   00000038   0x2002             MOVS     R0,#+2
+   \   0000003A   0x.... 0x....      BL       LPLD_SYSTICK_DelayUs
+     48              if (MISO)
+   \   0000003E   0x210B             MOVS     R1,#+11
+   \   00000040   0x....             LDR.N    R0,??DataTable5  ;; 0x400ff080
+   \   00000042   0x.... 0x....      BL       LPLD_GPIO_Input_b
+   \   00000046   0x2800             CMP      R0,#+0
+   \   00000048   0xD001             BEQ.N    ??SPI_Write_OneByte_4
+     49              {
+     50                temp |=1;
+   \   0000004A   0xF056 0x0601      ORRS     R6,R6,#0x1
+     51              }
+     52          
+     53              SCK_H;   //LDC_SCL恢复为低电平，并保持一段时间  
+   \                     ??SPI_Write_OneByte_4: (+1)
+   \   0000004E   0x2201             MOVS     R2,#+1
+   \   00000050   0x210A             MOVS     R1,#+10
+   \   00000052   0x....             LDR.N    R0,??DataTable5  ;; 0x400ff080
+   \   00000054   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     54              LPLD_SYSTICK_DelayUs(2);   
+   \   00000058   0x2002             MOVS     R0,#+2
+   \   0000005A   0x.... 0x....      BL       LPLD_SYSTICK_DelayUs
+     55            }  	
+   \   0000005E   0x1E6D             SUBS     R5,R5,#+1
+   \   00000060   0xE7D3             B.N      ??SPI_Write_OneByte_0
+     56            return (temp);
+   \                     ??SPI_Write_OneByte_1: (+1)
+   \   00000062   0x0030             MOVS     R0,R6
+   \   00000064   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000066   0xBD70             POP      {R4-R6,PC}       ;; return
+     57          }
+     58          //
+     59          /****** 下降沿读数据，每次读取 1 bit ******/
+
+   \                                 In section .text, align 2, keep-with-next
+     60          uint8 SPI_Read_OneByte(uint8 reg)
+     61          {
+   \                     SPI_Read_OneByte: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+     62            uint8 i;  
+     63            uint8 temp=0;
+   \   00000004   0x2600             MOVS     R6,#+0
+     64            LPLD_SYSTICK_DelayUs(2);
+   \   00000006   0x2002             MOVS     R0,#+2
+   \   00000008   0x.... 0x....      BL       LPLD_SYSTICK_DelayUs
+     65          
+     66            for(i=8;i>0;i--) 
+   \   0000000C   0x2008             MOVS     R0,#+8
+   \   0000000E   0x0005             MOVS     R5,R0
+   \                     ??SPI_Read_OneByte_0: (+1)
+   \   00000010   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   00000012   0x2D00             CMP      R5,#+0
+   \   00000014   0xD019             BEQ.N    ??SPI_Read_OneByte_1
+     67            {
+     68              temp<<=1;        //读取MISO 8次输入的值，存入temp
+   \   00000016   0x0076             LSLS     R6,R6,#+1
+     69              SCK_H;  
+   \   00000018   0x2201             MOVS     R2,#+1
+   \   0000001A   0x210A             MOVS     R1,#+10
+   \   0000001C   0x....             LDR.N    R0,??DataTable5  ;; 0x400ff080
+   \   0000001E   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     70              LPLD_SYSTICK_DelayUs(2);   
+   \   00000022   0x2002             MOVS     R0,#+2
+   \   00000024   0x.... 0x....      BL       LPLD_SYSTICK_DelayUs
+     71              if(MISO)
+   \   00000028   0x210B             MOVS     R1,#+11
+   \   0000002A   0x....             LDR.N    R0,??DataTable5  ;; 0x400ff080
+   \   0000002C   0x.... 0x....      BL       LPLD_GPIO_Input_b
+   \   00000030   0x2800             CMP      R0,#+0
+   \   00000032   0xD000             BEQ.N    ??SPI_Read_OneByte_2
+     72              {
+     73                temp++;  //读取最后1byte的最后一位之后，不能再左移了
+   \   00000034   0x1C76             ADDS     R6,R6,#+1
+     74              }
+     75              SCK_L;  
+   \                     ??SPI_Read_OneByte_2: (+1)
+   \   00000036   0x2200             MOVS     R2,#+0
+   \   00000038   0x210A             MOVS     R1,#+10
+   \   0000003A   0x....             LDR.N    R0,??DataTable5  ;; 0x400ff080
+   \   0000003C   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     76              LPLD_SYSTICK_DelayUs(2);   
+   \   00000040   0x2002             MOVS     R0,#+2
+   \   00000042   0x.... 0x....      BL       LPLD_SYSTICK_DelayUs
+     77            }  	
+   \   00000046   0x1E6D             SUBS     R5,R5,#+1
+   \   00000048   0xE7E2             B.N      ??SPI_Read_OneByte_0
+     78            return temp;		
+   \                     ??SPI_Read_OneByte_1: (+1)
+   \   0000004A   0x0030             MOVS     R0,R6
+   \   0000004C   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000004E   0xBD70             POP      {R4-R6,PC}       ;; return
+     79          }
+     80          
+
+   \                                 In section .text, align 2, keep-with-next
+     81          void SPI_WriteReg(uint8_t addr, uint8_t value) 
+     82          {  
+   \                     SPI_WriteReg: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+   \   00000004   0x000D             MOVS     R5,R1
+     83            CSN_L;                  //LDC_CS片选拉低      
+   \   00000006   0x2200             MOVS     R2,#+0
+   \   00000008   0x2110             MOVS     R1,#+16
+   \   0000000A   0x....             LDR.N    R0,??DataTable5  ;; 0x400ff080
+   \   0000000C   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     84            SPI_Write_OneByte(addr|0X00);      //SPI写地址  以及  写信号    1=读出,0=写入
+   \   00000010   0x0020             MOVS     R0,R4
+   \   00000012   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000014   0x.... 0x....      BL       SPI_Write_OneByte
+     85            SPI_Write_OneByte(value|0X00);     //SPI写数据   
+   \   00000018   0x0028             MOVS     R0,R5
+   \   0000001A   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000001C   0x.... 0x....      BL       SPI_Write_OneByte
+     86            CSN_H;                   //LDC_CS片选拉高 
+   \   00000020   0x2201             MOVS     R2,#+1
+   \   00000022   0x2110             MOVS     R1,#+16
+   \   00000024   0x....             LDR.N    R0,??DataTable5  ;; 0x400ff080
+   \   00000026   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     87          }
+   \   0000002A   0xBD31             POP      {R0,R4,R5,PC}    ;; return
+     88          
+     89          
+
+   \                                 In section .text, align 2, keep-with-next
+     90          uint8 SPI_RW(uint8 rwdata) 
+     91          {
+   \                     SPI_RW: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+     92            uint8 spi_rw_i=0; 
+   \   00000004   0x2500             MOVS     R5,#+0
+     93            uint8 temp=0; 
+   \   00000006   0x2600             MOVS     R6,#+0
+     94            
+     95            for( spi_rw_i = 0;spi_rw_i < 8;spi_rw_i++ ) //output8-bit 
+   \   00000008   0x2000             MOVS     R0,#+0
+   \   0000000A   0x0005             MOVS     R5,R0
+   \                     ??SPI_RW_0: (+1)
+   \   0000000C   0xB2ED             UXTB     R5,R5            ;; ZeroExt  R5,R5,#+24,#+24
+   \   0000000E   0x2D08             CMP      R5,#+8
+   \   00000010   0xDA25             BGE.N    ??SPI_RW_1
+     96            { /***preparethewritedataofreadbeforethecomingofrisingup******/ 
+     97              if( rwdata & 0x80 ) 
+   \   00000012   0x0620             LSLS     R0,R4,#+24
+   \   00000014   0xD505             BPL.N    ??SPI_RW_2
+     98              {
+     99                MOSI_H; 
+   \   00000016   0x2201             MOVS     R2,#+1
+   \   00000018   0x210F             MOVS     R1,#+15
+   \   0000001A   0x....             LDR.N    R0,??DataTable5  ;; 0x400ff080
+   \   0000001C   0x.... 0x....      BL       LPLD_GPIO_Output_b
+   \   00000020   0xE004             B.N      ??SPI_RW_3
+    100              }
+    101              else
+    102              {
+    103                MOSI_L; 
+   \                     ??SPI_RW_2: (+1)
+   \   00000022   0x2200             MOVS     R2,#+0
+   \   00000024   0x210F             MOVS     R1,#+15
+   \   00000026   0x....             LDR.N    R0,??DataTable5  ;; 0x400ff080
+   \   00000028   0x.... 0x....      BL       LPLD_GPIO_Output_b
+    104              }
+    105              rwdata <<= 1; //shiftnextbittoMSB 
+   \                     ??SPI_RW_3: (+1)
+   \   0000002C   0x0064             LSLS     R4,R4,#+1
+    106              temp <<= 1; 
+   \   0000002E   0x0076             LSLS     R6,R6,#+1
+    107              
+    108              LPLD_SYSTICK_DelayUs(2);
+   \   00000030   0x2002             MOVS     R0,#+2
+   \   00000032   0x.... 0x....      BL       LPLD_SYSTICK_DelayUs
+    109              SCK_L; //SetSCKhigh Risingup 
+   \   00000036   0x2200             MOVS     R2,#+0
+   \   00000038   0x210A             MOVS     R1,#+10
+   \   0000003A   0x....             LDR.N    R0,??DataTable5  ;; 0x400ff080
+   \   0000003C   0x.... 0x....      BL       LPLD_GPIO_Output_b
+    110              if(MISO) 
+   \   00000040   0x210B             MOVS     R1,#+11
+   \   00000042   0x....             LDR.N    R0,??DataTable5  ;; 0x400ff080
+   \   00000044   0x.... 0x....      BL       LPLD_GPIO_Input_b
+   \   00000048   0x2800             CMP      R0,#+0
+   \   0000004A   0xD001             BEQ.N    ??SPI_RW_4
+    111              {
+    112                temp|=1; 
+   \   0000004C   0xF056 0x0601      ORRS     R6,R6,#0x1
+    113              }
+    114              
+    115              SCK_H; //set SCKlow Fallingdown 
+   \                     ??SPI_RW_4: (+1)
+   \   00000050   0x2201             MOVS     R2,#+1
+   \   00000052   0x210A             MOVS     R1,#+10
+   \   00000054   0x....             LDR.N    R0,??DataTable5  ;; 0x400ff080
+   \   00000056   0x.... 0x....      BL       LPLD_GPIO_Output_b
+    116            }
+   \   0000005A   0x1C6D             ADDS     R5,R5,#+1
+   \   0000005C   0xE7D6             B.N      ??SPI_RW_0
+    117            
+    118            return(temp); //returnreadbyte
+   \                     ??SPI_RW_1: (+1)
+   \   0000005E   0x0030             MOVS     R0,R6
+   \   00000060   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000062   0xBD70             POP      {R4-R6,PC}       ;; return
+    119          }
+    120          
+    121          //uint8 Singal_SPI_Read(uint8 reg) 
+    122          //{ 
+    123          //  uint8 rdata; 
+    124          //  CSN_L; 
+    125          //  LPLD_SYSTICK_DelayUs(2); 
+    126          //  reg = reg | 0x80;//read 
+    127          //  SPI_RW(reg); //Selectregistertoreadfrom.. 
+    128          //  asm("nop"); asm("nop"); asm("nop"); asm("nop"); 
+    129          //  asm("nop");asm("nop");asm("nop"); asm("nop");
+    130          //  asm("nop");asm("nop"); asm("nop"); asm("nop"); 
+    131          //  asm("nop"); asm("nop");asm("nop"); asm("nop");
+    132          //  asm("nop"); asm("nop"); asm("nop"); asm("nop"); 
+    133          //  rdata = SPI_RW(0); 
+    134          //  LPLD_SYSTICK_DelayUs(1700);
+    135          //  CSN_H; 
+    136          //  return rdata; 
+    137          //} 
+    138          
+    139          //void SPI_Write(uint8 reg,uint8 wdata) 
+    140          //{ 
+    141          //  CSN_L;
+    142          //  LPLD_SYSTICK_DelayUs(5);//2us 
+    143          //  //reg= reg &~0x80; 
+    144          //  SPI_RW(reg); 
+    145          //  asm("nop"); asm("nop"); asm("nop"); asm("nop");
+    146          //  asm("nop"); asm("nop"); asm("nop"); asm("nop");
+    147          //  asm("nop"); asm("nop"); asm("nop"); asm("nop"); 
+    148          //  asm("nop"); asm("nop"); asm("nop"); asm("nop"); 
+    149          //  asm("nop"); asm("nop"); asm("nop"); asm("nop");
+    150          //  asm("nop"); 
+    151          //  SPI_RW(wdata); 
+    152          //  LPLD_SYSTICK_DelayUs(1875);//875us 
+    153          //  CSN_H;
+    154          //} 
+    155          
+
+   \                                 In section .text, align 2, keep-with-next
+    156          void SPI_Read_Buf(uint8 reg,uint8 *pBuf,uint8 len) 
+    157          { 
+   \                     SPI_Read_Buf: (+1)
+   \   00000000   0xB5F8             PUSH     {R3-R7,LR}
+   \   00000002   0x0004             MOVS     R4,R0
+   \   00000004   0x000D             MOVS     R5,R1
+   \   00000006   0x0016             MOVS     R6,R2
+    158            uint8 spi_rw_i; 
+    159            CSN_L;  
+   \   00000008   0x2200             MOVS     R2,#+0
+   \   0000000A   0x2110             MOVS     R1,#+16
+   \   0000000C   0x....             LDR.N    R0,??DataTable5  ;; 0x400ff080
+   \   0000000E   0x.... 0x....      BL       LPLD_GPIO_Output_b
+    160            reg = reg|0x80;
+   \   00000012   0xF054 0x0480      ORRS     R4,R4,#0x80
+    161            SPI_RW(reg); 
+   \   00000016   0x0020             MOVS     R0,R4
+   \   00000018   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000001A   0x.... 0x....      BL       SPI_RW
+    162            for ( spi_rw_i = 0;spi_rw_i < len; spi_rw_i++ )
+   \   0000001E   0x2000             MOVS     R0,#+0
+   \   00000020   0x0007             MOVS     R7,R0
+   \                     ??SPI_Read_Buf_0: (+1)
+   \   00000022   0xB2FF             UXTB     R7,R7            ;; ZeroExt  R7,R7,#+24,#+24
+   \   00000024   0xB2F6             UXTB     R6,R6            ;; ZeroExt  R6,R6,#+24,#+24
+   \   00000026   0x42B7             CMP      R7,R6
+   \   00000028   0xD206             BCS.N    ??SPI_Read_Buf_1
+    163            { 
+    164              pBuf[spi_rw_i]=SPI_RW(NULL); // 
+   \   0000002A   0x2000             MOVS     R0,#+0
+   \   0000002C   0x.... 0x....      BL       SPI_RW
+   \   00000030   0xB2FF             UXTB     R7,R7            ;; ZeroExt  R7,R7,#+24,#+24
+   \   00000032   0x5578             STRB     R0,[R7, R5]
+    165            } 
+   \   00000034   0x1C7F             ADDS     R7,R7,#+1
+   \   00000036   0xE7F4             B.N      ??SPI_Read_Buf_0
+    166            LPLD_SYSTICK_DelayUs(2);
+   \                     ??SPI_Read_Buf_1: (+1)
+   \   00000038   0x2002             MOVS     R0,#+2
+   \   0000003A   0x.... 0x....      BL       LPLD_SYSTICK_DelayUs
+    167            CSN_H;
+   \   0000003E   0x2201             MOVS     R2,#+1
+   \   00000040   0x2110             MOVS     R1,#+16
+   \   00000042   0x....             LDR.N    R0,??DataTable5  ;; 0x400ff080
+   \   00000044   0x.... 0x....      BL       LPLD_GPIO_Output_b
+    168          } 
+   \   00000048   0xBDF1             POP      {R0,R4-R7,PC}    ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5:
+   \   00000000   0x400FF080         DC32     0x400ff080
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable5_1:
+   \   00000000   0x........         DC32     SPI_inittypedef
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      24   SPI_GPIO_Init
+         8   -> LPLD_GPIO_Init
+         8   -> LPLD_GPIO_Output_b
+        24   -> __aeabi_memcpy4
+      16   SPI_RW
+        16   -> LPLD_GPIO_Input_b
+        16   -> LPLD_GPIO_Output_b
+        16   -> LPLD_SYSTICK_DelayUs
+      24   SPI_Read_Buf
+        24   -> LPLD_GPIO_Output_b
+        24   -> LPLD_SYSTICK_DelayUs
+        24   -> SPI_RW
+      16   SPI_Read_OneByte
+        16   -> LPLD_GPIO_Input_b
+        16   -> LPLD_GPIO_Output_b
+        16   -> LPLD_SYSTICK_DelayUs
+      16   SPI_WriteReg
+        16   -> LPLD_GPIO_Output_b
+        16   -> SPI_Write_OneByte
+      16   SPI_Write_OneByte
+        16   -> LPLD_GPIO_Input_b
+        16   -> LPLD_GPIO_Output_b
+        16   -> LPLD_SYSTICK_DelayUs
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable5
+       4  ??DataTable5_1
+     134  SPI_GPIO_Init
+     100  SPI_RW
+      74  SPI_Read_Buf
+      80  SPI_Read_OneByte
+      44  SPI_WriteReg
+     104  SPI_Write_OneByte
+      20  SPI_inittypedef
+
+ 
+  20 bytes in section .bss
+ 544 bytes in section .text
+ 
+ 544 bytes of CODE memory
+  20 bytes of DATA memory
+
+Errors: none
+Warnings: none

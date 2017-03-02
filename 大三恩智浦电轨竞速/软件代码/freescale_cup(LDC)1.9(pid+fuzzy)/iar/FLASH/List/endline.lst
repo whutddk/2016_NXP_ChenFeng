@@ -1,0 +1,234 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.20.2.7424/W32 for ARM        11/Mar/2016  11:02:23
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\app\CTL\endline.c
+#    Command line =  
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\app\CTL\endline.c"
+#        -D LPLD_K60 -D USE_K60DZ10 -lCN
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\FLASH\List\"
+#        -lB
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\FLASH\List\"
+#        -o
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\FLASH\Obj\"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config "C:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\app\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\app\MAIN\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\app\BSP\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\app\CTL\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\app\sensor\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\app\ITAC\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\CPU\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\common\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\LPLD\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\LPLD\HW\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\LPLD\DEV\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\LPLD\FUNC\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\uCOS-II\Ports\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\uCOS-II\Source\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\FatFs\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\FatFs\option\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\USB\common\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\USB\driver\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\USB\descriptor\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\USB\class\"
+#        -On -I "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\CMSIS\Include\" -D ARM_MATH_CM4
+#    List file    =  
+#        D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\FLASH\List\endline.lst
+#    Object file  =  
+#        D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\FLASH\Obj\endline.o
+#
+###############################################################################
+
+D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\app\CTL\endline.c
+      1          #include "include.h"
+      2          
+      3          #define END_PTX  PTC
+      4          #define END_PINS GPIO_Pin15
+      5          #define END_IRQN PORTC_IRQn 
+      6          #define END_PORT PORTC
+      7          
+      8          
+      9          void complete();
+     10          
+     11          
+     12          
+
+   \                                 In section .text, align 2, keep-with-next
+     13          void endline_init()
+     14          {
+   \                     endline_init: (+1)
+   \   00000000   0xB500             PUSH     {LR}
+   \   00000002   0xB087             SUB      SP,SP,#+28
+     15            GPIO_InitTypeDef endline_inittype;
+     16            endline_inittype.GPIO_PTx = END_PTX;
+   \   00000004   0x....             LDR.N    R0,??DataTable2  ;; 0x400ff080
+   \   00000006   0x9001             STR      R0,[SP, #+4]
+     17            endline_inittype.GPIO_Pins = END_PINS;
+   \   00000008   0xF44F 0x4000      MOV      R0,#+32768
+   \   0000000C   0x9002             STR      R0,[SP, #+8]
+     18            endline_inittype.GPIO_PinControl = INPUT_PULL_DIS | IRQC_FA;//硬件上拉，内部不拉，下降沿中断
+   \   0000000E   0xF45F 0x2020      MOVS     R0,#+655360
+   \   00000012   0x9003             STR      R0,[SP, #+12]
+     19            endline_inittype.GPIO_Dir = DIR_INPUT;
+   \   00000014   0x2000             MOVS     R0,#+0
+   \   00000016   0xF88D 0x0010      STRB     R0,[SP, #+16]
+     20            endline_inittype.GPIO_Output = OUTPUT_H;
+   \   0000001A   0x2001             MOVS     R0,#+1
+   \   0000001C   0xF88D 0x0011      STRB     R0,[SP, #+17]
+     21            endline_inittype.GPIO_Isr = complete;
+   \   00000020   0x.... 0x....      ADR.W    R0,complete
+   \   00000024   0x9005             STR      R0,[SP, #+20]
+     22            LPLD_GPIO_Init(endline_inittype);
+   \   00000026   0xA901             ADD      R1,SP,#+4
+   \   00000028   0xB084             SUB      SP,SP,#+16
+   \   0000002A   0x4668             MOV      R0,SP
+   \   0000002C   0x2214             MOVS     R2,#+20
+   \   0000002E   0x.... 0x....      BL       __aeabi_memcpy4
+   \   00000032   0xBC0F             POP      {R0-R3}
+   \   00000034   0x.... 0x....      BL       LPLD_GPIO_Init
+     23            
+     24            //不使能中断 
+     25          }
+   \   00000038   0xB007             ADD      SP,SP,#+28
+   \   0000003A   0xBD00             POP      {PC}             ;; return
+     26          
+
+   \                                 In section .text, align 2, keep-with-next
+     27          void end_enable()
+     28          {
+   \                     end_enable: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+     29            nvic_init_struct.NVIC_IRQChannel = END_IRQN;
+   \   00000002   0x2059             MOVS     R0,#+89
+   \   00000004   0x....             LDR.N    R1,??DataTable2_1
+   \   00000006   0x7008             STRB     R0,[R1, #+0]
+     30            nvic_init_struct.NVIC_IRQChannelGroupPriority = NVIC_PriorityGroup_3;
+   \   00000008   0x2004             MOVS     R0,#+4
+   \   0000000A   0x....             LDR.N    R1,??DataTable2_1
+   \   0000000C   0x6048             STR      R0,[R1, #+4]
+     31            nvic_init_struct.NVIC_IRQChannelPreemptionPriority = 0;
+   \   0000000E   0x2000             MOVS     R0,#+0
+   \   00000010   0x....             LDR.N    R1,??DataTable2_1
+   \   00000012   0x6088             STR      R0,[R1, #+8]
+     32            nvic_init_struct.NVIC_IRQChannelSubPriority = 0;  
+   \   00000014   0x2000             MOVS     R0,#+0
+   \   00000016   0x....             LDR.N    R1,??DataTable2_1
+   \   00000018   0x60C8             STR      R0,[R1, #+12]
+     33            nvic_init_struct.NVIC_IRQChannelEnable = FALSE;
+   \   0000001A   0x2000             MOVS     R0,#+0
+   \   0000001C   0x....             LDR.N    R1,??DataTable2_1
+   \   0000001E   0x7408             STRB     R0,[R1, #+16]
+     34            LPLD_NVIC_Init(nvic_init_struct);
+   \   00000020   0x....             LDR.N    R1,??DataTable2_1
+   \   00000022   0xB084             SUB      SP,SP,#+16
+   \   00000024   0x4668             MOV      R0,SP
+   \   00000026   0x2214             MOVS     R2,#+20
+   \   00000028   0x.... 0x....      BL       __aeabi_memcpy4
+   \   0000002C   0xBC0F             POP      {R0-R3}
+   \   0000002E   0x.... 0x....      BL       LPLD_NVIC_Init
+     35          }
+   \   00000032   0xBD01             POP      {R0,PC}          ;; return
+     36          
+     37          
+
+   \                                 In section .text, align 4, keep-with-next
+     38          void complete()
+     39          {
+     40              if  ( LPLD_GPIO_IsPinxExt(END_PORT, END_PINS) ) //上 中断
+   \                     complete: (+1)
+   \   00000000   0x....             LDR.N    R0,??DataTable2_2  ;; 0x4004b0a0
+   \   00000002   0x6800             LDR      R0,[R0, #+0]
+   \   00000004   0x0400             LSLS     R0,R0,#+16
+   \   00000006   0xD504             BPL.N    ??complete_0
+     41            {
+     42              LPLD_GPIO_ClearIntFlag(END_PORT);//清中断标志
+   \   00000008   0xF05F 0x30FF      MOVS     R0,#-1
+   \   0000000C   0x....             LDR.N    R1,??DataTable2_2  ;; 0x4004b0a0
+   \   0000000E   0x6008             STR      R0,[R1, #+0]
+     43              
+     44              //操作
+     45              
+     46              return;
+   \   00000010   0xE7FF             B.N      ??complete_1
+     47            }
+     48          }
+   \                     ??complete_0: (+1)
+   \                     ??complete_1: (+1)
+   \   00000012   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2:
+   \   00000000   0x400FF080         DC32     0x400ff080
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_1:
+   \   00000000   0x........         DC32     nvic_init_struct
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable2_2:
+   \   00000000   0x4004B0A0         DC32     0x4004b0a0
+     49          
+     50          /*
+     51          还有NVIC
+     52          */
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   complete
+      24   end_enable
+         8   -> LPLD_NVIC_Init
+        24   -> __aeabi_memcpy4
+      48   endline_init
+        32   -> LPLD_GPIO_Init
+        48   -> __aeabi_memcpy4
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable2
+       4  ??DataTable2_1
+       4  ??DataTable2_2
+      20  complete
+      52  end_enable
+      60  endline_init
+
+ 
+ 144 bytes in section .text
+ 
+ 144 bytes of CODE memory
+
+Errors: none
+Warnings: none

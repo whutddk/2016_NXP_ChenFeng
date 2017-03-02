@@ -1,0 +1,203 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.20.2.7424/W32 for ARM        11/Mar/2016  11:03:05
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\app\BSP\sysinit.c
+#    Command line =  
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\app\BSP\sysinit.c"
+#        -D LPLD_K60 -D USE_K60DZ10 -lCN
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\FLASH\List\"
+#        -lB
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\FLASH\List\"
+#        -o
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\FLASH\Obj\"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config "C:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\app\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\app\MAIN\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\app\BSP\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\app\CTL\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\app\sensor\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\app\ITAC\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\CPU\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\common\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\LPLD\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\LPLD\HW\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\LPLD\DEV\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\LPLD\FUNC\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\uCOS-II\Ports\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\uCOS-II\Source\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\FatFs\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\FatFs\option\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\USB\common\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\USB\driver\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\USB\descriptor\"
+#        -I
+#        "D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\..\..\..\lib\USB\class\"
+#        -On -I "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\CMSIS\Include\" -D ARM_MATH_CM4
+#    List file    =  
+#        D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\FLASH\List\sysinit.lst
+#    Object file  =  
+#        D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\iar\FLASH\Obj\sysinit.o
+#
+###############################################################################
+
+D:\LPLDV3.1\LPLD_OSKinetis_V3\project\freescale_cup(LDC)1.9(pid+fuzzy)\app\BSP\sysinit.c
+      1          //系统全体初始化
+      2          //DDK
+      3          
+      4          #include "include.h"
+      5          
+
+   \                                 In section .text, align 4, keep-with-next
+      6          void sysinit()
+      7          {
+   \                     sysinit: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+      8            //首先初始化蜂鸣器进行复位检测
+      9            bzled_init();  
+   \   00000002   0x.... 0x....      BL       bzled_init
+     10            
+     11            BZ_ON;
+   \   00000006   0x2201             MOVS     R2,#+1
+   \   00000008   0x2107             MOVS     R1,#+7
+   \   0000000A   0x481B             LDR.N    R0,??sysinit_0   ;; 0x400ff080
+   \   0000000C   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     12            LED_ON;
+   \   00000010   0x2200             MOVS     R2,#+0
+   \   00000012   0x2106             MOVS     R1,#+6
+   \   00000014   0x4818             LDR.N    R0,??sysinit_0   ;; 0x400ff080
+   \   00000016   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     13            
+     14            UART_init();
+   \   0000001A   0x.... 0x....      BL       UART_init
+     15            PWM_init();
+   \   0000001E   0x.... 0x....      BL       PWM_init
+     16            qei_init();
+   \   00000022   0x.... 0x....      BL       qei_init
+     17            S3010_init();
+   \   00000026   0x.... 0x....      BL       S3010_init
+     18             
+     19            key_init();
+   \   0000002A   0x.... 0x....      BL       key_init
+     20            OLED_Init();
+   \   0000002E   0x.... 0x....      BL       OLED_Init
+     21            
+     22            Draw_BMP(0,0,66,7,mushroom);
+   \   00000032   0x4812             LDR.N    R0,??sysinit_0+0x4
+   \   00000034   0x9000             STR      R0,[SP, #+0]
+   \   00000036   0x2307             MOVS     R3,#+7
+   \   00000038   0x2242             MOVS     R2,#+66
+   \   0000003A   0x2100             MOVS     R1,#+0
+   \   0000003C   0x2000             MOVS     R0,#+0
+   \   0000003E   0x.... 0x....      BL       Draw_BMP
+     23            
+     24            //代入参数
+     25           
+     26            CTL_SEN_init();
+   \   00000042   0x.... 0x....      BL       CTL_SEN_init
+     27            
+     28            
+     29              /*LDC_INIT()*/
+     30            I2C_CLK_INIT();
+   \   00000046   0x.... 0x....      BL       I2C_CLK_INIT
+     31            I2C_DAT_IN();
+   \   0000004A   0x.... 0x....      BL       I2C_DAT_IN
+     32            LDC1614_init();
+   \   0000004E   0x.... 0x....      BL       LDC1614_init
+     33            LDC1614_start_meas();
+   \   00000052   0x.... 0x....      BL       LDC1614_start_meas
+     34            
+     35            
+     36          
+     37          
+     38            //最后初始化，初始化完成即任务开始
+     39           
+     40            PIT1_init();//控制系统时钟 //暂定10ms
+   \   00000056   0x.... 0x....      BL       PIT1_init
+     41            PIT0_init();//主系统时钟 //1MS 一次中断
+   \   0000005A   0x.... 0x....      BL       PIT0_init
+     42          
+     43            
+     44            NVIC_init();
+   \   0000005E   0x.... 0x....      BL       NVIC_init
+     45            
+     46            BZ_OFF; //初始化结束，关闭蜂鸣器
+   \   00000062   0x2200             MOVS     R2,#+0
+   \   00000064   0x2107             MOVS     R1,#+7
+   \   00000066   0x4804             LDR.N    R0,??sysinit_0   ;; 0x400ff080
+   \   00000068   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     47            LED_OFF;
+   \   0000006C   0x2201             MOVS     R2,#+1
+   \   0000006E   0x2106             MOVS     R1,#+6
+   \   00000070   0x4801             LDR.N    R0,??sysinit_0   ;; 0x400ff080
+   \   00000072   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     48          }
+   \   00000076   0xBD01             POP      {R0,PC}          ;; return
+   \                     ??sysinit_0:
+   \   00000078   0x400FF080         DC32     0x400ff080
+   \   0000007C   0x........         DC32     mushroom
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   sysinit
+         8   -> CTL_SEN_init
+         8   -> Draw_BMP
+         8   -> I2C_CLK_INIT
+         8   -> I2C_DAT_IN
+         8   -> LDC1614_init
+         8   -> LDC1614_start_meas
+         8   -> LPLD_GPIO_Output_b
+         8   -> NVIC_init
+         8   -> OLED_Init
+         8   -> PIT0_init
+         8   -> PIT1_init
+         8   -> PWM_init
+         8   -> S3010_init
+         8   -> UART_init
+         8   -> bzled_init
+         8   -> key_init
+         8   -> qei_init
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+     128  sysinit
+
+ 
+ 128 bytes in section .text
+ 
+ 128 bytes of CODE memory
+
+Errors: none
+Warnings: none

@@ -1,0 +1,34 @@
+Added Pin To Net: NetName=GND Pin=P1-2
+Added Pin To Net: NetName=GND Pin=P2-2
+Added Pin To Net: NetName=GND Pin=P3-2
+Added Pin To Net: NetName=GND Pin=P4-2
+Added Pin To Net: NetName=GND Pin=P5-3
+Added Net: Name=GND
+Added Pin To Net: NetName=IO1 Pin=P3-3
+Added Pin To Net: NetName=IO1 Pin=P5-5
+Added Pin To Net: NetName=IO1 Pin=R1-2
+Added Net: Name=IO1
+Added Pin To Net: NetName=IO2 Pin=P1-3
+Added Pin To Net: NetName=IO2 Pin=P5-4
+Added Pin To Net: NetName=IO2 Pin=R2-2
+Added Net: Name=IO2
+Added Pin To Net: NetName=IO3 Pin=P2-3
+Added Pin To Net: NetName=IO3 Pin=P5-2
+Added Pin To Net: NetName=IO3 Pin=R3-2
+Added Net: Name=IO3
+Added Pin To Net: NetName=IO4 Pin=P4-3
+Added Pin To Net: NetName=IO4 Pin=P5-1
+Added Pin To Net: NetName=IO4 Pin=R4-2
+Added Net: Name=IO4
+Added Pin To Net: NetName=VCC Pin=P1-1
+Added Pin To Net: NetName=VCC Pin=P2-1
+Added Pin To Net: NetName=VCC Pin=P3-1
+Added Pin To Net: NetName=VCC Pin=P4-1
+Added Pin To Net: NetName=VCC Pin=P5-6
+Added Pin To Net: NetName=VCC Pin=R1-1
+Added Pin To Net: NetName=VCC Pin=R2-1
+Added Pin To Net: NetName=VCC Pin=R3-1
+Added Pin To Net: NetName=VCC Pin=R4-1
+Added Net: Name=VCC
+Added Class: Name=ÆðÅÜÍ»»÷V4.0
+Added Room: Name=ÆðÅÜÍ»»÷V4.0

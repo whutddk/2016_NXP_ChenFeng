@@ -1,0 +1,137 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.20.2.7424/W32 for ARM        26/Apr/2016  20:21:44
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\app\ITAC\keyborad.c
+#    Command line =  
+#        "D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\app\ITAC\keyborad.c"
+#        -D LPLD_K60 -lCN
+#        "D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\iar\FLASH\List\"
+#        -lB
+#        "D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\iar\FLASH\List\"
+#        -o
+#        "D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\iar\FLASH\Obj\"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config "C:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\INC\c\DLib_Config_Normal.h" -I
+#        "D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\iar\..\app\"
+#        -I
+#        "D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\iar\..\app\BSP\"
+#        -I
+#        "D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\iar\..\app\ITAC\"
+#        -I
+#        "D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\iar\..\app\CTL\"
+#        -I
+#        "D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\iar\..\app\MAIN\"
+#        -I
+#        "D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\iar\..\app\SENSOR\"
+#        -I
+#        "D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\iar\..\..\..\lib\CPU\"
+#        -I
+#        "D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\iar\..\..\..\lib\common\"
+#        -I
+#        "D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\iar\..\..\..\lib\LPLD\"
+#        -I
+#        "D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\iar\..\..\..\lib\LPLD\HW\"
+#        -I
+#        "D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\iar\..\..\..\lib\LPLD\DEV\"
+#        -I
+#        "D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\iar\..\..\..\lib\uCOS-II\Ports\"
+#        -I
+#        "D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\iar\..\..\..\lib\uCOS-II\Source\"
+#        -I
+#        "D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\iar\..\..\..\lib\FatFs\"
+#        -I
+#        "D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\iar\..\..\..\lib\FatFs\option\"
+#        -I
+#        "D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\iar\..\..\..\lib\USB\common\"
+#        -I
+#        "D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\iar\..\..\..\lib\USB\driver\"
+#        -I
+#        "D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\iar\..\..\..\lib\USB\descriptor\"
+#        -I
+#        "D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\iar\..\..\..\lib\USB\class\"
+#        -On -I "C:\Program Files (x86)\IAR Systems\Embedded Workbench
+#        7.0\arm\CMSIS\Include\" -D ARM_MATH_CM4
+#    List file    =  
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\iar\FLASH\List\keyborad.lst
+#    Object file  =  
+#        D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\iar\FLASH\Obj\keyborad.o
+#
+###############################################################################
+
+D:\快盘同步\2016省赛\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)\app\ITAC\keyborad.c
+      1          #include "include.h"
+      2          
+      3          GPIO_InitTypeDef KEY_inittype;
+      4          void keyboard_init()
+      5          {
+      6            KEY_inittype.GPIO_PTx = PTD;
+      7            KEY_inittype.GPIO_Pins = GPIO_Pin0 | GPIO_Pin1 | GPIO_Pin2| GPIO_Pin3 | GPIO_Pin4;
+      8            KEY_inittype.GPIO_PinControl = INPUT_PULL_UP | INPUT_PF_EN | IRQC_DIS;
+      9            KEY_inittype.GPIO_Dir = DIR_INPUT;
+     10            KEY_inittype.GPIO_Output = OUTPUT_H;
+     11            
+     12            LPLD_GPIO_Init(KEY_inittype);
+     13            
+     14          }
+     15          
+     16          enum _bz_style key_event()
+     17          {
+     18           while(1)
+     19            {
+     20              if (LPLD_GPIO_Input_b(PTD, 0))
+     21              {     
+     22                  
+     23                if (LPLD_GPIO_Input_b(PTD, 0))
+     24                {  
+     25                  while ( LPLD_GPIO_Input_b(PTD, 0) );
+     26                  return key_up;
+     27                }
+     28              }
+     29          
+     30              if (LPLD_GPIO_Input_b(PTD, 1))
+     31              {
+     32                if (LPLD_GPIO_Input_b(PTD, 1))
+     33                {
+     34                  while ( LPLD_GPIO_Input_b(PTD, 1) );
+     35                  return key_click;
+     36                }
+     37              }  
+     38            
+     39              if (LPLD_GPIO_Input_b(PTD, 2))
+     40              {
+     41                     if (LPLD_GPIO_Input_b(PTD, 2))
+     42                {
+     43                  while ( LPLD_GPIO_Input_b(PTD, 2) );
+     44                  return key_left;
+     45                } 
+     46              } 
+     47            
+     48              if (LPLD_GPIO_Input_b(PTD, 3))
+     49              {
+     50                      if (LPLD_GPIO_Input_b(PTD, 3))
+     51                {
+     52                  while ( LPLD_GPIO_Input_b(PTD, 3) );
+     53                  return key_right;
+     54                }
+     55              } 
+     56                  if (LPLD_GPIO_Input_b(PTD, 4))
+     57              {
+     58                      if (LPLD_GPIO_Input_b(PTD, 4))
+     59                {
+     60                  while ( LPLD_GPIO_Input_b(PTD, 4) );
+     61                  return key_down;
+     62                }
+     63              } 
+     64            }
+     65          }
+
+Errors: 5
+Warnings: none

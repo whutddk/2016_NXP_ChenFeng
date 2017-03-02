@@ -1,0 +1,189 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.30.3.8024/W32 for ARM        16/Aug/2016  11:11:20
+# Copyright 1999-2014 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\app\BSP\sysinit.c
+#    Command line =  
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\app\BSP\sysinit.c" -D LPLD_K60 -lCN
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\FLASH\List\" -lB
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\FLASH\List\" -o
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\FLASH\Obj\" --no_cse --no_unroll --no_inline --no_code_motion
+#        --no_tbaa --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M4 -e --fpu=None --dlib_config
+#        D:\IAR\arm\INC\c\DLib_Config_Normal.h -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\app\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\app\BSP\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\app\ITAC\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\app\CTL\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\app\MAIN\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\app\SENSOR\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\CPU\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\common\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\LPLD\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\LPLD\HW\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\LPLD\DEV\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\uCOS-II\Ports\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\uCOS-II\Source\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\FatFs\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\FatFs\option\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\USB\common\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\USB\driver\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\USB\descriptor\" -I
+#        "E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\..\..\..\lib\USB\class\" -On -I D:\IAR\arm\CMSIS\Include\ -D
+#        ARM_MATH_CM4
+#    List file    =  
+#        E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\FLASH\List\sysinit.lst
+#    Object file  =  
+#        E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid)
+#        1.9\iar\FLASH\Obj\sysinit.o
+#
+###############################################################################
+
+E:\飞思卡尔\新工程\LPLD_OSKinetis_V3\project\NXP_(golden_cyprinoid) 1.9\app\BSP\sysinit.c
+      1          //系统全体初始化
+      2          //DDK
+      3          
+      4          #include "include.h"
+      5          
+
+   \                                 In section .text, align 4, keep-with-next
+      6          void sysinit()
+      7          {
+   \                     sysinit: (+1)
+   \   00000000   0xB580             PUSH     {R7,LR}
+      8            //首先初始化蜂鸣器进行复位检测
+      9            bz_init();  
+   \   00000002   0x.... 0x....      BL       bz_init
+     10            led_init();
+   \   00000006   0x.... 0x....      BL       led_init
+     11            
+     12            BZ_ON;
+   \   0000000A   0x2201             MOVS     R2,#+1
+   \   0000000C   0x210A             MOVS     R1,#+10
+   \   0000000E   0x4815             LDR.N    R0,??sysinit_0   ;; 0x400ff100
+   \   00000010   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     13            LED_ON;
+   \   00000014   0x2200             MOVS     R2,#+0
+   \   00000016   0x210B             MOVS     R1,#+11
+   \   00000018   0x4812             LDR.N    R0,??sysinit_0   ;; 0x400ff100
+   \   0000001A   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     14            
+     15            UART_init();
+   \   0000001E   0x.... 0x....      BL       UART_init
+     16            PWM_init();
+   \   00000022   0x.... 0x....      BL       PWM_init
+     17            qei_init();
+   \   00000026   0x.... 0x....      BL       qei_init
+     18            S3010_init();
+   \   0000002A   0x.... 0x....      BL       S3010_init
+     19             
+     20            OLED_Init();
+   \   0000002E   0x.... 0x....      BL       OLED_Init
+     21            
+     22            //代入参数
+     23           
+     24            CTL_SEN_init();
+   \   00000032   0x.... 0x....      BL       CTL_SEN_init
+     25              
+     26              /*LDC_INIT()*/
+     27            //I2C_init();
+     28            I2C_CLK_INIT();
+   \   00000036   0x.... 0x....      BL       I2C_CLK_INIT
+     29            I2C_DAT_IN();
+   \   0000003A   0x.... 0x....      BL       I2C_DAT_IN
+     30            LDC1614_init();
+   \   0000003E   0x.... 0x....      BL       LDC1614_init
+     31            LDC1614_start_meas();
+   \   00000042   0x.... 0x....      BL       LDC1614_start_meas
+     32            
+     33            key_init();
+   \   00000046   0x.... 0x....      BL       key_init
+     34            
+     35            sensor_offset();//取偏置
+   \   0000004A   0x.... 0x....      BL       sensor_offset
+     36            
+     37            //最后初始化，初始化完成即任务开始
+     38            
+     39          //  PIT1_init();//控制系统时钟 //暂定10ms
+     40          //  PIT0_init();//主系统时钟 //1MS 一次中断
+     41          //    NVIC_init();
+     42            
+     43            BZ_OFF; //初始化结束，关闭蜂鸣器
+   \   0000004E   0x2200             MOVS     R2,#+0
+   \   00000050   0x210A             MOVS     R1,#+10
+   \   00000052   0x4804             LDR.N    R0,??sysinit_0   ;; 0x400ff100
+   \   00000054   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     44            LED_OFF;
+   \   00000058   0x2201             MOVS     R2,#+1
+   \   0000005A   0x210B             MOVS     R1,#+11
+   \   0000005C   0x4801             LDR.N    R0,??sysinit_0   ;; 0x400ff100
+   \   0000005E   0x.... 0x....      BL       LPLD_GPIO_Output_b
+     45          }
+   \   00000062   0xBD01             POP      {R0,PC}          ;; return
+   \                     ??sysinit_0:
+   \   00000064   0x400FF100         DC32     0x400ff100
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   sysinit
+         8   -> CTL_SEN_init
+         8   -> I2C_CLK_INIT
+         8   -> I2C_DAT_IN
+         8   -> LDC1614_init
+         8   -> LDC1614_start_meas
+         8   -> LPLD_GPIO_Output_b
+         8   -> OLED_Init
+         8   -> PWM_init
+         8   -> S3010_init
+         8   -> UART_init
+         8   -> bz_init
+         8   -> key_init
+         8   -> led_init
+         8   -> qei_init
+         8   -> sensor_offset
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+     104  sysinit
+
+ 
+ 104 bytes in section .text
+ 
+ 104 bytes of CODE memory
+
+Errors: none
+Warnings: none
