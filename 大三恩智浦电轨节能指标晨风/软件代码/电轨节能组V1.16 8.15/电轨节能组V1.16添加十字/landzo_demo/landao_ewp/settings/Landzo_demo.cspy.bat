@@ -19,6 +19,6 @@
 @REM 
 
 
-"D:\program files (x86)\IAR Systems\Embedded Workbench 6.5\common\bin\cspybat" "D:\program files (x86)\IAR Systems\Embedded Workbench 6.5\arm\bin\armproc.dll" "D:\program files (x86)\IAR Systems\Embedded Workbench 6.5\arm\bin\armjlink.dll"  %1 --plugin "D:\program files (x86)\IAR Systems\Embedded Workbench 6.5\arm\bin\armbat.dll" --backend -B "--endian=little" "--cpu=Cortex-M0+" "--fpu=None" "-p" "D:\program files (x86)\IAR Systems\Embedded Workbench 6.5\arm\CONFIG\debugger\Freescale\MKL25Z128xxx4.ddf" "--semihosting=none" "--device=MKL25Z128xxx4" "--drv_mtb_regbase=0xF0000000" "--drv_mtb_dwtregbase=0xF0001000" "--drv_mtb_minramaddr=0x20000000" "--drv_mtb_maxramaddr=0x20002FFF" "--drv_communication=USB0" "--jlink_speed=auto" "--jlink_initial_speed=32" "--jlink_reset_strategy=0,0" "--jlink_interface=SWD" "--drv_catch_exceptions=0x000" "--drv_swo_clock_setup=72000000,0,2000000" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.5\common\bin\cspybat" "C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.5\arm\bin\armproc.dll" "C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.5\arm\bin\armsim2.dll"  %1 --plugin "C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.5\arm\bin\armbat.dll" --backend -B "--endian=little" "--cpu=ARM7TDMI" "--fpu=None" "--semihosting=none" 
 
 

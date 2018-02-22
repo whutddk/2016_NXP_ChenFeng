@@ -17,13 +17,6 @@ StopOnThrow=_ 0
 ShowArgs=0
 [Disassembly]
 MixedMode=1
-[MemoryMap]
-Enabled=0
-Base=0
-UseAuto=0
-TypeViolation=1
-UnspecRange=1
-ActionState=1
 [JLinkDriver]
 CStepIntDis=_ 0
 TraceBufferSize=0x00010000
@@ -108,6 +101,15 @@ Exclusions=
 Enabled=0
 [CallStackStripe]
 ShowTiming=1
+[MemConfig]
+Base=1
+Manual=0
+Ddf=1
+TypeViol=0
+Stop=1
+[Simulator]
+Freq=10000000
+MultiCoreRunAll=1
 [InterruptLog]
 LogEnabled=0
 SumEnabled=0
@@ -121,24 +123,25 @@ SumEnabled=0
 GraphEnabled=0
 ShowTimeLog=1
 ShowTimeSum=1
-[Interrupts]
-Enabled=1
-[MemConfig]
-Base=1
-Manual=0
-Ddf=1
-TypeViol=0
-Stop=1
-[Simulator]
-Freq=10000000
-MultiCoreRunAll=1
 [Disassemble mode]
 mode=0
 [Breakpoints2]
 Count=0
+[Interrupts]
+Enabled=1
+[MemoryMap]
+Enabled=0
+Base=0
+UseAuto=0
+TypeViolation=1
+UnspecRange=1
+ActionState=1
 [Aliases]
 A0=_ "C:\百度云同步盘\比赛代码\蓝宙KL25\电轨节能组V1.14整定\src\common\startup.c" ""
 A1=_ "C:\百度云同步盘\比赛代码\蓝宙KL25\电轨节能组V1.8\src\app\main.c" "F:\快盘\2016飞思卡尔\蓝宙KL25\电轨节能组V1.8\src\app\main.c"
 A2=_ "F:\快盘\2016飞思卡尔\电轨节能组V1.15优化+起跑线\src\app\isr.c" ""
 Count=3
 SuppressDialog=1
+[Trace1]
+Enabled=0
+ShowSource=1
