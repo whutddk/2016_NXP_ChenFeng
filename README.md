@@ -44,6 +44,10 @@
         + LDC1614复位原因
         + 电机Bang-Bang控制对传感器，电路板的冲击
     
+### 照片
+[1](https://github.com/whutddk/2016_NXP_ChenFeng/blob/master/pic/IMG_20160820_100030.jpg)
+[2](https://github.com/whutddk/2016_NXP_ChenFeng/blob/master/pic/微信图片_2019013122002214.jpg)
+[合照](https://github.com/whutddk/2016_NXP_ChenFeng/blob/master/pic/P60820-124719.jpg)
 
 ### Video
 * [省赛（华南赛）预赛](https://v.youku.com/v_show/id_XMTY0ODY4NTUyOA==.html?spm=a2hfx.9903432.collectVideo.5~5~5~1!2~3~A
